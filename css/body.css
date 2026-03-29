@@ -1,0 +1,614 @@
+body {
+	background-attachment: fixed;
+	margin: 0px;
+	padding: 0 0 5px 0;
+	width: 100%;
+}
+body p {line-height: 20px; font-size: 13px;}
+
+body p.teledir {margin: 15px auto; text-align: center; font-family:Verdana, Geneva, sans-serif; font-size: 18px;}
+
+header, section, footer, aside, nav, main, article, figure {display: block;}
+
+/* Contenedor de Iframe responsivo  */
+
+.responsive-iframe-container {
+      display: flex;
+      justify-content: center;  /* Centra horizontalmente el contenido */
+      align-items: center;      /* Centra verticalmente el contenido */
+      width: 100%;              /* Ocupa el 100% del ancho del contenedor padre */
+      height: 100vh;            /* Ajusta el alto para que sea igual a la altura de la ventana del navegador */
+    }
+
+.responsive-iframe-container {
+      width: 100%;              /* Ocupa el 100% del ancho del contenedor */
+      height: 100%;             /* Ocupa el 100% del alto del contenedor */
+      border: none;             /* Elimina cualquier borde que pueda tener el iframe */
+    }
+
+/* Barra azul, va abajo del menu, y ahi van las frases  */
+#barraazul {
+	clear:both;
+	line-height: 35px;
+	width: 100%;
+	display: block;
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 0 auto;
+	text-align: center;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	background: #272727;
+}
+
+/* #menu y #menu a, son las propiedades de estilo del menu de abajo de todas las paginas */
+#menu  {
+	width: 100%;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#menu a {
+	color: #171717;
+	text-align:center;
+	display: inline-block;
+}
+/* definen la tabla blanca donde van los contenidos */
+
+#contents {
+	width:100%;
+	background-color: #FFF;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* Los bloques que tengan article se veran afectador tambien en sus h1, h2, h3 y h4, es un estilo optimo para los articulos de la seccion documentos. */
+article {
+	margin:0 auto;
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 12px;
+	text-align: justify;
+	z-index: 10;
+}
+article p {font-size: 17px; line-height: 25px;}
+article h1 {
+	text-align: center;
+	font-size: 35px;
+	color: #036;
+    font-family: 'Orbitron', sans-serif;
+}
+article h1.g {font-size:18px;}
+article h1.azultimes {
+	font-size: 28px;
+	color: #384478;
+	font-family: "Times New Roman", Verdana, Times, serif;
+}
+article h2 {
+	font-weight: normal;
+	font-size: 20px;
+	text-align: center;
+}
+article h3 {
+	font-weight: bold;
+	font-size: 16px;
+}
+/* igual que h3 pero centrado */
+article h4  {
+	text-align: center;
+	font-weight: bold;
+	font-size: 13px;
+}
+article h6 {
+	font-size: 10px;
+	text-align: right;
+	color: #0000A0;
+}
+article p.centrado {
+	text-align: center;
+}
+article ul.centrado {
+	text-align: center;
+}
+article ul.centradoleftaling {
+	text-align: left;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
+article p.right {
+	text-align: right;
+}
+article p.paladere {margin-left: 50px;}
+
+article img {max-width:95%; height:auto;}
+
+article img.float {
+	float: left;
+	margin-top: 10px;
+	margin-right: 30px;
+	margin-bottom: 4px;
+	margin-left: 4px;
+}
+article hr.small {
+	width: 300px;
+	margin-left: 0px;
+}
+/* Esta regla hace referencia solo a la lista de articulos nuevos, en la pagina documentos.htm */
+#ndocs {
+	font-family: Verdana, Arial, Geneva, sans-serif;
+	font-size: 10px;
+	text-align: left;
+}
+/* Esta clase es para centrar una imagen mediante css ejemplo: class="imgcentrada" */
+.imgcentrada {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:100%;
+	height:auto;
+}
+.videocentrado {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+.piedefoto {
+	font-size: 10px;
+	color: #069;
+	text-align: center;
+	margin-top: -1px;
+}
+
+/* con esta clase se puede dar un marco a un texto sin necesidad de poner una tabla, ejemplo en: FernandoGarcia.html */
+.marco {
+	border: groove;
+	padding: 2%;
+}
+.marcofoto {
+	border: solid 2px #000;
+}
+/* color de todos los links al ser visitados     a:visited {	color: #363 } 
+   color por defecto de todos los links          a:link { color: blue }
+*/
+/* color de los links al pasar el mause por ellos y al darles click */
+a:link {color:#039;}
+a:hover {color: #930;}
+/* Necesitas comentario para saber que hace esto? */
+.azul {
+    color: #0000A0
+}
+/* las listas Ul-LI en documentos.htm muy pegadas, esto separa un poco una linea de otra */
+.masespacio {
+	line-height: 20px;
+}
+#docus li {line-height: 25px;}
+/* Menu de la pagina documentos.htm */
+#menudocs  {
+	background-color: #344356;
+	text-align: center;
+	color: #FFF;
+	border-top-style: inset;
+	border-right-style: inset;
+	border-bottom-style: inset;
+	border-left-style: inset;
+	margin-top: 50px;
+}
+#menudocs a {
+	color: #FFF;
+}
+/* Propiedades de la tabla de obras.htm */
+table.obras {
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 20px;
+}
+table.obras td.tdright {
+	text-align:right;
+	padding-right:18px;
+}
+table.obras td.tdleft {
+	text-align: left;
+	padding-right:18px;
+}
+table.obras caption {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.red {
+	color: #F33;
+	font-size: 11px;
+	padding: 2px;
+}
+/* puntos en traduccion.html */
+.pts {
+	font-size: 16px;
+	color: #C30;
+	text-decoration: none;
+}
+#busquedas {
+	visibility: visible;
+	width: 600px;
+	position: relative;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+/* Para los wallpapers en descargas.htm */
+#contenedor-wallpapers {
+	margin-right: auto;
+	margin-left: auto;
+	width: 678px;
+	position: relative;
+}
+#contenedor-cdvillancicos {
+	margin-right: auto;
+	margin-left: auto;
+	width: 500px;
+	height: 300px;
+	position: relative;
+	background-color: rgb(245,245,245);
+	margin-bottom: 80px;
+}
+.wallpaper {
+	float: left;
+	height: 116px;
+	width: 161px;
+	margin: 2px;
+}
+/* Para que una lista se represente con con letras: A... B... C... */
+.listaalfa {
+	list-style-type: upper-alpha;
+}
+/* define la posicion del pequeño menu español-ingles, en los articulos que tienen traduccion */
+.idiomacentrado {
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin: 3px 0 0 0;
+}
+/* Espacio entre los párrafos de una listas */
+.listaconespacio li {
+	margin-top: 20px;	
+}
+.listasinestilo {
+	list-style: none;
+}
+/* para centrar el texto de un parrafo */
+.centrado {
+	text-align: center;
+}
+.floatleft {
+	float: left;
+	margin: 5px 15px 0 0;
+}
+.floatright {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+.both {
+	clear: both;
+}
+/* Tabla de Cifras.htm */
+#tablacifras {
+	font-size: 11px;
+	color: #666666;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	width: 52%;
+}
+#titulocifras {
+	color: #0000A0;
+	font-size: 18pt;
+	text-align: center;
+}
+/* para centrar el iframe de Ubicacion.html */
+#centrariframe {
+	width: 630px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* para los textos de autores.htm */
+#autores {
+	margin-left: 150px;
+}
+#autores img.floatleft {
+    margin-left: -130px;
+}
+#autores h1 {
+	font-size: 16px;
+	text-align: left;
+}
+h1.titulotienda {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #666;
+	text-align: center;
+}
+h1.notext {
+	display:none;
+}
+/* para los documentos */
+.cita {
+	font-size: 11px;
+	text-align: right;
+	margin-right:5%;
+}
+.cita2 {
+	font-size: 11px;
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+/* para quitar a las imagenes con link */
+.nostyle {
+	border:0;
+}
+
+
+
+
+
+
+
+
+/* CSS de las obras */
+
+/* Esta propiedad permite que las columnas de obras funcionen bien en ff y en ie */
+#contenedorcolumnaobra * {padding:0; margin:0;}
+#contenedorcolumnaobra {height:100%; margin:0 auto;}
+
+#contenedorcolumnaobra > img, #contenedorcolumnaobra .bloqueobra img {max-width:75%; height:auto;}
+#contenedorcolumnaobra > img:first-child {margin:o auto; display:block; width:74%;}
+
+#contenedorcolumnaobra::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#contenedorcolumnaobra .bloqueobra {
+	font-family: Verdana,Arial, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+	width:70%;
+	display:inline-block;
+	margin:0 auto;
+    background-color:#FFFFFF;
+	padding: 10px 2%;
+}
+
+/* Es necesario aplicar esto a causa de la propiedad anterior */
+#contenedorcolumnaobra .bloqueobra p {
+	margin-top: 15px;
+}
+#contenedorcolumnaobra .bloqueobra table {
+	margin-top: 15px;
+	margin:  0 auto;
+}
+#contenedorcolumnaobra .bloqueobra ul.listasinestilo {
+	margin-left: 15px;
+	text-align: left;
+}
+/* Centrar album de flickr y pdfs de Issuu */
+#contenedorcolumnaobra .bloqueobra .flickypdfs {text-align: center;}
+/* centrar una imagen */
+#contenedorcolumnaobra img.imgcentrada {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
+}
+#contenedorcolumnaobra .bloqueobra ul.listasinestilo {
+	list-style-type: none;
+	font-size: 12px;
+	line-height: 20px;
+	margin: 30px 0 30px;
+}
+/* para poder colocar texto a lado de una imagen */
+#contenedorcolumnaobra .bloqueobra img.floatleft {
+	margin: 15px;
+	float: left;
+}
+/* para que un elemento no sea representado */
+#contenedorcolumnaobra .bloqueobra .notext {
+    display: none;
+}
+/* propiedades generales de las columnas */
+#contenedorcolumnaobra .columna {
+	width: 20%;
+	color: #FFF;
+	vertical-align:top;
+	text-align: left;
+	font-family: Verdana,Arial, Geneva, sans-serif;
+	font-size: 11px;
+	float:right;
+	padding: 2%;
+}
+#contenedorcolumnaobra .columna a {
+	color: #FF0;
+	text-decoration: none;
+}
+#contenedorcolumnaobra .columna p {
+	line-height: 15px;
+	margin-top: 15px;
+}
+/* color y tamaño de cada columna segun obra */
+.cazulmarinherio {background-color: #000080;}.crojavozhumana {background-color: #A52400;}.crojafiesta {background-color: #A52400;}.crojachorillo {background-color: #A52400;}.cnaranjajuegos {background-color: #CC6600;}.crojaviajecompartido {background-color: #A52400;}.crojapersul {background-color: #A52400;}.crojapinocho {background-color: #A52400;}.crojaangelitos {background-color: #A52400;}.cmoradadiplomas {background-color: #800080;}.crojabellosdias {background-color: #A52400;}.crojarosita {background-color: #A52400;}.crojahechizerias {background-color: #A52400;}.cnaranjalachica {background-color: #CC6600;}.crojalosciegos {background-color: #A52400;}.crojamedea {background-color: #A52400;}.crojajuegos2 {background-color: #A52400;}.cnaranjahadaycartero {background-color: #CC6600;}.crojafernando {background-color: #A52400;}.crojausher {background-color: #A52400;}.croja4mujeres {background-color: #800000;}.cmoradomedium {background-color: #900;}.crosadaconchita {background-color: #FB1566;}.cnegrojorge {background-color: #069;}.cgrispound {background-color: #333;}.crojocasagrande {background-color: #1E0304;}.cnegroprimeramor {background-color: #070F02;}.cperspectivas {background-color: #2A184D;} .cjaime {background-color: #7B1F21;} .cincertidumbre {background-color:#142B76;} .cespectro {background-color:#94383A;} 
+
+/* Titulos en obras */
+
+.bloqueobra h1.titulocolumna {
+	font-size: 12px;
+	color: #FFF;
+	text-align: center;
+}
+.bloqueobra h1.titeres {
+	font-size: 22px;
+	color: #384478;
+	text-align: center;
+}
+.bloqueobra h2 {
+	font-size: 18px;
+	color: #384478;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	}
+.bloqueobra h2.titeres {
+	font-size: 18px;
+	color: #384478;
+	text-align: center;
+}
+.bloqueobra h3 {
+	font-size: 22px;
+	margin-top: 15px;
+	color:#333;
+    font-family: 'Orbitron', sans-serif;
+}
+.bloqueobra h4 {
+	font-size: 14px;
+	margin-top: 15px;
+	text-align: center;
+}
+.bloqueobra h5 {
+	font-size: 11px;
+	margin-top: 15px;
+	text-align: center;
+	font-weight: normal;
+}
+/* para centrar una tabla que este en un div clase fichacentrada */
+.fichacentrada {
+	text-align: left;
+}
+.fichacentrada table {
+	margin-right: auto;
+	margin-left: auto;
+}
+/* alinear texto a la derecha */
+.bloqueobra p.right {
+	text-align: right;
+}
+
+/* Album de fotos */
+h2.album {
+	clear: both;
+	text-align: center;
+	font-family:Verdana, Arial, Geneva, sans-serif;
+	color:#384478;
+	font-size: 16px;
+}
+#album {
+	width:600px; 
+	height:360px; 
+	position:relative;
+	padding:5px 0; 
+	background:#fff; 
+	margin:0 auto 20px auto; 
+	clear:both;
+}
+#album em {
+	display:block; 
+	width:229px; 
+	height:175px; 
+	position:absolute; 
+	top:0; 
+	right:0; 
+	border:1px solid #ddd;
+}
+#album span {
+	display:block; 
+	width:360px; 
+	height:365px; 
+	position:absolute; 
+	top:0; left:0; 
+	border:1px solid #ddd;
+}
+#album a span.descripcion{
+	display:none;
+}
+#album b#thumbs a:focus span.descripcion, #album b#thumbs a:active span.descripcion {
+	display:block;
+	top:330px;
+	width:360px;
+	height:30px;
+	font-size:10px;
+	font-family: Verdana, Arial, Geneva, sans-serif;
+	border-bottom-color: #FFF;
+	text-align: center;
+	color: #666;
+}
+#album b#thumbs {
+	display:block; 
+	width:220px; 
+	height:175px; 
+	overflow:auto; 
+	float:right; 
+	margin-top:175px; 
+	border:1px solid #ccc; 
+	border-width:1px 1px 1px 1px; 
+	padding:5px;
+}
+#album b#thumbs a {
+	display:block; 
+	float:left; 
+	margin:0 10px 10px 0; 
+	background:#f8f8ff; 
+	width:50px; 
+	height:50px; 
+	border:1px solid #000;
+}
+#album b#thumbs a img {
+	width:50px; 
+	height:50px; 
+	border:0;
+}
+
+#album b#thumbs a:hover {
+	border:1px dotted #ccc; 
+	background:#fff url(img/click.gif);
+}
+#album b#thumbs a:active, #album b#thumbs a:focus {
+	border:1px solid #fff; 
+	background:#fff; 
+	outline:0;
+}
+#album b#thumbs a:hover img {
+	display:block; 
+	position:absolute; 
+	background:#aaa; 
+	z-index:500;
+}
+#album b#thumbs a:active img, #album b#thumbs a:focus img {
+	display:block; 
+	position:absolute; 
+	background:#aaa; 
+	z-index:100;
+}
+#album b#thumbs a:hover img.hr {
+	width:160px; 
+	height:120px; 
+	right:35px; 
+	top:7px; 
+	border:1px solid #333;
+}
+#album b#thumbs a:hover img.vt {
+	width:120px; 
+	height:160px; 
+	right:55px; 
+	top:7px; 
+	border:1px solid #333;
+}
+#album b#thumbs a:active img.hr, #album b#thumbs a:focus img.hr {
+	width:320px; 
+	height:240px; 
+	left:20px; 
+	top:7px; 
+	border:1px solid #333;
+}
+#album b#thumbs a:active img.vt, #album b#thumbs a:focus img.vt {
+	width:240px; 
+	height:320px; 
+	left:60px; 
+	top:7px; 
+	border:1px solid #333;
+}

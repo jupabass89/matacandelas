@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS solo para index.html */
+
+
+#poemaindex {width: 100%; margin: 0 auto; text-align: center;}
+#poemaindex p {font-size: 20px; line-height: 30px;} 
+
+/*Sos teatral*/
+.sosteatral
+{width: 800px; margin: 0 auto;}
+
+
+/* Publicidad en la parte de arriba */
+.w3-animate-fading{animation:fading 8s infinite}@keyframes fading{0%{opacity:0}99%{opacity:1}100%{opacity:0}}
+.barrateatronoticias2 {
+	width: 100%;
+	background-image: none;
+	background-repeat: no-repeat, repeat-x;
+	background-position: center, top;
+}
+.barrateatronoticias2 > img {width:100%; max-width:600px; margin: 0 auto;}
+
+
+/*Color de links*/
+a:link {color:#004F75;}
+a:hover {color: #930;}
+
+/* div contenedor de temporada, noticias y bloquevarios */
+
+h2.tseccion {
+	width: 100%;
+	color: #2D2D2D;
+	line-height:100px;
+	font-size: calc(35px + .5vw);
+	letter-spacing: 5px;
+	text-align: center;
+    font-family: 'Orbitron', sans-serif;
+	margin:0 auto;
+}
+
+
+
+	
+/*.barrateatronoticias2 {
+	width: 100%;
+	background-image: url(../img/pp-fondo-matacandelas.png), url(img/backgroundblanco.png);
+	background-repeat: no-repeat, repeat-x;
+	background-position: center, top;
+}*/

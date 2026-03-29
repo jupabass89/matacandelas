@@ -1,0 +1,12 @@
+article {
+	width:45%;}
+
+.bloqueobra h1 {
+	font-size: 4.2em;
+	color: #384478;
+	text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* CSS de las obras */
+#contenedorcolumnaobra {width: 90%;}
