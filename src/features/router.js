@@ -25,18 +25,6 @@ const routes = {
   'documentos': '/pages/documentos.html',
 }
 
-async function fileExists(path) {
-  try {
-    const res = await fetch(path, {
-      method: 'GET',
-      headers: { 'Range': 'bytes=0-0' } // Only fetch first byte
-    })
-    return res.status === 200
-  } catch {
-    return false
-  }
-}
-
 export async function router(path = window.location.pathname) {
   // Espera a que el elemento page-content esté disponible
   const pageContent = await waitForElement('#page-content')
@@ -73,6 +61,18 @@ export async function router(path = window.location.pathname) {
   } catch (error) {
     console.error('Error loading page:', error)
     pageContent.innerHTML = '<p>Error al cargar la página</p>'
+  }
+}
+
+async function fileExists(path) {
+  try {
+    const res = await fetch(path, {
+      method: 'GET',
+      headers: { 'Range': 'bytes=0-0' } // Only fetch first byte
+    })
+    return res.status === 200
+  } catch {
+    return false
   }
 }
 
