@@ -5,8 +5,7 @@ export default defineConfig({
   root: 'src',
   server: {
     port: 3000,
-    // middlewareMode: true,
-    open: '/pages/programacion.html',
+    open: '/',
   },
   build: {
     outDir: 'dist',
