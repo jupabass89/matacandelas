@@ -63,7 +63,7 @@ div #vsolar {width: 840px; height: 473px; margin: 20px auto;}
 	width:100px;
 	height:67px;
 	margin:0 auto 0 auto;
-	background-image:url(img/botonfecha2.png);
+	background-image:url(/assets/img/botonfecha2.png);
 	text-align:center; 
 	line-height: 65px;
 	color: #8E3436;
@@ -76,7 +76,7 @@ div #vsolar {width: 840px; height: 473px; margin: 20px auto;}
     font-family:  Verdana, Arial, Geneva, sans-serif;
 	font-weight: bolder;
 }
-#programacion .noticiasfuncion h3.rojo {background-image: url(img/botonfechar.png);}
+#programacion .noticiasfuncion h3.rojo {background-image: url(/assets/img/botonfechar.png);}
 
 #programacion .noticiasfuncion a.vermas {
 	text-decoration: none;
