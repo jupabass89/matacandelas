@@ -3,11 +3,17 @@
 const routes = {
     '': '/pages/programacion.html',
     '/': '/pages/programacion.html',
-    '*': '',
+    '*': '', // Fallback a programacion.html
     'programacion': '/pages/programacion.html',
     'historia': '/pages/historia.html',
     'suscribir': '/pages/suscribir.html',
-    'cifras': '/pages/cifras.html'
+    'cifras': '/pages/cifras.html',
+    'obras': '/pages/obras.html',
+    'logo': '/pages/Logo-Matacandelas.html',
+    'documentos': '/pages/documentos.html',
+    'casa': '/pages/casa.html',
+    'contacto': '/pages/contacto.html',
+    'ubicacion': '/pages/ubicacion.html',
 }
 
 export async function router(path = window.location.pathname) {
