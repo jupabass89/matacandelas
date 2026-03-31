@@ -1,24 +1,28 @@
 // router.js
 
 const routes = {
-  // default routes
+  // Default routes
   '': '/pages/programacion.html',
   '/': '/pages/programacion.html',
   'programacion': '/pages/programacion.html', // home *
 
-  // Fallback a programacion.html
+  // Fallback
   '*': '',
 
-  // main routes
-  'historia': '/pages/historia.html',
+  // Nuestro Grupo
   'suscribir': '/pages/suscribir.html',
+  'historia': '/pages/historia.html',
   'cifras': '/pages/cifras.html',
-  'obras': '/pages/obras.html',
-  'logo': '/pages/Logo-Matacandelas.html',
-  'documentos': '/pages/documentos.html',
-  'casa': '/pages/casa.html',
-  'contacto': '/pages/contacto.html',
   'ubicacion': '/pages/ubicacion.html',
+  'casa': '/pages/casa.html',
+  'logo': '/pages/logo.html',
+  'contacto': '/pages/contacto.html',
+
+  // Obras
+  'obras': '/pages/obras.html',
+
+  // Documentos
+  'documentos': '/pages/documentos.html',
 }
 
 async function fileExists(path) {
@@ -44,7 +48,6 @@ export async function router(path = window.location.pathname) {
   // Extrae solo el nombre de la ruta (sin /)
   const routeName = path.split('/').filter(Boolean).pop() || ''
 
-
   // Primero busca en routes definidas
   let file = routes[routeName]
 
@@ -58,7 +61,6 @@ export async function router(path = window.location.pathname) {
       file = routes['programacion']
     }
   }
-
   console.log('Ruta:', routeName, 'Archivo:', file)
 
   try {
