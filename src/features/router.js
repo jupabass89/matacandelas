@@ -1,11 +1,13 @@
 // router.js
 
 const routes = {
+    '': '/pages/programacion.html',
+    '/': '/pages/programacion.html',
+    '*': '',
     'programacion': '/pages/programacion.html',
     'historia': '/pages/historia.html',
-    '/': '/pages/programacion-beta.html',
-    '': '/pages/programacion-beta.html',
-    'test': '/pages/test.html',
+    'suscribir': '/pages/suscribir.html',
+    'cifras': '/pages/cifras.html'
 }
 
 export async function router(path = window.location.pathname) {
