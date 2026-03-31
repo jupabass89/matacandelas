@@ -16,6 +16,15 @@ const routes = {
     'ubicacion': '/pages/ubicacion.html',
 }
 
+async function fileExists(path) {
+    try {
+        const res = await fetch(path, { method: 'HEAD' })
+        return res.ok
+    } catch {
+        return false
+    }
+}
+
 export async function router(path = window.location.pathname) {
     // Espera a que el elemento page-content esté disponible
     const pageContent = await waitForElement('#page-content')
@@ -27,9 +36,22 @@ export async function router(path = window.location.pathname) {
     // Extrae solo el nombre de la ruta (sin /)
     const routeName = path.split('/').filter(Boolean).pop() || ''
 
-    const file = routes[routeName] ?? routes['']
-    // const file = `pages/${routeName || 'programacion-beta'}.html`
-    
+    // Primero busca en routes definidas
+    let file = routes[routeName]
+
+    // Si no está en routes, intenta buscar en blog/
+    if (!file) {
+        const blogPath = `/blog/${routeName}`
+        if (await fileExists(blogPath)) {
+            file = blogPath
+        } else {
+            // Si no existe, usa fallback
+            file = routes['']
+        }
+    }
+
+    console.log('Ruta:', routeName, 'Archivo:', file)
+
     try {
         const res = await fetch(file)
         if (!res.ok) throw new Error(`Error ${res.status}`)
