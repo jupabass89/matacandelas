@@ -8,14 +8,16 @@ html {
 
 body {
   font-family: $font-primary;
+	background-color: $color-bg-dark;
 	background-attachment: fixed;
 	margin: 0;
 	padding: 0 0 0.3125rem 0;
 	width: 100%;
+	color: $color-text-main;
 }
 body p {line-height: 1.25rem; font-size: 0.8125rem;}
 
-body p.teledir {margin: 0.9375rem auto; text-align: center;  font-size: 1.125rem;}
+body p.teledir {margin: 0.9375rem auto; text-align: center;  font-size: 1.125rem; color: $color-text-muted;}
 
 header, section, footer, aside, nav, main, article, figure {display: block;}
 
@@ -23,16 +25,16 @@ header, section, footer, aside, nav, main, article, figure {display: block;}
 
 .responsive-iframe-container {
       display: flex;
-      justify-content: center;  /* Centra horizontalmente el contenido */
-      align-items: center;      /* Centra verticalmente el contenido */
-      width: 100%;              /* Ocupa el 100% del ancho del contenedor padre */
-      height: 100vh;            /* Ajusta el alto para que sea igual a la altura de la ventana del navegador */
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
     }
 
 .responsive-iframe-container {
-      width: 100%;              /* Ocupa el 100% del ancho del contenedor */
-      height: 100%;             /* Ocupa el 100% del alto del contenedor */
-      border: none;             /* Elimina cualquier borde que pueda tener el iframe */
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
 /* Barra azul, va abajo del menu, y ahi van las frases  */
@@ -41,13 +43,14 @@ header, section, footer, aside, nav, main, article, figure {display: block;}
 	line-height: 2.1875rem;
 	width: 100%;
 	display: block;
-	color: #FFFFFF;
+	color: $color-accent;
 	font-size: 0.8125rem;
 	margin: 0 auto;
 	text-align: center;
 	
 	font-weight:bold;
-	background: #272727;
+	background: rgba(18, 18, 18, 0.95);
+	border-bottom: 1px solid rgba(231, 226, 174, 0.1);
 }
 
 /* #menu y #menu a, son las propiedades de estilo del menu de abajo de todas las paginas */
@@ -58,19 +61,21 @@ header, section, footer, aside, nav, main, article, figure {display: block;}
 	font-size: 0.75rem;
 }
 #menu a {
-	color: #171717;
+	color: $color-text-muted;
 	text-align:center;
 	display: inline-block;
+	&:hover { color: $color-accent; }
 }
-/* definen la tabla blanca donde van los contenidos */
+/* definen la tabla donde van los contenidos */
 
 #contents {
 	width:100%;
-	background-color: #FFF;
+	background-color: $color-bg-dark;
+	color: $color-text-main;
 	margin-right: auto;
 	margin-left: auto;
 }
-/* Los bloques que tengan article se veran afectador tambien en sus h1, h2, h3 y h4, es un estilo optimo para los articulos de la seccion documentos. */
+/* Los bloques que tengan article se veran afectador tambien en sus h1, h2, h3 y h4 */
 article {
 	margin:0 auto;
 	
@@ -82,13 +87,13 @@ article p {font-size: 1.0625rem; line-height: 1.5625rem;}
 article h1 {
 	text-align: center;
 	font-size: 2.1875rem;
-	color: #036;
+	color: $color-text-main;
     
 }
 article h1.g {font-size:1.125rem;}
 article h1.azultimes {
 	font-size: 1.75rem;
-	color: #384478;
+	color: #6B8EFF;
 	
 }
 article h2 {
@@ -109,7 +114,7 @@ article h4  {
 article h6 {
 	font-size: 0.625rem;
 	text-align: right;
-	color: #0000A0;
+	color: #6B8EFF;
 }
 article p.centrado {
 	text-align: center;
@@ -147,7 +152,7 @@ article hr.small {
 	font-size: 0.625rem;
 	text-align: left;
 }
-/* Esta clase es para centrar una imagen mediante css ejemplo: class="imgcentrada" */
+/* Esta clase es para centrar una imagen mediante css */
 .imgcentrada {
     display: block;
 	margin-left: auto;
@@ -163,30 +168,33 @@ article hr.small {
 }
 .piedefoto {
 	font-size: 0.625rem;
-	color: #069;
+	color: #6B8EFF;
 	text-align: center;
 	margin-top: -0.0625rem;
 }
 
-/* con esta clase se puede dar un marco a un texto sin necesidad de poner una tabla, ejemplo en: FernandoGarcia.html */
+/* con esta clase se puede dar un marco a un texto */
 .marco {
 	border: groove;
 	padding: 2%;
 }
 .marcofoto {
-	border: solid 0.125rem #000;
+	border: solid 0.125rem rgba(255, 255, 255, 0.15);
 }
-/* color de todos los links al ser visitados     a:visited {	color: #363 } 
-   color por defecto de todos los links          a:link { color: blue }
-*/
-/* color de los links al pasar el mause por ellos y al darles click */
-a:link {color:#039;}
-a:hover {color: #930;}
-/* Necesitas comentario para saber que hace esto? */
+
+/* Global link colors — Dark Theme */
+a:link { color: $color-text-muted; }
+a:hover { color: $color-accent; }
+
 .azul {
-    color: #0000A0
+    color: #6B8EFF;
 }
-/* las listas Ul-LI en documentos.htm muy pegadas, esto separa un poco una linea de otra */
+.red {
+	color: #F33;
+	font-size: 0.6875rem;
+	padding: 0.125rem;
+}
+/* las listas Ul-LI en documentos.htm */
 .masespacio {
 	line-height: 1.25rem;
 }
@@ -205,30 +213,7 @@ a:hover {color: #930;}
 #menudocs a {
 	color: #FFF;
 }
-/* Propiedades de la tabla de obras.htm */
-table.obras {
-	margin-right: auto;
-	margin-left: auto;
-	line-height: 1.25rem;
-}
-table.obras td.tdright {
-	text-align:right;
-	padding-right:1.125rem;
-}
-table.obras td.tdleft {
-	text-align: left;
-	padding-right:1.125rem;
-}
-table.obras caption {
-	font-size: 0.875rem;
-	font-weight: bold;
-}
 
-.red {
-	color: #F33;
-	font-size: 0.6875rem;
-	padding: 0.125rem;
-}
 /* puntos en traduccion.html */
 .pts {
 	font-size: 1rem;
@@ -270,7 +255,7 @@ table.obras caption {
 .listaalfa {
 	list-style-type: upper-alpha;
 }
-/* define la posicion del pequeño menu español-ingles, en los articulos que tienen traduccion */
+/* define la posicion del pequeño menu español-ingles */
 .idiomacentrado {
 	text-align: center;
 	
@@ -302,14 +287,14 @@ table.obras caption {
 /* Tabla de Cifras.htm */
 #tablacifras {
 	font-size: 0.6875rem;
-	color: #666666;
+	color: $color-text-muted;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 1.25rem;
 	width: 52%;
 }
 #titulocifras {
-	color: #0000A0;
+	color: #6B8EFF;
 	font-size: 18pt;
 	text-align: center;
 }
@@ -333,7 +318,7 @@ table.obras caption {
 h1.titulotienda {
 	
 	font-size: 1.125rem;
-	color: #666;
+	color: $color-text-muted;
 	text-align: center;
 }
 h1.notext {
@@ -358,18 +343,14 @@ h1.notext {
 
 
 
-
-
-
-
-/* CSS de las obras */
+/* CSS de las obras (individual play detail pages) */
 
 /* Esta propiedad permite que las columnas de obras funcionen bien en ff y en ie */
 #contenedorcolumnaobra * {padding:0; margin:0;}
 #contenedorcolumnaobra {height:100%; margin:0 auto;}
 
 #contenedorcolumnaobra > img, #contenedorcolumnaobra .bloqueobra img {max-width:75%; height:auto;}
-#contenedorcolumnaobra > img:first-child {margin:o auto; display:block; width:74%;}
+#contenedorcolumnaobra > img:first-child {margin:0 auto; display:block; width:74%;}
 
 #contenedorcolumnaobra::after {
   content: "";
@@ -384,8 +365,9 @@ h1.notext {
 	width:70%;
 	display:inline-block;
 	margin:0 auto;
-    background-color:#FFFFFF;
+    background-color: $color-bg-light;
 	padding: 0.625rem 2%;
+	color: $color-text-main;
 }
 
 /* Es necesario aplicar esto a causa de la propiedad anterior */
@@ -471,7 +453,7 @@ h1.notext {
 .bloqueobra h3 {
 	font-size: 1.375rem;
 	margin-top: 0.9375rem;
-	color:#333;
+	color: $color-text-main;
     
 }
 .bloqueobra h4 {
@@ -511,7 +493,7 @@ h2.album {
 	height:22.5rem; 
 	position:relative;
 	padding:0.3125rem 0; 
-	background:#fff; 
+	background: $color-bg-light; 
 	margin:0 auto 1.25rem auto; 
 	clear:both;
 }
@@ -522,7 +504,7 @@ h2.album {
 	position:absolute; 
 	top:0; 
 	right:0; 
-	border:0.0625rem solid #ddd;
+	border:0.0625rem solid rgba(255,255,255,0.1);
 }
 #album span {
 	display:block; 
@@ -530,7 +512,7 @@ h2.album {
 	height:22.8125rem; 
 	position:absolute; 
 	top:0; left:0; 
-	border:0.0625rem solid #ddd;
+	border:0.0625rem solid rgba(255,255,255,0.1);
 }
 #album a span.descripcion{
 	display:none;
@@ -542,9 +524,9 @@ h2.album {
 	height:1.875rem;
 	font-size:0.625rem;
 	
-	border-bottom-color: #FFF;
+	border-bottom-color: $color-bg-light;
 	text-align: center;
-	color: #666;
+	color: $color-text-muted;
 }
 #album b#thumbs {
 	display:block; 
@@ -553,7 +535,7 @@ h2.album {
 	overflow:auto; 
 	float:right; 
 	margin-top:10.9375rem; 
-	border:0.0625rem solid #ccc; 
+	border:0.0625rem solid rgba(255,255,255,0.1); 
 	border-width:0.0625rem 0.0625rem 0.0625rem 0.0625rem; 
 	padding:0.3125rem;
 }
@@ -561,10 +543,10 @@ h2.album {
 	display:block; 
 	float:left; 
 	margin:0 0.625rem 0.625rem 0; 
-	background:#f8f8ff; 
+	background: $color-bg-light; 
 	width:3.125rem; 
 	height:3.125rem; 
-	border:0.0625rem solid #000;
+	border:0.0625rem solid rgba(255,255,255,0.1);
 }
 #album b#thumbs a img {
 	width:3.125rem; 
@@ -573,12 +555,12 @@ h2.album {
 }
 
 #album b#thumbs a:hover {
-	border:0.0625rem dotted #ccc; 
-	background:#fff url(img/click.gif);
+	border:0.0625rem dotted $color-accent; 
+	background: $color-bg-dark;
 }
 #album b#thumbs a:active, #album b#thumbs a:focus {
-	border:0.0625rem solid #fff; 
-	background:#fff; 
+	border:0.0625rem solid $color-accent; 
+	background: $color-bg-dark; 
 	outline:0;
 }
 #album b#thumbs a:hover img {
@@ -598,28 +580,28 @@ h2.album {
 	height:7.5rem; 
 	right:2.1875rem; 
 	top:0.4375rem; 
-	border:0.0625rem solid #333;
+	border:0.0625rem solid rgba(255,255,255,0.2);
 }
 #album b#thumbs a:hover img.vt {
 	width:7.5rem; 
 	height:10rem; 
 	right:3.4375rem; 
 	top:0.4375rem; 
-	border:0.0625rem solid #333;
+	border:0.0625rem solid rgba(255,255,255,0.2);
 }
 #album b#thumbs a:active img.hr, #album b#thumbs a:focus img.hr {
 	width:20rem; 
 	height:15rem; 
 	left:1.25rem; 
 	top:0.4375rem; 
-	border:0.0625rem solid #333;
+	border:0.0625rem solid rgba(255,255,255,0.2);
 }
 #album b#thumbs a:active img.vt, #album b#thumbs a:focus img.vt {
 	width:15rem; 
 	height:20rem; 
 	left:3.75rem; 
 	top:0.4375rem; 
-	border:0.0625rem solid #333;
+	border:0.0625rem solid rgba(255,255,255,0.2);
 }
 
 
@@ -654,4 +636,3 @@ article {
 /* CSS de las obras */
 #contenedorcolumnaobra {width: 90%;}
 }
-
