@@ -434,7 +434,8 @@
     </div>
     <!--Para quitar los eventos que ya pasaron!-->
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      // Run immediately upon injection
+      (() => {
         const today = new Date();
         const events = document.querySelectorAll(".noticiasfuncion");
 
@@ -449,7 +450,7 @@
             event.style.display = "none";
           }
         });
-      });
+      })();
     </script>
 
     <div id="poemaindex">

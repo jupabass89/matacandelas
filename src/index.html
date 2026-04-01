@@ -6,7 +6,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/assets/img/IconoMatacandelas.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Orbitron:500" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="/features/frases.js"></script>
   <meta content="teatro,matacandelas,titeres,musica,arte,poesia,articulos de teatro,cine,cabaret" name="keywords" />
   <meta
@@ -59,51 +61,41 @@
 </head>
 
 <body>
-  <nav>
-    <label for="drop">Menu</label>
-    <input type="checkbox" id="drop" />
-    <ul>
-      <li class="fuego">
-        <a class="index" href="home"><span class="notext">Página principal</span>
-          <img src="/assets/img/Matacandelas.png" width="321" height="43" alt="Matacandelas" />
-        </a>
-      </li>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="home">
+        <img src="/assets/img/Matacandelas.png" alt="Matacandelas" />
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-menu">
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Nuestro grupo</a>
+          <ul class="nav-dropdown">
+            <li><a href="suscribir">Boletín</a></li>
+            <li><a href="historia">Historia</a></li>
+            <li><a href="cifras">Cifras</a></li>
+            <li><a href="ubicacion">Ubicación</a></li>
+            <li><a href="casa">La casa</a></li>
+            <li><a href="logo">Logo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="obras" class="nav-link">Obras</a>
+        </li>
+        <li class="nav-item">
+          <a href="documentos" class="nav-link">Documentos</a>
+        </li>
+        <li class="nav-item">
+          <a href="contacto" class="nav-link">Contacto</a>
+        </li>
 
-      <li class="top">
-        <a class="nuestrogrupo" href="/" onclick="funcion;return false;">Nuestro grupo</a>
-        <ul class="sub">
-          <li><a href="suscribir">Boletín</a></li>
-          <li><a href="historia">Historia</a></li>
-          <li><a href="cifras">Cifras</a></li>
-          <li><a href="ubicacion">Ubicación</a></li>
-          <li><a href="casa">La casa</a></li>
-          <li><a href="logo">Logo</a></li>
-          <!--<li><a href="../infoesal">Inf. legal</a></li>-->
-          <!-- <li><a href="contacto">Contacto</a></li> -->
-        </ul>
-      </li>
-      <li class="top"><a class="obras" href="obras">Obras</a></li>
-      <ul class="sub">
-        <li><a target="_blank" href="https://www.instagram.com/teatromatacandelas/">Instagram</a></li>
-        <li><a target="_blank" href="http://www.facebook.com/matacandelas">Facebook</a></li>
-        <li><a target="_blank" href="https://www.tiktok.com/@matacandelas">Tiktok</a></li>
-        <li><a target="_blank" href="http://www.youtube.com/teatromatacandelas">Youtube</a></li>
-        <li><a target="_blank" href="https://www.flickr.com/photos/matacandelas/albums">Flickr</a></li>
       </ul>
-    </li>
-    <li class="top"><a class="entorno" href="documentos" onclick="funcion;return false;">Documentos</a></li>
-    <li class="top"><a class="entorno" href="contacto" onclick="funcion;return false;">Contacto</a></li>
-    <li class="top"><a class="siguenos" href="UnaFlorEnElPavimento" onclick="funcion;return false;">Síguenos en:</a>
-      <ul class="sub">
-        <li><a target="_blank" href="https://www.instagram.com/teatromatacandelas/">Instagram</a></li>
-		<li><a target="_blank" href="http://www.facebook.com/matacandelas">Facebook</a></li>
-        <li><a target="_blank" href="https://www.tiktok.com/@matacandelas">Tiktok</a></li>
-        <li><a target="_blank" href="http://www.youtube.com/teatromatacandelas">Youtube</a></li>
-        <li><a target="_blank" href="https://www.flickr.com/photos/matacandelas/albums">Flickr</a></li>
-      </ul>
-    </li>
-
-    </ul>
+    </div>
   </nav>
 
   <span id="barraazul">
@@ -261,62 +253,48 @@
       <!-- </div> -->
 
       <!-- Footer -->
-      <footer>
-
-        <div class="apoyan">
-          <h4>Aliados</h4>
-          <a href="https://www.alklima.com.co/" target="_blank"><img src="/assets/img/LogoAlklima.png" width="234"
-              height="65" alt="" /></a><a href="https://www.facebook.com/AeroHostal"
-            title="Aerohostal La casa en el aire" target="_blank"><img src="/assets/img/Logo-La-casa-en-el-aire.png"
-              width="182" height="63" alt="La casa en el aire" /></a><a href="http://www.medellinenescena.com.co"
-            target="_blank"><img class="medellinenescena" src="/assets/img/MedellinEnEscena1.jpg" width="131"
-              height="67" alt="Asociación Medellín en escena" /></a><a href="http://www.otraparte.org/"
-            target="_blank"><img class="otraparte" src="/assets/img/OtraparteLogoGrande.jpg" width="206" height="55"
-              alt="La Otraparte de Fernando González" /></a><a href="https://distritosanignacio.com/inicio/"
-            target="_blank"><img src="/assets/img/LogoComfama.png" width="195" height="75" alt="Comfama" /></a><a
-            href="http://www.confiar.coop/" title="Confiar - Cooperativa Financiera" target="_blank"><img
-              src="/assets/img/LogoConfiar2023.png" width="184" height="67" alt="" /></a><a
-            href="http://www.teatropablotobon.com/" target="_blank"><img src="/assets/img/LogoTeatroPabloTobon.png"
-              width="189" height="66" alt="Teatro Pablo Tobón" /></a><a href="https://www.gatolokofilms.com/"
-            target="_blank"><img src="/assets/img/LogoGatoLokoFilms.png" width="129" height="100"
-              alt="Gato Loko Films" /></a><a href="https://www.comunycorriente.org/" target="_blank"><img
-              src="/assets/img/Logo-Pascasia.png" width="99" height="99" alt="La Pascasia" /></a><a
-            href="https://compasurbano.com" target="_blank"><img src="/assets/img/Logo-Compas-Urbano.png" width="95"
-              height="95" alt="Compás Urbano" /></a><a href="http://www.casateatroelpoblado.com/" target="_blank"><img
-              src="/assets/img/Logo-CasaTeatro-El-Poblado-N.png" width="84" height="96" alt="Casa Teatro" /></a><a
-            href="https://www.facebook.com/huggerisland/" target="_blank"><img src="/assets/img/LogoHuggerIsland.png"
-              width="96" height="94" alt="Hugger Island" /></a><a href="https://dispronat.com.co/" target="_blank"><img
-              src="/assets/img/logo-dispronat.png" width="169" height="79" alt="Dispronat logo" /></a><a
-            href="https://morada.co/"><img src="/assets/img/Logo-Casa-Morada.png" width="208" height="73"
-              alt="Logo de Casa Morada" /></a><a href="https://latinastereo.com/"><img src="/assets/img/Logo-Latina.png"
-              width="158" height="94" alt="Latina" /></a><a href="https://www.tragaluzeditores.com/"><img
-              src="/assets/img/Logo-Tragaluz.png" width="138" height="94" alt="Tragaluz" /></a><a
-            href="https://somospornaturaleza.org/"><img src="/assets/img/Logo-Somos-por-naturaleza.png" width="137"
-              height="114" alt="Somos por naturaleza" /></a><a href="https://www.redcepela.org/quienes_somos/"><img
-              src="/assets/img/Logo-red-cepela.png" width="120" height="120" alt="Red cepela" /></a><a
-            href="https://puertodelaimaginacion.org/" target="_blank"><img
-              src="/assets/img/LogoPuerto-de-la-imaginacion.png" width="173" height="126" alt="" /></a><a
-            href="https://fundacionalmargen.com/" target="_blank"><img src="/assets/img/Logo-almargen.png" width="95"
-              height="111" alt="" /></a><br>
-
-          <!--<a href="http://www.mincultura.gov.co" target="_blank"><img src="..//src/assets/img/LogoMinisterio2024.png" width="195" height="154" alt="Logo Ministerio Culturas"/></a><br>
-      <a href="https://www.medellin.gov.co" target="_blank"><img src="..//src/assets/img/LogoAlcaldiaMedellin2024.png" width="213" height="166" alt="Logo Alcaldia 2024"/></a>--><br>
-          <div class="recomienda">
-            <h4><a href="https://www.roccograficas.com" title="Servicios litograficos - Litografía - Rocco Gráficas"
-                target="_blank"><img src="/assets/img/Logo-Litografia-Roccograficas2021.jpg" width="200" height="59"
-                  alt="Litografia en Medellín - Rocco Gráficas" /></a><a href="https://www.roccograficas.com"
-                title="Litografía - Rocco Gráficas - Servicios de impresión" target="_blank"><br>
-                Litografía - Servicios de impresión</a></h4>
-          </div>
-          <a style="margin-top: 10px" href="https://www.eticketablanca.com/" target="_blank"><img class="imgcentrada"
-              src="/assets/img/Logo-Bitcoin-Eticketa-Blanca.png" width="300" height="76"
-              alt="Bitcoin - Eticketa Blanca" /></a>
+      <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section footer-info">
+        <p class="footer-address">
+          Calle 47 No. 43 - 47 | Medellín - Colombia<br>
+          <strong>Tels:</strong> (057) 350 215 11 00
+        </p>
+        <div class="footer-blockchain">
+          <a href="https://www.eticketablanca.com/" target="_blank">
+            <img src="/assets/img/Logo-Bitcoin-Eticketa-Blanca.png" alt="Bitcoin - Eticketa Blanca" />
+          </a>
         </div>
-
-        <p>Calle 47 No. 43 - 47 | Medellín - Colombia | <strong>Tels:</strong> (057) 350 215 11 00</p>
-
-
-      </footer>
+      </div>
+      
+      <div class="footer-section footer-allies">
+        <h4>Aliados Estratégicos</h4>
+        <div class="allies-grid">
+          <a href="https://www.alklima.com.co/" target="_blank"><img src="/assets/img/LogoAlklima.png" alt="" /></a>
+          <a href="https://www.facebook.com/AeroHostal" target="_blank"><img src="/assets/img/Logo-La-casa-en-el-aire.png" alt="" /></a>
+          <a href="http://www.medellinenescena.com.co" target="_blank"><img src="/assets/img/MedellinEnEscena1.jpg" alt="" /></a>
+          <a href="http://www.otraparte.org/" target="_blank"><img src="/assets/img/OtraparteLogoGrande.jpg" alt="" /></a>
+          <a href="https://distritosanignacio.com/inicio/" target="_blank"><img src="/assets/img/LogoComfama.png" alt="" /></a>
+          <a href="http://www.confiar.coop/" target="_blank"><img src="/assets/img/LogoConfiar2023.png" alt="" /></a>
+          <a href="http://www.teatropablotobon.com/" target="_blank"><img src="/assets/img/LogoTeatroPabloTobon.png" alt="" /></a>
+          <a href="https://www.gatolokofilms.com/" target="_blank"><img src="/assets/img/LogoGatoLokoFilms.png" alt="" /></a>
+          <a href="https://latinastereo.com/" target="_blank"><img src="/assets/img/Logo-Latina.png" alt="Latina" /></a>
+          <a href="https://www.roccograficas.com" target="_blank"><img src="/assets/img/Logo-Litografia-Roccograficas2021.jpg" alt="Rocco Gráficas" /></a>
+          <a href="https://www.comunycorriente.org/" target="_blank"><img src="/assets/img/Logo-Pascasia.png" alt="La Pascasia" /></a>
+          <a href="https://compasurbano.com" target="_blank"><img src="/assets/img/Logo-Compas-Urbano.png" alt="Compás Urbano" /></a>
+          <a href="http://www.casateatroelpoblado.com/" target="_blank"><img src="/assets/img/Logo-CasaTeatro-El-Poblado-N.png" alt="Casa Teatro" /></a>
+          <a href="https://www.facebook.com/huggerisland/" target="_blank"><img src="/assets/img/LogoHuggerIsland.png" alt="Hugger Island" /></a>
+          <a href="https://dispronat.com.co/" target="_blank"><img src="/assets/img/logo-dispronat.png" alt="Dispronat" /></a>
+          <a href="https://morada.co/" target="_blank"><img src="/assets/img/Logo-Casa-Morada.png" alt="Casa Morada" /></a>
+          <a href="https://www.tragaluzeditores.com/" target="_blank"><img src="/assets/img/Logo-Tragaluz.png" alt="Tragaluz" /></a>
+          <a href="https://somospornaturaleza.org/" target="_blank"><img src="/assets/img/Logo-Somos-por-naturaleza.png" alt="Somos por naturaleza" /></a>
+          <a href="https://www.redcepela.org/quienes_somos/" target="_blank"><img src="/assets/img/Logo-red-cepela.png" alt="Red cepela" /></a>
+          <a href="https://puertodelaimaginacion.org/" target="_blank"><img src="/assets/img/LogoPuerto-de-la-imaginacion.png" alt="" /></a>
+          <a href="https://fundacionalmargen.com/" target="_blank"><img src="/assets/img/Logo-almargen.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
       <!-- Menu fijo abajo -->
       <div id="menu"><a href="home">Inicio</a> - <a href="Servicios-de-Teatro-Titeres-y-Musica">Servicios</a> -
@@ -324,6 +302,28 @@
           href="obras">Obras</a> - <a href="documentos">Documentos</a>
       </div>
 
+  <div class="floating-socials">
+    <a href="https://www.instagram.com/teatromatacandelas/" target="_blank" class="social-btn instagram" title="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      <span class="social-text">Instagram</span>
+    </a>
+    <a href="http://www.facebook.com/matacandelas" target="_blank" class="social-btn facebook" title="Facebook">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+      <span class="social-text">Facebook</span>
+    </a>
+    <a href="https://www.tiktok.com/@matacandelas" target="_blank" class="social-btn tiktok" title="TikTok">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V0h4a6 6 0 0 0-6 6z"></path><path d="M15 2v4a3 3 0 0 0 3 3v4a7 7 0 0 1-7-7z"></path></svg>
+      <span class="social-text">TikTok</span>
+    </a>
+    <a href="http://www.youtube.com/teatromatacandelas" target="_blank" class="social-btn youtube" title="YouTube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2C5.12 19.5 12 19.5 12 19.5s-6.88 0-8.6-.46a2.78 2.78 0 0 0-1.94-2 29 29 0 0 0-.46-5.33 29 29 0 0 0 .46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+      <span class="social-text">YouTube</span>
+    </a>
+    <a href="https://www.flickr.com/photos/matacandelas/albums" target="_blank" class="social-btn flickr" title="Flickr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="12" r="5" fill="currentColor" stroke="none"></circle><circle cx="17" cy="12" r="5" fill="currentColor" stroke="none"></circle></svg>
+      <span class="social-text">Flickr</span>
+    </a>
+  </div>
 </body>
 
 </html>

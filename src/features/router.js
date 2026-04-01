@@ -62,6 +62,15 @@ export async function router(path = window.location.pathname) {
 
     pageContent.innerHTML = html
     window.scrollTo(0, 0)
+
+    // Execute scripts manually since innerHTML doesn't
+    const scripts = pageContent.querySelectorAll('script')
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script')
+      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.textContent = oldScript.textContent
+      oldScript.parentNode.replaceChild(newScript, oldScript)
+    })
   } catch (error) {
     console.error('Error loading page:', error)
     pageContent.innerHTML = '<p>Error al cargar la página</p>'
