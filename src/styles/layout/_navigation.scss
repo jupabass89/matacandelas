@@ -1,0 +1,170 @@
+@use '../abstracts/mixins' as *;
+
+// --- Menu.css ---
+@charset "utf-8";
+
+/* Menu Xhtml Y Css */
+
+nav * {margin:0;padding:0;}
+
+
+// --- Menu-celular.css ---
+@include mobile {
+@charset "utf-8";
+
+/* Menu Xhtml Y Css */
+
+nav * {margin:0; padding:0;}
+
+nav > ul {display:none;}
+
+#drop {display: none;}
+#drop:checked + ul {display: block;}
+
+nav > label {height:110px; line-height:180px; width:100%; display:block; color:#FFFFFF; background:url(img/Matacandelas.png) no-repeat center top; background-color: #1f1f1f; font-size:22px; clear:both; text-align:center; margin:0;} 
+
+nav {width:100%;margin:0 auto;}
+
+nav > ul {list-style:none;text-align:center; }
+
+nav > ul > li{width:100%;border-top:none; font-size:20px;background-color:#E6F2FF;}
+
+
+nav > ul > li.fuego {display:none;}
+
+nav > ul > li a{height:35px;line-height:35px;display:block;padding-left:12px;padding-right:12px;color:#555;}
+
+nav > ul > li > ul > li {display: inline-block;  font-size:15px;}
+
+nav > ul > li > ul > li > ul {display:none;}
+}
+
+// --- Menu-pantalla.css ---
+@include desktop {
+@charset "utf-8";
+
+/* Menu Xhtml Y Css */
+
+
+
+nav {width:100%; background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #000000 88%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #45484d 0%,#000000 88%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #45484d 0%,#000000 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */}
+
+nav label, nav input {display:none;}
+
+nav > ul {
+	margin: 0 auto;
+	list-style:none;
+	height:60px;
+	position:relative;
+	z-index:200;
+	width:1150px;
+}
+nav > ul > li {
+	height:60px;
+	line-height:60px;
+}
+nav ul li.top {
+	display:block;
+	float: left;
+	text-align:right;
+}
+nav ul li.fuego {
+	float:left;
+	height:60px;
+	line-height:60px;
+	width: 340px;
+}
+nav ul li.fuego img {display: inline-block; margin: 0 auto; display:inline-block; vertical-align: middle;}
+nav ul li a:link {color:#FFF;}
+nav ul li a:hover {color: #FFEBEC; text-decoration:none;}
+nav ul li a {
+	color: #FFF;
+	display:block;
+	float:left;
+	cursor:pointer;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav ul li a.nuestrogrupo {
+	height:60px;
+	width: 150px;
+
+}
+nav ul li a.obras {
+	height:60px;
+	width: 150px;
+}
+nav ul li a.programacion {
+	height:60px;
+	width: 150px;
+}
+nav ul li a.entorno {
+	height:60px;
+	width: 150px;
+}
+nav ul li a.siguenos {
+	height:60px;
+	width: 150px;
+}
+nav ul li span.notext {
+	display: none;
+}
+nav ul .sub {
+	position:absolute; 
+	left:-9999px; 
+	top:-9999px; 
+	width:0; 
+	height:0; 
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}
+nav ul li:hover {
+	position:relative;
+	z-index:200;
+}
+nav ul a:hover {
+	position:relative; 
+	white-space:normal; 
+	z-index:200;
+}
+nav ul :hover ul.sub {
+	left:0;
+	top:60px;
+	z-index:300;
+	width:140px;
+}
+nav ul :hover ul.sub li {
+	float:left;
+	display:block;
+	position:relative;
+	top:-2px;
+	font-weight:normal;
+	background-color: #DFDFDF;
+	height:40px;
+	line-height: 30px;
+}
+nav ul :hover ul.sub li a {
+	height:40px;
+	width:160px;
+	display:block;
+	text-decoration:none;
+	padding:0;
+	cursor:pointer;
+	text-align: center;
+	color:#000000;
+}
+nav ul ul.sub li a:hover {
+	background-color: #FFFFFF;
+	border-top: solid 1px #333C59;
+	border-bottom: solid 1px #333C59;
+}
+}
+

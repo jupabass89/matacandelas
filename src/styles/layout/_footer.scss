@@ -1,0 +1,55 @@
+@use '../abstracts/mixins' as *;
+
+// --- Piedepagina.css ---
+@charset "utf-8";
+/* pie de pagina */
+footer * {
+	margin: 0;
+	padding: 0;
+}
+footer {
+	width: 100%;
+    border-top: 2px double #CDD1F5;
+	clear: both;
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 40px 0;
+	margin: 0 auto 0 auto;
+}
+footer img.imgcentrada {
+	margin: 0 auto 0 auto;
+	display: block;
+}
+/* centrar buscador de google */
+#google {
+	text-align: center;
+	margin: 15px 0 15px 0; 
+}
+footer p, footer h4 {
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
+footer img {
+	border: 0;
+	margin: 10px;
+}
+
+footer div.apoyan {
+	width: 90%;
+	background-color:#FFF;
+	margin: 50px auto;
+	text-align: center;
+}
+footer div.recomienda {
+	max-width:20%;
+	min-width: 280px;
+	display: inline-block;
+	vertical-align: top;
+	background-color:#FFF;
+	margin: 15px auto 15px auto;
+}
+footer div.recomienda h4 {line-height: 12px;}
+footer div.recomienda h4 a {color: #1B1A1A;}
+
+
+

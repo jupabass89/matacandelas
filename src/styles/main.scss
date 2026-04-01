@@ -1,1 +1,6 @@
-
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'base/global';
+@use 'layout/navigation';
+@use 'layout/footer';
+@use 'pages/home';
