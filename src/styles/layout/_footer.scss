@@ -31,9 +31,13 @@
     
     .footer-blockchain img {
       width: 200px;
-      opacity: 0.8;
+      filter: grayscale(100%) invert(1) brightness(1.8) opacity(0.6);
+      mix-blend-mode: screen;
       transition: $transition-smooth;
-      &:hover { opacity: 1; }
+      &:hover { 
+        filter: grayscale(100%) invert(1) brightness(2.5) opacity(1);
+        transform: scale(1.02);
+      }
     }
   }
 
@@ -59,11 +63,12 @@
       img {
         max-width: 100%;
         max-height: 50px;
-        filter: grayscale(100%) opacity(0.6);
+        filter: grayscale(100%) invert(1) brightness(1.5) opacity(0.6);
+        mix-blend-mode: screen;
         transition: $transition-smooth;
 
         &:hover {
-          filter: grayscale(0%) opacity(1);
+          filter: grayscale(100%) invert(1) brightness(2) opacity(1);
           transform: scale(1.05);
         }
       }

@@ -8,456 +8,550 @@
 /* Poem Section */
 #poemaindex {
   width: 100%;
-  max-width: 720px;
-  margin: 4rem auto;
+  max-width: 100%;
+  margin: 0;
   text-align: center;
-  padding: 3rem 1.5rem;
-}
-#poemaindex p {
-  font-size: 1.15rem;
-  line-height: 2;
-  color: $color-text-muted;
-}
+  padding: 1.25rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
 
-/* Sos Teatral */
-.sosteatral { width: 50rem; margin: 0 auto; }
+  h2.tseccion {
+    color: $color-accent;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    letter-spacing: 0.05rem;
+    margin: 0 auto 0.25rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba($color-accent, 0.2);
+    display: inline-block;
 
-/* Carousel / Banner */
-.w3-animate-fading{animation:fading 8s infinite}@keyframes fading{0%{opacity:0}99%{opacity:1}100%{opacity:0}}
-.barrateatronoticias2 {
-  width: 100%;
-  background-image: none;
-  background-repeat: no-repeat, repeat-x;
-  background-position: center, top;
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0.4rem;
+  }
+
+  p.author {
+    color: rgba($color-accent, 0.8);
+    font-style: italic;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
 }
-.barrateatronoticias2 > img {width:100%; max-width:37.5rem; margin: 0 auto;}
 
 /* Section Titles */
-h2.tseccion {
-  width: 100%;
-  color: $color-accent;
-  line-height: 6.25rem;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  letter-spacing: 0.5rem;
-  text-align: center;
-  margin: 0 auto;
-  text-transform: uppercase;
-}
-
 
 /* =========================================================================
    Programación — Modern Event Cards
    ========================================================================= */
 
 #programacion {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-  background: transparent;
-}
+  // max-width: 1100px;
+  // margin: 2rem auto;
+  // padding: 0 1.5rem;
+  // background: green;
+  width: 100%;
 
-/* Month Headers */
-#programacion h2.fecha {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: $color-accent;
-  letter-spacing: 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-  background: transparent;
-  border: none;
-  margin: 3rem auto 2rem;
-  padding-bottom: 0.75rem;
-  position: relative;
-  width: auto;
+  /* Month Headers */
+  h2.fecha {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: $color-accent;
+    letter-spacing: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    // background-color: grey;
+    border: none;
+    margin: 3rem auto 2rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+    width: auto;
 
-  &::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: $color-accent;
-    margin: 0.75rem auto 0;
-    border-radius: 2px;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-accent;
+      margin: 0.75rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  /* ---- Individual Event Card ---- */
+
+
+  .ciudad {
+    border: 1px solid rgba(231, 226, 174, 0.2);
+  }
+
+  .sexta {
+    border: 1px solid rgba(231, 226, 174, 0.2);
+    background-color: rgba(198, 40, 40, 0.05);
   }
 }
 
-/* ---- Individual Event Card ---- */
-#programacion .noticiasfuncion {
-  background: $color-bg-light;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+.funcion-card {
+  cursor: pointer;
+  display: flex;
+
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 0;
-  margin: 0 auto 1.5rem;
-  overflow: hidden;
+  margin: 0 auto 2.5rem;
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto;
-  gap: 0;
   width: 100%;
-  height: auto;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  // max-height: 10rem;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 
-  /* Remove old legacy filters */
-  filter: none;
-  -webkit-filter: none;
+  &:has(.vermas-btn[aria-expanded="true"]) {
+    z-index: 50;
+  }
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 16px 48px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(231, 226, 174, 0.12);
-    border-color: rgba(231, 226, 174, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba($color-accent, 0.2);
+
+    .date {
+      @include desktop {
+        background: linear-gradient(180deg, rgba($color-accent, 0.15) 0%, rgba($color-accent, 0.02) 100%);
+        border-right-color: rgba($color-accent, 0.25);
+      }
+    }
+
+    .content .imagen-evento {
+      transform: scale(1.03) rotate(2deg);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
   }
 
-  /* Remove old alternating row colors */
-  &:nth-child(odd) {
-    background-color: $color-bg-light;
+  @include mobile {
+    flex-direction: column;
   }
-}
 
-/* ---- Date Block ---- */
-#programacion .noticiasfuncion .dia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 1.25rem;
-  background: rgba(231, 226, 174, 0.08);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-  min-width: 100px;
-  width: auto;
-  height: auto;
-  float: none;
-  margin: 0;
-
-  * {
-    display: block;
-    color: $color-text-muted;
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(180deg, rgba($color-accent, 0.06) 0%, rgba($color-accent, 0.01) 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px 0 0 12px;
+    min-width: 120px;
     text-align: center;
-    margin: 0;
+    transition: all 0.4s ease;
+
+    @include mobile {
+      flex-direction: row;
+      gap: 1rem;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px 12px 0 0;
+      padding: 1rem;
+      background: linear-gradient(90deg, rgba($color-accent, 0.08) 0%, rgba($color-accent, 0.02) 100%);
+    }
+
+    h5 {
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.5);
+
+      @include mobile {
+        font-size: 0.85rem;
+      }
+    }
+
+    h3 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      color: $color-accent;
+      line-height: 1;
+      margin: 0.5rem 0;
+      text-shadow: 0 2px 10px rgba($color-accent, 0.2);
+
+      @include mobile {
+        font-size: 2.25rem;
+        margin: 0;
+      }
+    }
   }
 
-  h5 {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: 1.4;
-    width: auto;
-    color: $color-text-muted;
+  .content {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr auto;
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding: 1.25rem;
+      gap: 1rem;
+    }
+
+    .presenter {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+
+      &__strong {
+        font-weight: 700;
+        color: rgba($color-accent, 0.9);
+        display: inline;
+      }
+    }
+
+    .title {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.25;
+      text-align: left;
+
+      @include mobile {
+        grid-row: 3;
+        font-size: 1.4rem;
+      }
+    }
+
+    .description {
+      grid-column: 1;
+      grid-row: 3;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.6;
+
+      @include mobile {
+        grid-row: 4;
+      }
+
+      strong {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
+    .imagen-evento {
+      grid-column: 2;
+      grid-row: 2 / span 3;
+      width: 12.5rem;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      align-self: center;
+
+
+      @include mobile {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .actions-row {
+      grid-column: 1;
+      grid-row: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @include mobile {
+        grid-row: 5;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .vermas-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      font-family: inherit;
+      font-size: 0.75rem;
+      color: $color-accent;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba($color-accent, 0.3);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .vermas-icon {
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &[aria-expanded="true"] .vermas-icon {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #a11c1e, #d82b2b);
+      color: #fff !important;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(216, 43, 43, 0.25);
+      // margin-top: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(135deg, #d82b2b, #f63c3c);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(216, 43, 43, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .extended-content {
+      position: absolute;
+      top: calc(100% - 10px);
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #121212;
+      border: 1px solid rgba(255, 255, 255, 0.08); /* Matches card borders */
+      border-top: 1px dashed rgba($color-accent, 0.3);
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba($color-accent, 0.1);
+      padding: 2rem;
+      margin-top: 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+
+      @include mobile {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      p {
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.2px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          font-weight: 700;
+          color: rgba($color-accent, 0.95);
+        }
+      }
+    }
   }
-
-  h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: $color-accent;
-    line-height: 1;
-    margin: 0.25rem 0;
-    width: auto;
-    height: auto;
-    background-image: none;
-  }
 }
-#programacion .noticiasfuncion:hover .dia h5 {
-  color: $color-accent;
-}
-
-/* ---- Content Area (everything after .dia) ---- */
-#programacion .noticiasfuncion > :not(.dia) {
-  grid-column: 2;
-}
-
-#programacion .noticiasfuncion .imagen-evento {
-  grid-column: 3;
-  grid-row: 1/5;
-  margin: 3rem;
-  background-color: #8B1A1C;
-}
-
-
-/* Event Images */
-#programacion .noticiasfuncion img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.08);
-  float: right;
-  margin: 1.25rem 1.25rem 0.5rem 1rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-#programacion .noticiasfuncion:hover img {
-  border-color: rgba(231, 226, 174, 0.25);
-}
-/* Hide secondary overlay images by default */
-#programacion .noticiasfuncion img.imgo {
-  display: none;
-}
-
-/* Event Title */
-#programacion > .noticiasfuncion h1 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: $color-text-main;
-  margin: 1rem 1.25rem 0.25rem;
-  display: block;
-  clear: none;
-  text-align: left;
-
-  a {
-    color: $color-text-main;
-    text-decoration: none;
-    transition: color 0.25s ease;
-    &:link, &:visited { color: $color-text-main; }
-    &:hover { color: $color-accent; }
-  }
-}
-
-/* Event Description & Details */
-#programacion > .noticiasfuncion p {
-  color: $color-text-muted;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0.25rem 1.25rem 0.75rem;
-  display: block;
-  text-align: left;
-
-  strong {
-    // grid-row: 1/2;
-    color: $color-accent;
-    font-size: 0.9rem;
-  }
-
-
-}
-
-// .presents {
-
-//     grid-row: 1/2;
-//     display: none;
-//     color: #8B1A1C;
-
-// }
-
-// #programacion > .noticiasfuncion  .presents {
-// color: #8B1A1C;
-//     grid-row: 1;
-//     height: 10px;
-//     // display: none;
-
-// }
-
-/* "Ver más" Link */
-#programacion .noticiasfuncion a.vermas {
-  text-decoration: none;
-  font-size: 0.8rem;
-  color: $color-accent;
-  display: inline-block;
-  position: relative;
-  bottom: auto;
-  right: auto;
-  margin: 0 1.25rem 1rem;
-  padding: 0.35rem 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-
-  &:hover {
-    color: $color-text-main;
-  }
-
-  &::after {
-    content: ' →';
-  }
-}
-
-/* Ticket Buttons */
-#programacion .noticiasfuncion .btn,
-#contents > #programacion > .noticiasfuncion .btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #8B1A1C, #C62828);
-  color: #fff !important;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  height: auto;
-  line-height: 1.4;
-  margin-top: 0.5rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(135deg, #C62828, #E53935);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4);
-  }
-}
-
-#programacion .noticiasfuncion {
-  // max-height: 33rem;
-  // grid-template-rows: 2rem 1fr;
-}
-
-/* Expanded content */
-#programacion .noticiasfuncion div[id] {
-  padding: 0 1.25rem 1rem;
-  p {
-    color: $color-text-muted;
-    font-size: 0.85rem;
-    line-height: 1.7;
-  }
-}
-
-/* Festivo / Special Events */
-#programacion .noticiasfuncion .festivo {
-  background-color: rgba(198, 40, 40, 0.15);
-}
-#programacion .ciudad { border: 1px solid rgba(231, 226, 174, 0.2); }
-#programacion .sexta { border: 1px solid rgba(231, 226, 174, 0.2); background-color: rgba(198, 40, 40, 0.05); }
 
 
 /* =========================================================================
    Mobile — Programación
    ========================================================================= */
 @include mobile {
-  .sosteatral { width: 100%; }
-  .sos { margin: 0 auto; width: 90%; }
-  .sos h1 { text-align: center; margin-top: 0.9375rem; }
-  .sos p { width: 100%; font-size: 1.125rem; margin: 1.25rem auto; }
-  div #vsolar { width: 100%; height: 23.3125rem; margin: 1.25rem auto; }
+  .sosteatral {
+    width: 100%;
+  }
+
+  .sos {
+    margin: 0 auto;
+    width: 90%;
+
+    h1 {
+      text-align: center;
+      margin-top: 0.9375rem;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.125rem;
+      margin: 1.25rem auto;
+    }
+  }
+
+  div #vsolar {
+    width: 100%;
+    height: 23.3125rem;
+    margin: 1.25rem auto;
+  }
 
   #programacion {
     padding: 0 1rem;
-  }
 
-  #programacion h2.fecha {
-    letter-spacing: 0.4rem;
-    margin: 2rem auto 1.5rem;
-  }
-
-  #programacion .noticiasfuncion {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin-bottom: 1.25rem;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-
-  #programacion .noticiasfuncion .dia {
-    flex-direction: row;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    min-width: auto;
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-    h3 {
-      font-size: 2rem;
-      margin: 0;
+    h2.fecha {
+      letter-spacing: 0.4rem;
+      margin: 2rem auto 1.5rem;
     }
 
-    h5 {
-      font-size: 0.7rem;
+    .noticiasfuncion {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      .dia {
+        flex-direction: row;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        min-width: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+        h3 {
+          font-size: 2rem;
+          margin: 0;
+        }
+
+        h5 {
+          font-size: 0.7rem;
+        }
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin: 1rem 1rem 0.5rem;
+        float: none;
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 1.15rem;
+        text-align: center;
+        margin: 0.75rem 1rem 0.25rem;
+      }
+
+      p {
+        text-align: center;
+        margin: 0.25rem 1rem 0.5rem;
+        font-size: 0.85rem;
+      }
+
+      a.vermas {
+        text-align: center;
+        margin: 0 1rem 0.75rem;
+      }
+
+      .btn {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 1rem;
+      }
     }
-  }
-
-  #programacion .noticiasfuncion img {
-    width: 70px;
-    height: 70px;
-    margin: 1rem 1rem 0.5rem;
-    float: none;
-    display: inline-block;
-  }
-
-  #programacion > .noticiasfuncion h1 {
-    font-size: 1.15rem;
-    text-align: center;
-    margin: 0.75rem 1rem 0.25rem;
-  }
-
-  #programacion > .noticiasfuncion p {
-    text-align: center;
-    margin: 0.25rem 1rem 0.5rem;
-    font-size: 0.85rem;
-  }
-
-   #programacion .noticiasfuncion a.vermas {
-    text-align: center;
-    margin: 0 1rem 0.75rem;
-  }
-
-  #programacion .noticiasfuncion .btn,
-  #contents > #programacion > .noticiasfuncion .btn {
-    display: block;
-    text-align: center;
-    margin: 0.5rem 1rem;
   }
 }
-
 
 /* =========================================================================
    Desktop — Extra Refinements
    ========================================================================= */
 @include desktop {
-  div #vsolar { width: 52.5rem; height: 29.5625rem; margin: 1.25rem auto; }
-
-  /* Desktop-specific layout details for event cards */
-  #programacion .noticiasfuncion {
-    grid-template-columns: 120px 1fr 1fr;
-    grid-template-rows: 1fr;
+  div #vsolar {
+    width: 52.5rem;
+    height: 29.5625rem;
+    margin: 1.25rem auto;
   }
 
-  #programacion .noticiasfuncion .dia {
-    padding: 1.75rem 1rem;
-    min-width: 120px;
+  #programacion {
+    .noticiasfuncion {
+      grid-template-columns: 120px 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .dia {
+        padding: 1.75rem 1rem;
+        min-width: 120px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
-
-  #programacion .noticiasfuncion img {
-
-    width: 100px;
-    height: 100px;
-  }
-
-
 }
-
 
 /* =========================================================================
    Modern Docs & Descuentos Sections
    ========================================================================= */
 
 #docsydescus {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 4rem auto;
   padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  align-items: start;
 
   h2 {
     color: $color-accent;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 2px solid rgba(231, 226, 174, 0.3);
     padding-bottom: 0.5rem;
-    display: inline-block;
+    display: block;
+    width: fit-content;
+    text-align: center;
   }
 
   @include desktop {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
   }
 }
 
@@ -468,50 +562,58 @@ h2.tseccion {
   .descu {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    background: $color-bg-light;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+    margin-bottom: 0;
     transition: $transition-smooth;
 
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
-      border-color: rgba(231, 226, 174, 0.15);
+    &:last-of-type {
+      border-bottom: none;
     }
 
-    img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 5px;
+    &:hover {
+      transform: translateX(4px);
+
+      .descu-icon {
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
+
+    .descu-icon {
+      width: 24px;
+      height: 24px;
+      color: $color-accent;
       flex-shrink: 0;
+      transition: all 0.3s ease;
     }
 
     p {
       color: $color-text-muted;
-      font-size: 0.95rem;
-      line-height: 1.5;
+      font-size: 0.9rem;
+      line-height: 1.4;
       margin: 0;
+
       a {
         color: $color-accent;
         font-weight: bold;
         text-decoration: none;
-        &:hover { color: #f0ebca; }
+
+        &:hover {
+          color: #f0ebca;
+        }
       }
     }
   }
 
-  > p {
-    color: $color-text-muted;
-    font-size: 0.8rem;
+  >p.nota {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
     text-align: right;
     font-style: italic;
+    margin-top: 1rem;
   }
 }
 
@@ -531,14 +633,17 @@ h2.tseccion {
     &::-webkit-scrollbar {
       width: 6px;
     }
+
     &::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.03);
       border-radius: 3px;
     }
+
     &::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.15);
       border-radius: 3px;
     }
+
     &::-webkit-scrollbar-thumb:hover {
       background: $color-accent;
     }
@@ -562,14 +667,16 @@ h2.tseccion {
       }
 
       a {
-        color: $color-text-main;
+        color: $color-bg-dark;
         text-decoration: none;
         font-weight: bold;
         font-size: 0.95rem;
         display: block;
         margin-bottom: 0.25rem;
 
-        &:hover { color: $color-accent; }
+        &:hover {
+          color: $color-accent;
+        }
       }
 
       /* Subtle author/date text if present */
@@ -578,5 +685,170 @@ h2.tseccion {
     }
   }
 
-  p { display: none; }
+  p {
+    display: none;
+  }
+}
+
+#docsydescus {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  h2 {
+    color: $color-accent;
+    font-size: 1.5rem;
+    margin: 0 auto 2rem auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(231, 226, 174, 0.3);
+    padding-bottom: 0.5rem;
+    display: block;
+    width: fit-content;
+    text-align: center;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* 1. Descuentos (Discounts) Cards */
+#descuentos {
+  text-align: left;
+
+  .descu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+    margin-bottom: 0;
+    transition: $transition-smooth;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:hover {
+      transform: translateX(4px);
+
+      .descu-icon {
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
+
+    .descu-icon {
+      width: 24px;
+      height: 24px;
+      color: $color-accent;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    p {
+      color: $color-text-muted;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 0;
+
+      a {
+        color: $color-accent;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          color: #f0ebca;
+        }
+      }
+    }
+  }
+
+  >p.nota {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    text-align: right;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+}
+
+/* 2. Nuevos Artículos (Articles List) */
+#nuevosdocs {
+  text-align: left;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+
+    /* Custom Scrollbar — Dark Theme */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-accent;
+    }
+
+    li {
+      margin-bottom: 0;
+      transition: $transition-smooth;
+      padding: 0.75rem 1rem;
+      background: $color-bg-light;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+
+      &:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.03);
+      }
+
+      &:hover {
+        background: rgba(231, 226, 174, 0.08);
+        transform: translateX(6px);
+        border-bottom-color: rgba(231, 226, 174, 0.2);
+      }
+
+      a {
+        color: $color-bg-dark;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.95rem;
+        display: block;
+        margin-bottom: 0.25rem;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      /* Subtle author/date text if present */
+      color: $color-text-muted;
+      font-size: 0.85rem;
+    }
+  }
+
+  p {
+    display: none;
+  }
 }

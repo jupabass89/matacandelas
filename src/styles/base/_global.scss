@@ -1,343 +1,409 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+#page-content {
+  background-color: $color-bg-light;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
 // --- body.css ---
 html {
-  font-size: 112.5%; /* Changes base from 16px to 18px */
+  font-size: 112.5%;
+  /* Changes base from 16px to 18px */
 }
 
 body {
   font-family: $font-primary;
-	background-color: $color-bg-dark;
-	background-attachment: fixed;
-	margin: 0;
-	padding: 0 0 0.3125rem 0;
-	width: 100%;
-	color: $color-text-main;
+  background-color: $color-bg-dark;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0 0 0.3125rem 0;
+  width: 100%;
+  color: $color-text-main;
 }
-body p {line-height: 1.25rem; font-size: 0.8125rem;}
 
-body p.teledir {margin: 0.9375rem auto; text-align: center;  font-size: 1.125rem; color: $color-text-muted;}
+body p {
+  line-height: 1.25rem;
+  font-size: 0.8125rem;
+}
 
-header, section, footer, aside, nav, main, article, figure {display: block;}
+
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
 
 /* Contenedor de Iframe responsivo  */
 
 .responsive-iframe-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100vh;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 
 .responsive-iframe-container {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-/* Barra azul, va abajo del menu, y ahi van las frases  */
-#barraazul {
-	clear:both;
-	line-height: 2.1875rem;
-	width: 100%;
-	display: block;
-	color: $color-accent;
-	font-size: 0.8125rem;
-	margin: 0 auto;
-	text-align: center;
-	
-	font-weight:bold;
-	background: rgba(18, 18, 18, 0.95);
-	border-bottom: 1px solid rgba(231, 226, 174, 0.1);
+  width: 100%;
+  height: 100%;
+  border: none;
 }
+
 
 /* #menu y #menu a, son las propiedades de estilo del menu de abajo de todas las paginas */
-#menu  {
-	width: 100%;
-	text-align: center;
-	
-	font-size: 0.75rem;
-}
-#menu a {
-	color: $color-text-muted;
-	text-align:center;
-	display: inline-block;
-	&:hover { color: $color-accent; }
-}
-/* definen la tabla donde van los contenidos */
+#menu {
+  width: 100%;
+  text-align: center;
 
-#contents {
-	width:100%;
-	background-color: $color-bg-dark;
-	color: $color-text-main;
-	margin-right: auto;
-	margin-left: auto;
+  font-size: 0.75rem;
 }
+
+#menu a {
+  color: $color-text-muted;
+  text-align: center;
+  display: inline-block;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
 /* Los bloques que tengan article se veran afectador tambien en sus h1, h2, h3 y h4 */
 article {
-	margin:0 auto;
-	
-	font-size: 0.75rem;
-	text-align: justify;
-	z-index: 10;
-}
-article p {font-size: 1.0625rem; line-height: 1.5625rem;}
-article h1 {
-	text-align: center;
-	font-size: 2.1875rem;
-	color: $color-text-main;
-    
-}
-article h1.g {font-size:1.125rem;}
-article h1.azultimes {
-	font-size: 1.75rem;
-	color: #6B8EFF;
-	
-}
-article h2 {
-	font-weight: normal;
-	font-size: 1.25rem;
-	text-align: center;
-}
-article h3 {
-	font-weight: bold;
-	font-size: 1rem;
-}
-/* igual que h3 pero centrado */
-article h4  {
-	text-align: center;
-	font-weight: bold;
-	font-size: 0.8125rem;
-}
-article h6 {
-	font-size: 0.625rem;
-	text-align: right;
-	color: #6B8EFF;
-}
-article p.centrado {
-	text-align: center;
-}
-article ul.centrado {
-	text-align: center;
-}
-article ul.centradoleftaling {
-	text-align: left;
-	width: 31.25rem;
-	margin-right: auto;
-	margin-left: auto;
-}
-article p.right {
-	text-align: right;
-}
-article p.paladere {margin-left: 3.125rem;}
+  margin: 0 auto;
 
-article img {max-width:95%; height:auto;}
+  font-size: 0.75rem;
+  text-align: justify;
+  z-index: 10;
+}
+
+article p {
+  font-size: 1.0625rem;
+  line-height: 1.5625rem;
+}
+
+article h1 {
+  text-align: center;
+  font-size: 2.1875rem;
+  color: $color-text-main;
+
+}
+
+article h1.g {
+  font-size: 1.125rem;
+}
+
+article h1.azultimes {
+  font-size: 1.75rem;
+  color: #6B8EFF;
+
+}
+
+article h2 {
+  font-weight: normal;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+article h3 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* igual que h3 pero centrado */
+article h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8125rem;
+}
+
+article h6 {
+  font-size: 0.625rem;
+  text-align: right;
+  color: #6B8EFF;
+}
+
+article p.centrado {
+  text-align: center;
+}
+
+article ul.centrado {
+  text-align: center;
+}
+
+article ul.centradoleftaling {
+  text-align: left;
+  width: 31.25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article p.right {
+  text-align: right;
+}
+
+article p.paladere {
+  margin-left: 3.125rem;
+}
+
+article img {
+  max-width: 95%;
+  height: auto;
+}
 
 article img.float {
-	float: left;
-	margin-top: 0.625rem;
-	margin-right: 1.875rem;
-	margin-bottom: 0.25rem;
-	margin-left: 0.25rem;
+  float: left;
+  margin-top: 0.625rem;
+  margin-right: 1.875rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
 }
+
 article hr.small {
-	width: 18.75rem;
-	margin-left: 0;
+  width: 18.75rem;
+  margin-left: 0;
 }
+
 /* Esta regla hace referencia solo a la lista de articulos nuevos, en la pagina documentos.htm */
 #ndocs {
-	
-	font-size: 0.625rem;
-	text-align: left;
+
+  font-size: 0.625rem;
+  text-align: left;
 }
+
 /* Esta clase es para centrar una imagen mediante css */
 .imgcentrada {
-    display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width:100%;
-	height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 .videocentrado {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 3.125rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.125rem;
 }
+
 .piedefoto {
-	font-size: 0.625rem;
-	color: #6B8EFF;
-	text-align: center;
-	margin-top: -0.0625rem;
+  font-size: 0.625rem;
+  color: #6B8EFF;
+  text-align: center;
+  margin-top: -0.0625rem;
 }
 
 /* con esta clase se puede dar un marco a un texto */
 .marco {
-	border: groove;
-	padding: 2%;
+  border: groove;
+  padding: 2%;
 }
+
 .marcofoto {
-	border: solid 0.125rem rgba(255, 255, 255, 0.15);
+  border: solid 0.125rem rgba(255, 255, 255, 0.15);
 }
 
 /* Global link colors — Dark Theme */
-a:link { color: $color-text-muted; }
-a:hover { color: $color-accent; }
+a:link {
+  color: $color-text-muted;
+}
+
+a:hover {
+  color: $color-accent;
+}
 
 .azul {
-    color: #6B8EFF;
+  color: #6B8EFF;
 }
+
 .red {
-	color: #F33;
-	font-size: 0.6875rem;
-	padding: 0.125rem;
+  color: #F33;
+  font-size: 0.6875rem;
+  padding: 0.125rem;
 }
+
 /* las listas Ul-LI en documentos.htm */
 .masespacio {
-	line-height: 1.25rem;
+  line-height: 1.25rem;
 }
-#docus li {line-height: 1.5625rem;}
+
+#docus li {
+  line-height: 1.5625rem;
+}
+
 /* Menu de la pagina documentos.htm */
-#menudocs  {
-	background-color: #344356;
-	text-align: center;
-	color: #FFF;
-	border-top-style: inset;
-	border-right-style: inset;
-	border-bottom-style: inset;
-	border-left-style: inset;
-	margin-top: 3.125rem;
+#menudocs {
+  background-color: #344356;
+  text-align: center;
+  color: #FFF;
+  border-top-style: inset;
+  border-right-style: inset;
+  border-bottom-style: inset;
+  border-left-style: inset;
+  margin-top: 3.125rem;
 }
+
 #menudocs a {
-	color: #FFF;
+  color: #FFF;
 }
 
 /* puntos en traduccion.html */
 .pts {
-	font-size: 1rem;
-	color: #C30;
-	text-decoration: none;
+  font-size: 1rem;
+  color: #C30;
+  text-decoration: none;
 }
+
 #busquedas {
-	visibility: visible;
-	width: 37.5rem;
-	position: relative;
-	margin-top: 0.625rem;
-	margin-right: 0.625rem;
-	margin-bottom: 0.625rem;
-	margin-left: 0.625rem;
+  visibility: visible;
+  width: 37.5rem;
+  position: relative;
+  margin-top: 0.625rem;
+  margin-right: 0.625rem;
+  margin-bottom: 0.625rem;
+  margin-left: 0.625rem;
 }
+
 /* Para los wallpapers en descargas.htm */
 #contenedor-wallpapers {
-	margin-right: auto;
-	margin-left: auto;
-	width: 42.375rem;
-	position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 42.375rem;
+  position: relative;
 }
+
 #contenedor-cdvillancicos {
-	margin-right: auto;
-	margin-left: auto;
-	width: 31.25rem;
-	height: 18.75rem;
-	position: relative;
-	background-color: rgb(245,245,245);
-	margin-bottom: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 31.25rem;
+  height: 18.75rem;
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  margin-bottom: 5rem;
 }
+
 .wallpaper {
-	float: left;
-	height: 7.25rem;
-	width: 10.0625rem;
-	margin: 0.125rem;
+  float: left;
+  height: 7.25rem;
+  width: 10.0625rem;
+  margin: 0.125rem;
 }
+
 /* Para que una lista se represente con con letras: A... B... C... */
 .listaalfa {
-	list-style-type: upper-alpha;
+  list-style-type: upper-alpha;
 }
+
 /* define la posicion del pequeño menu español-ingles */
 .idiomacentrado {
-	text-align: center;
-	
-	font-size: 0.75rem;
-	margin: 0.1875rem 0 0 0;
+  text-align: center;
+
+  font-size: 0.75rem;
+  margin: 0.1875rem 0 0 0;
 }
+
 /* Espacio entre los párrafos de una listas */
 .listaconespacio li {
-	margin-top: 1.25rem;	
+  margin-top: 1.25rem;
 }
+
 .listasinestilo {
-	list-style: none;
+  list-style: none;
 }
+
 /* para centrar el texto de un parrafo */
 .centrado {
-	text-align: center;
+  text-align: center;
 }
+
 .floatleft {
-	float: left;
-	margin: 0.3125rem 0.9375rem 0 0;
+  float: left;
+  margin: 0.3125rem 0.9375rem 0 0;
 }
+
 .floatright {
-	float: right;
-	margin: 0 0 0.625rem 0.9375rem;
+  float: right;
+  margin: 0 0 0.625rem 0.9375rem;
 }
+
 .both {
-	clear: both;
+  clear: both;
 }
+
 /* Tabla de Cifras.htm */
 #tablacifras {
-	font-size: 0.6875rem;
-	color: $color-text-muted;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 1.25rem;
-	width: 52%;
+  font-size: 0.6875rem;
+  color: $color-text-muted;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.25rem;
+  width: 52%;
 }
+
 #titulocifras {
-	color: #6B8EFF;
-	font-size: 18pt;
-	text-align: center;
+  color: #6B8EFF;
+  font-size: 18pt;
+  text-align: center;
 }
+
 /* para centrar el iframe de Ubicacion.html */
 #centrariframe {
-	width: 39.375rem;
-	margin-right: auto;
-	margin-left: auto;
+  width: 39.375rem;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 /* para los textos de autores.htm */
 #autores {
-	margin-left: 9.375rem;
+  margin-left: 9.375rem;
 }
+
 #autores img.floatleft {
-    margin-left: -8.125rem;
+  margin-left: -8.125rem;
 }
+
 #autores h1 {
-	font-size: 1rem;
-	text-align: left;
+  font-size: 1rem;
+  text-align: left;
 }
+
 h1.titulotienda {
-	
-	font-size: 1.125rem;
-	color: $color-text-muted;
-	text-align: center;
+
+  font-size: 1.125rem;
+  color: $color-text-muted;
+  text-align: center;
 }
+
 h1.notext {
-	display:none;
+  display: none;
 }
+
 /* para los documentos */
 .cita {
-	font-size: 0.6875rem;
-	text-align: right;
-	margin-right:5%;
+  font-size: 0.6875rem;
+  text-align: right;
+  margin-right: 5%;
 }
+
 .cita2 {
-	font-size: 0.6875rem;
-	width: 80%;
-	margin: 0 auto 0 auto;
+  font-size: 0.6875rem;
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
+
 /* para quitar a las imagenes con link */
 .nostyle {
-	border:0;
+  border: 0;
 }
 
 
@@ -346,11 +412,27 @@ h1.notext {
 /* CSS de las obras (individual play detail pages) */
 
 /* Esta propiedad permite que las columnas de obras funcionen bien en ff y en ie */
-#contenedorcolumnaobra * {padding:0; margin:0;}
-#contenedorcolumnaobra {height:100%; margin:0 auto;}
+#contenedorcolumnaobra * {
+  padding: 0;
+  margin: 0;
+}
 
-#contenedorcolumnaobra > img, #contenedorcolumnaobra .bloqueobra img {max-width:75%; height:auto;}
-#contenedorcolumnaobra > img:first-child {margin:0 auto; display:block; width:74%;}
+#contenedorcolumnaobra {
+  height: 100%;
+  margin: 0 auto;
+}
+
+#contenedorcolumnaobra>img,
+#contenedorcolumnaobra .bloqueobra img {
+  max-width: 75%;
+  height: auto;
+}
+
+#contenedorcolumnaobra>img:first-child {
+  margin: 0 auto;
+  display: block;
+  width: 74%;
+}
 
 #contenedorcolumnaobra::after {
   content: "";
@@ -359,280 +441,451 @@ h1.notext {
 }
 
 #contenedorcolumnaobra .bloqueobra {
-	
-	font-size: 0.75rem;
-	text-align: justify;
-	width:70%;
-	display:inline-block;
-	margin:0 auto;
-    background-color: $color-bg-light;
-	padding: 0.625rem 2%;
-	color: $color-text-main;
+
+  font-size: 0.75rem;
+  text-align: justify;
+  width: 70%;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: $color-bg-light;
+  padding: 0.625rem 2%;
+  color: $color-text-main;
 }
 
 /* Es necesario aplicar esto a causa de la propiedad anterior */
 #contenedorcolumnaobra .bloqueobra p {
-	margin-top: 0.9375rem;
+  margin-top: 0.9375rem;
 }
+
 #contenedorcolumnaobra .bloqueobra table {
-	margin-top: 0.9375rem;
-	margin:  0 auto;
+  margin-top: 0.9375rem;
+  margin: 0 auto;
 }
+
 #contenedorcolumnaobra .bloqueobra ul.listasinestilo {
-	margin-left: 0.9375rem;
-	text-align: left;
+  margin-left: 0.9375rem;
+  text-align: left;
 }
+
 /* Centrar album de flickr y pdfs de Issuu */
-#contenedorcolumnaobra .bloqueobra .flickypdfs {text-align: center;}
+#contenedorcolumnaobra .bloqueobra .flickypdfs {
+  text-align: center;
+}
+
 /* centrar una imagen */
 #contenedorcolumnaobra img.imgcentrada {
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 0.9375rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0.9375rem;
 }
+
 #contenedorcolumnaobra .bloqueobra ul.listasinestilo {
-	list-style-type: none;
-	font-size: 0.75rem;
-	line-height: 1.25rem;
-	margin: 1.875rem 0 1.875rem;
+  list-style-type: none;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin: 1.875rem 0 1.875rem;
 }
+
 /* para poder colocar texto a lado de una imagen */
 #contenedorcolumnaobra .bloqueobra img.floatleft {
-	margin: 0.9375rem;
-	float: left;
+  margin: 0.9375rem;
+  float: left;
 }
+
 /* para que un elemento no sea representado */
 #contenedorcolumnaobra .bloqueobra .notext {
-    display: none;
+  display: none;
 }
+
 /* propiedades generales de las columnas */
 #contenedorcolumnaobra .columna {
-	width: 20%;
-	color: #FFF;
-	vertical-align:top;
-	text-align: left;
-	
-	font-size: 0.6875rem;
-	float:right;
-	padding: 2%;
+  width: 20%;
+  color: #FFF;
+  vertical-align: top;
+  text-align: left;
+
+  font-size: 0.6875rem;
+  float: right;
+  padding: 2%;
 }
+
 #contenedorcolumnaobra .columna a {
-	color: #FF0;
-	text-decoration: none;
+  color: #FF0;
+  text-decoration: none;
 }
+
 #contenedorcolumnaobra .columna p {
-	line-height: 0.9375rem;
-	margin-top: 0.9375rem;
+  line-height: 0.9375rem;
+  margin-top: 0.9375rem;
 }
+
 /* color y tamaño de cada columna segun obra */
-.cazulmarinherio {background-color: #000080;}.crojavozhumana {background-color: #A52400;}.crojafiesta {background-color: #A52400;}.crojachorillo {background-color: #A52400;}.cnaranjajuegos {background-color: #CC6600;}.crojaviajecompartido {background-color: #A52400;}.crojapersul {background-color: #A52400;}.crojapinocho {background-color: #A52400;}.crojaangelitos {background-color: #A52400;}.cmoradadiplomas {background-color: #800080;}.crojabellosdias {background-color: #A52400;}.crojarosita {background-color: #A52400;}.crojahechizerias {background-color: #A52400;}.cnaranjalachica {background-color: #CC6600;}.crojalosciegos {background-color: #A52400;}.crojamedea {background-color: #A52400;}.crojajuegos2 {background-color: #A52400;}.cnaranjahadaycartero {background-color: #CC6600;}.crojafernando {background-color: #A52400;}.crojausher {background-color: #A52400;}.croja4mujeres {background-color: #800000;}.cmoradomedium {background-color: #900;}.crosadaconchita {background-color: #FB1566;}.cnegrojorge {background-color: #069;}.cgrispound {background-color: #333;}.crojocasagrande {background-color: #1E0304;}.cnegroprimeramor {background-color: #070F02;}.cperspectivas {background-color: #2A184D;} .cjaime {background-color: #7B1F21;} .cincertidumbre {background-color:#142B76;} .cespectro {background-color:#94383A;} 
+.cazulmarinherio {
+  background-color: #000080;
+}
+
+.crojavozhumana {
+  background-color: #A52400;
+}
+
+.crojafiesta {
+  background-color: #A52400;
+}
+
+.crojachorillo {
+  background-color: #A52400;
+}
+
+.cnaranjajuegos {
+  background-color: #CC6600;
+}
+
+.crojaviajecompartido {
+  background-color: #A52400;
+}
+
+.crojapersul {
+  background-color: #A52400;
+}
+
+.crojapinocho {
+  background-color: #A52400;
+}
+
+.crojaangelitos {
+  background-color: #A52400;
+}
+
+.cmoradadiplomas {
+  background-color: #800080;
+}
+
+.crojabellosdias {
+  background-color: #A52400;
+}
+
+.crojarosita {
+  background-color: #A52400;
+}
+
+.crojahechizerias {
+  background-color: #A52400;
+}
+
+.cnaranjalachica {
+  background-color: #CC6600;
+}
+
+.crojalosciegos {
+  background-color: #A52400;
+}
+
+.crojamedea {
+  background-color: #A52400;
+}
+
+.crojajuegos2 {
+  background-color: #A52400;
+}
+
+.cnaranjahadaycartero {
+  background-color: #CC6600;
+}
+
+.crojafernando {
+  background-color: #A52400;
+}
+
+.crojausher {
+  background-color: #A52400;
+}
+
+.croja4mujeres {
+  background-color: #800000;
+}
+
+.cmoradomedium {
+  background-color: #900;
+}
+
+.crosadaconchita {
+  background-color: #FB1566;
+}
+
+.cnegrojorge {
+  background-color: #069;
+}
+
+.cgrispound {
+  background-color: #333;
+}
+
+.crojocasagrande {
+  background-color: #1E0304;
+}
+
+.cnegroprimeramor {
+  background-color: #070F02;
+}
+
+.cperspectivas {
+  background-color: #2A184D;
+}
+
+.cjaime {
+  background-color: #7B1F21;
+}
+
+.cincertidumbre {
+  background-color: #142B76;
+}
+
+.cespectro {
+  background-color: #94383A;
+}
 
 /* Titulos en obras */
 
 .bloqueobra h1.titulocolumna {
-	font-size: 0.75rem;
-	color: #FFF;
-	text-align: center;
+  font-size: 0.75rem;
+  color: #FFF;
+  text-align: center;
 }
+
 .bloqueobra h1.titeres {
-	font-size: 1.375rem;
-	color: #384478;
-	text-align: center;
+  font-size: 1.375rem;
+  color: #384478;
+  text-align: center;
 }
+
 .bloqueobra h2 {
-	font-size: 1.125rem;
-	color: #384478;
-	text-align: center;
-	
-	}
+  font-size: 1.125rem;
+  color: #384478;
+  text-align: center;
+
+}
+
 .bloqueobra h2.titeres {
-	font-size: 1.125rem;
-	color: #384478;
-	text-align: center;
+  font-size: 1.125rem;
+  color: #384478;
+  text-align: center;
 }
+
 .bloqueobra h3 {
-	font-size: 1.375rem;
-	margin-top: 0.9375rem;
-	color: $color-text-main;
-    
+  font-size: 1.375rem;
+  margin-top: 0.9375rem;
+  color: $color-text-main;
+
 }
+
 .bloqueobra h4 {
-	font-size: 0.875rem;
-	margin-top: 0.9375rem;
-	text-align: center;
+  font-size: 0.875rem;
+  margin-top: 0.9375rem;
+  text-align: center;
 }
+
 .bloqueobra h5 {
-	font-size: 0.6875rem;
-	margin-top: 0.9375rem;
-	text-align: center;
-	font-weight: normal;
+  font-size: 0.6875rem;
+  margin-top: 0.9375rem;
+  text-align: center;
+  font-weight: normal;
 }
+
 /* para centrar una tabla que este en un div clase fichacentrada */
 .fichacentrada {
-	text-align: left;
+  text-align: left;
 }
+
 .fichacentrada table {
-	margin-right: auto;
-	margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 /* alinear texto a la derecha */
 .bloqueobra p.right {
-	text-align: right;
+  text-align: right;
 }
 
 /* Album de fotos */
 h2.album {
-	clear: both;
-	text-align: center;
-	
-	color:#384478;
-	font-size: 1rem;
+  clear: both;
+  text-align: center;
+
+  color: #384478;
+  font-size: 1rem;
 }
+
 #album {
-	width:37.5rem; 
-	height:22.5rem; 
-	position:relative;
-	padding:0.3125rem 0; 
-	background: $color-bg-light; 
-	margin:0 auto 1.25rem auto; 
-	clear:both;
+  width: 37.5rem;
+  height: 22.5rem;
+  position: relative;
+  padding: 0.3125rem 0;
+  background: $color-bg-light;
+  margin: 0 auto 1.25rem auto;
+  clear: both;
 }
+
 #album em {
-	display:block; 
-	width:14.3125rem; 
-	height:10.9375rem; 
-	position:absolute; 
-	top:0; 
-	right:0; 
-	border:0.0625rem solid rgba(255,255,255,0.1);
+  display: block;
+  width: 14.3125rem;
+  height: 10.9375rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
+
 #album span {
-	display:block; 
-	width:22.5rem; 
-	height:22.8125rem; 
-	position:absolute; 
-	top:0; left:0; 
-	border:0.0625rem solid rgba(255,255,255,0.1);
+  display: block;
+  width: 22.5rem;
+  height: 22.8125rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
-#album a span.descripcion{
-	display:none;
+
+#album a span.descripcion {
+  display: none;
 }
-#album b#thumbs a:focus span.descripcion, #album b#thumbs a:active span.descripcion {
-	display:block;
-	top:20.625rem;
-	width:22.5rem;
-	height:1.875rem;
-	font-size:0.625rem;
-	
-	border-bottom-color: $color-bg-light;
-	text-align: center;
-	color: $color-text-muted;
+
+#album b#thumbs a:focus span.descripcion,
+#album b#thumbs a:active span.descripcion {
+  display: block;
+  top: 20.625rem;
+  width: 22.5rem;
+  height: 1.875rem;
+  font-size: 0.625rem;
+
+  border-bottom-color: $color-bg-light;
+  text-align: center;
+  color: $color-text-muted;
 }
+
 #album b#thumbs {
-	display:block; 
-	width:13.75rem; 
-	height:10.9375rem; 
-	overflow:auto; 
-	float:right; 
-	margin-top:10.9375rem; 
-	border:0.0625rem solid rgba(255,255,255,0.1); 
-	border-width:0.0625rem 0.0625rem 0.0625rem 0.0625rem; 
-	padding:0.3125rem;
+  display: block;
+  width: 13.75rem;
+  height: 10.9375rem;
+  overflow: auto;
+  float: right;
+  margin-top: 10.9375rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-width: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+  padding: 0.3125rem;
 }
+
 #album b#thumbs a {
-	display:block; 
-	float:left; 
-	margin:0 0.625rem 0.625rem 0; 
-	background: $color-bg-light; 
-	width:3.125rem; 
-	height:3.125rem; 
-	border:0.0625rem solid rgba(255,255,255,0.1);
+  display: block;
+  float: left;
+  margin: 0 0.625rem 0.625rem 0;
+  background: $color-bg-light;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
+
 #album b#thumbs a img {
-	width:3.125rem; 
-	height:3.125rem; 
-	border:0;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0;
 }
 
 #album b#thumbs a:hover {
-	border:0.0625rem dotted $color-accent; 
-	background: $color-bg-dark;
+  border: 0.0625rem dotted $color-accent;
+  background: $color-bg-dark;
 }
-#album b#thumbs a:active, #album b#thumbs a:focus {
-	border:0.0625rem solid $color-accent; 
-	background: $color-bg-dark; 
-	outline:0;
+
+#album b#thumbs a:active,
+#album b#thumbs a:focus {
+  border: 0.0625rem solid $color-accent;
+  background: $color-bg-dark;
+  outline: 0;
 }
+
 #album b#thumbs a:hover img {
-	display:block; 
-	position:absolute; 
-	background:#aaa; 
-	z-index:500;
+  display: block;
+  position: absolute;
+  background: #aaa;
+  z-index: 500;
 }
-#album b#thumbs a:active img, #album b#thumbs a:focus img {
-	display:block; 
-	position:absolute; 
-	background:#aaa; 
-	z-index:100;
+
+#album b#thumbs a:active img,
+#album b#thumbs a:focus img {
+  display: block;
+  position: absolute;
+  background: #aaa;
+  z-index: 100;
 }
+
 #album b#thumbs a:hover img.hr {
-	width:10rem; 
-	height:7.5rem; 
-	right:2.1875rem; 
-	top:0.4375rem; 
-	border:0.0625rem solid rgba(255,255,255,0.2);
+  width: 10rem;
+  height: 7.5rem;
+  right: 2.1875rem;
+  top: 0.4375rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
+
 #album b#thumbs a:hover img.vt {
-	width:7.5rem; 
-	height:10rem; 
-	right:3.4375rem; 
-	top:0.4375rem; 
-	border:0.0625rem solid rgba(255,255,255,0.2);
+  width: 7.5rem;
+  height: 10rem;
+  right: 3.4375rem;
+  top: 0.4375rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
-#album b#thumbs a:active img.hr, #album b#thumbs a:focus img.hr {
-	width:20rem; 
-	height:15rem; 
-	left:1.25rem; 
-	top:0.4375rem; 
-	border:0.0625rem solid rgba(255,255,255,0.2);
+
+#album b#thumbs a:active img.hr,
+#album b#thumbs a:focus img.hr {
+  width: 20rem;
+  height: 15rem;
+  left: 1.25rem;
+  top: 0.4375rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
-#album b#thumbs a:active img.vt, #album b#thumbs a:focus img.vt {
-	width:15rem; 
-	height:20rem; 
-	left:3.75rem; 
-	top:0.4375rem; 
-	border:0.0625rem solid rgba(255,255,255,0.2);
+
+#album b#thumbs a:active img.vt,
+#album b#thumbs a:focus img.vt {
+  width: 15rem;
+  height: 20rem;
+  left: 3.75rem;
+  top: 0.4375rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
 
 
 // --- body-celular.css ---
 @include mobile {
-article {
-	width:85%;}
-	
-.bloqueobra h1 {
-	font-size: 1.125rem;
-	color: #384478;
-	text-align: center;
-    
-}	
-	
-/* CSS de las obras */
-#contenedorcolumnaobra {width: 100%;}
+  article {
+    width: 85%;
+  }
+
+  .bloqueobra h1 {
+    font-size: 1.125rem;
+    color: #384478;
+    text-align: center;
+
+  }
+
+  /* CSS de las obras */
+  #contenedorcolumnaobra {
+    width: 100%;
+  }
 }
 
 // --- body-pantalla.css ---
 @include desktop {
-article {
-	width:45%;}
+  article {
+    // width: 45%;
+  }
 
-.bloqueobra h1 {
-	font-size: 4.2em;
-	color: #384478;
-	text-align: center;
-    
-}
+  .bloqueobra h1 {
+    font-size: 4.2em;
+    color: #384478;
+    text-align: center;
 
-/* CSS de las obras */
-#contenedorcolumnaobra {width: 90%;}
+  }
+
+  /* CSS de las obras */
+  #contenedorcolumnaobra {
+    width: 90%;
+  }
 }

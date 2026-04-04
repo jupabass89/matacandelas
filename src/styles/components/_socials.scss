@@ -57,31 +57,16 @@ a.social-btn {
   }
 
   /* Ignite Brand Colors on Hover */
+  &.whatsapp:hover { background: #25D366; }
   &.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
   &.facebook:hover { background: #1877F2; }
-  &.tiktok:hover { background: #000000; }
+  &.tiktok:hover { background: darkblue; }
   &.youtube:hover { background: #FF0000; }
   &.flickr:hover { background: #FF0084; }
 }
 
 @include mobile {
   .floating-socials {
-    top: auto;
-    bottom: 25px; 
-    right: 25px;
-    flex-direction: column-reverse; 
-    gap: 10px;
-  }
-
-  .social-btn {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%; /* Force complete circles on mobile */
-    border: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-
-    &:first-child, &:last-child {
-      border-radius: 50%;
-    }
+    display: none !important;
   }
 }
