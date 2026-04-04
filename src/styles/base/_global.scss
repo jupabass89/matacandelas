@@ -14,6 +14,10 @@ html {
   /* Changes base from 16px to 18px */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+}
+
 body {
   font-family: $font-primary;
   background-color: $color-bg-dark;
