@@ -8,6 +8,6 @@ export default defineConfig({
     open: '/',
   },
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
   }
 })
