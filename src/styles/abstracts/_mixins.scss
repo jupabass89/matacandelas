@@ -1,0 +1,12 @@
+// Global SCSS mixins
+@mixin mobile {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}

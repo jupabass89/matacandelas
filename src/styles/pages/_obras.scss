@@ -1,0 +1,203 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* =========================================================================
+   Obras (Plays) Archive — Card Grid Layout
+   ========================================================================= */
+
+.obras-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  width: auto;
+  font-size: inherit;
+  text-align: left;
+}
+
+/* Page Title */
+.obras-title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: $color-accent;
+  letter-spacing: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Introductory Paragraph */
+.obras-intro {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  color: $color-text-muted;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Decade Sections */
+.obras-decade {
+  margin-bottom: 4rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.decade-label {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: $color-text-main;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: $color-accent;
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+/* Card Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Play Card */
+.work-card {
+  background: $color-bg-light;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: $transition-smooth;
+  margin: 0;
+  text-align: left;
+  font-size: inherit;
+
+  /* Accent top border — hidden until hover */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $color-accent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(231, 226, 174, 0.1);
+    border-color: rgba(231, 226, 174, 0.15);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .work-year {
+      background: $color-accent;
+      color: $color-bg-dark;
+    }
+  }
+}
+
+/* Year Badge */
+.work-year {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(231, 226, 174, 0.12);
+  color: $color-accent;
+  margin-bottom: 0.75rem;
+  transition: $transition-smooth;
+}
+
+/* Play Title */
+.work-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+  color: $color-text-main;
+  text-align: left;
+
+  a {
+    color: $color-text-main;
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:link, &:visited {
+      color: $color-text-main;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+/* Author / Creation */
+.work-author {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  margin: 0;
+  line-height: 1.5;
+  font-style: italic;
+
+  &:empty {
+    display: none;
+  }
+}
+
+/* =========================================================================
+   Responsive Breakpoints
+   ========================================================================= */
+
+@include mobile {
+  .obras-page {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .obras-title {
+    letter-spacing: 0.4rem;
+  }
+
+  .obras-intro {
+    font-size: 0.9rem !important;
+  }
+
+  .decade-label {
+    letter-spacing: 0.3rem;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .work-card {
+    padding: 1.25rem 1.25rem 1rem;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

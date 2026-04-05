@@ -1,4 +1,5 @@
 // main.js
+import './styles/main.scss'
 import { router } from './features/router.js'
 
 class MainContainer extends HTMLElement {

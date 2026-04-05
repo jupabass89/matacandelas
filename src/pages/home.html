@@ -1,0 +1,289 @@
+<article>
+  <!-- <div id="contents"> -->
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 8000); // Change image every 5 seconds
+    }
+  </script>
+  <!-- Comienza programación HOME page -->
+  <div id="programacion">
+
+    <!-- Month-->
+    <h2 class="fecha">Mayo</h2>
+
+    <!-- Card -->
+    <article class="funcion-card" data-date="2026-05-29">
+
+      <!-- date -->
+      <section class="date">
+        <h5>Viernes</h5>
+        <h3>29</h3>
+        <h5>De mayo</h5>
+        <h5>10:00 p.m.</h5>
+      </section>
+
+      <section class="content">
+        <div class="presenter">
+          <div class="presenter__strong">Rock Symphony Productions</div> Presenta:
+        </div>
+
+        <!-- image -->
+        <img class="imagen-evento" src="/assets/img/programacion/image.png" alt="">
+
+
+        <h1 class="title">Fabio Lione Rhapsody Times</h1>
+        <div class="description">
+
+          <div><strong>"Dawn of the Enchanted Tales"</strong><br>
+            <strong>Artistas:</strong> Fabio Lione (Italia) + Royal Project<br>
+            <strong>Lugar: </strong> Cabaret El Cantadero Matacandelas.<br>
+            <strong>Valor:</strong><br>
+            <span class="valor-etapa">Etapa 1: $100.000</span><br>
+            <span class="valor-etapa">Etapa 2: $130.000</span><br>
+            <span class="valor-etapa">Etapa 3: $150.000</span>
+            <div class="nota-edad"><em>*Edad mínima 15 años (menores acompañados de adulto responsable)</em></div>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button class="vermas-btn" aria-expanded="false" aria-controls="fabiolione-1">
+            <span class="vermas-text">Ver más</span>
+            <svg class="vermas-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <a class="btn btn-danger btn-lg compra-btn" target="_blank"
+            href="https://www.domebi.com/events/fabio-lione-rhapsody-times-dawn-of-the-enchanted-tales-en-medelln">Compra
+            tu Ticket</a>
+        </div>
+        <div id="fabiolione-1" class="extended-content" style="display:none;">
+          <p><strong>El Rugido del León en la Eternidad de Medellín</strong></p>
+          <p>Cuando las luces se apaguen y los primeros acordes de la saga de Algalord suenen en el valle de Aburrá,
+            asistiremos a una cátedra de maestría vocal. Fabio Lione cantará los himnos de Rhapsody con una de la más
+            excelsa técnica vocal del mundo.</p>
+          <p><strong>Una voz que desafía el tiempo</strong></p>
+          <p>Desde las notas más altas de Dawn of Victory hasta la profundidad operística de Lamento Eroico, la voz de
+            Lione navegará con su registro impecable, potente y cristalino, entre la potencia del heavy metal y la
+            elegancia del bel canto italiano, recorrerá lo mejor de los álbumes de Rhapsody "Legendary Tales, Symphony
+            of Enchanted Lands, Dawn of Victory y Power of the Dragonflame" y algunos éxitos de Iron Maiden, Scorpions
+            &
+            Europe.</p>
+          <p><strong>Puntos de venta física:</strong> Rock Symphony (Torres de Bomboná), Taquilla Teatro Matacandelas
+            (Calle 47 # 43-47) y Rockland disco tienda (Paseo de la Playa).</p>
+        </div>
+      </section>
+    </article>
+
+     <!-- Card -->
+    <article class="funcion-card" data-date="2026-05-29">
+
+      <!-- date -->
+      <section class="date">
+        <h5>Viernes</h5>
+        <h3>29</h3>
+        <h5>De mayo</h5>
+        <h5>10:00 p.m.</h5>
+      </section>
+
+      <section class="content">
+        <div class="presenter">
+          <div class="presenter__strong">Rock Symphony Productions</div> Presenta:
+        </div>
+
+        <!-- image -->
+        <img class="imagen-evento" src="/assets/img/programacion/image.png" alt="">
+
+
+        <h1 class="title">Fabio Lione Rhapsody Times</h1>
+        <div class="description">
+
+          <div><strong>"Dawn of the Enchanted Tales"</strong><br>
+            <strong>Artistas:</strong> Fabio Lione (Italia) + Royal Project<br>
+            <strong>Lugar: </strong> Cabaret El Cantadero Matacandelas.<br>
+            <strong>Valor:</strong><br>
+            <span class="valor-etapa">Etapa 1: $100.000</span><br>
+            <span class="valor-etapa">Etapa 2: $130.000</span><br>
+            <span class="valor-etapa">Etapa 3: $150.000</span>
+            <div class="nota-edad"><em>*Edad mínima 15 años (menores acompañados de adulto responsable)</em></div>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button class="vermas-btn" aria-expanded="false" aria-controls="fabiolione-2">
+            <span class="vermas-text">Ver más</span>
+            <svg class="vermas-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <a class="btn btn-danger btn-lg compra-btn" target="_blank"
+            href="https://www.domebi.com/events/fabio-lione-rhapsody-times-dawn-of-the-enchanted-tales-en-medelln">Compra
+            tu Ticket</a>
+        </div>
+        <div id="fabiolione-2" class="extended-content" style="display:none;">
+          <p><strong>El Rugido del León en la Eternidad de Medellín</strong></p>
+          <p>Cuando las luces se apaguen y los primeros acordes de la saga de Algalord suenen en el valle de Aburrá,
+            asistiremos a una cátedra de maestría vocal. Fabio Lione cantará los himnos de Rhapsody con una de la más
+            excelsa técnica vocal del mundo.</p>
+          <p><strong>Una voz que desafía el tiempo</strong></p>
+          <p>Desde las notas más altas de Dawn of Victory hasta la profundidad operística de Lamento Eroico, la voz de
+            Lione navegará con su registro impecable, potente y cristalino, entre la potencia del heavy metal y la
+            elegancia del bel canto italiano, recorrerá lo mejor de los álbumes de Rhapsody "Legendary Tales, Symphony
+            of Enchanted Lands, Dawn of Victory y Power of the Dragonflame" y algunos éxitos de Iron Maiden, Scorpions
+            &
+            Europe.</p>
+          <p><strong>Puntos de venta física:</strong> Rock Symphony (Torres de Bomboná), Taquilla Teatro Matacandelas
+            (Calle 47 # 43-47) y Rockland disco tienda (Paseo de la Playa).</p>
+        </div>
+      </section>
+    </article>
+
+     <!-- Card -->
+    <article class="funcion-card" data-date="2026-05-29">
+
+      <!-- date -->
+      <section class="date">
+        <h5>Viernes</h5>
+        <h3>29</h3>
+        <h5>De mayo</h5>
+        <h5>10:00 p.m.</h5>
+      </section>
+
+      <section class="content">
+        <div class="presenter">
+          <div class="presenter__strong">Rock Symphony Productions</div> Presenta:
+        </div>
+
+        <!-- image -->
+        <img class="imagen-evento" src="/assets/img/programacion/image.png" alt="">
+
+
+        <h1 class="title">Fabio Lione Rhapsody Times</h1>
+        <div class="description">
+
+          <div><strong>"Dawn of the Enchanted Tales"</strong><br>
+            <strong>Artistas:</strong> Fabio Lione (Italia) + Royal Project<br>
+            <strong>Lugar: </strong> Cabaret El Cantadero Matacandelas.<br>
+            <strong>Valor:</strong><br>
+            <span class="valor-etapa">Etapa 1: $100.000</span><br>
+            <span class="valor-etapa">Etapa 2: $130.000</span><br>
+            <span class="valor-etapa">Etapa 3: $150.000</span>
+            <div class="nota-edad"><em>*Edad mínima 15 años (menores acompañados de adulto responsable)</em></div>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button class="vermas-btn" aria-expanded="false" aria-controls="fabiolione-3">
+            <span class="vermas-text">Ver más</span>
+            <svg class="vermas-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <a class="btn btn-danger btn-lg compra-btn" target="_blank"
+            href="https://www.domebi.com/events/fabio-lione-rhapsody-times-dawn-of-the-enchanted-tales-en-medelln">Compra
+            tu Ticket</a>
+        </div>
+        <div id="fabiolione-3" class="extended-content" style="display:none;">
+          <p><strong>El Rugido del León en la Eternidad de Medellín</strong></p>
+          <p>Cuando las luces se apaguen y los primeros acordes de la saga de Algalord suenen en el valle de Aburrá,
+            asistiremos a una cátedra de maestría vocal. Fabio Lione cantará los himnos de Rhapsody con una de la más
+            excelsa técnica vocal del mundo.</p>
+          <p><strong>Una voz que desafía el tiempo</strong></p>
+          <p>Desde las notas más altas de Dawn of Victory hasta la profundidad operística de Lamento Eroico, la voz de
+            Lione navegará con su registro impecable, potente y cristalino, entre la potencia del heavy metal y la
+            elegancia del bel canto italiano, recorrerá lo mejor de los álbumes de Rhapsody "Legendary Tales, Symphony
+            of Enchanted Lands, Dawn of Victory y Power of the Dragonflame" y algunos éxitos de Iron Maiden, Scorpions
+            &
+            Europe.</p>
+          <p><strong>Puntos de venta física:</strong> Rock Symphony (Torres de Bomboná), Taquilla Teatro Matacandelas
+            (Calle 47 # 43-47) y Rockland disco tienda (Paseo de la Playa).</p>
+        </div>
+      </section>
+    </article>
+
+    
+
+  </div>
+  <script>
+    // Run immediately upon injection
+    (() => {
+      const today = new Date();
+      const events = document.querySelectorAll(".funcion-card");
+
+      events.forEach(event => {
+        const dateAttr = event.getAttribute("data-date");
+        const eventDate = new Date(`${dateAttr}T00:00:00`); // Forzar formato ISO
+
+        // Agregar un día al final del evento para que se oculte al día siguiente
+        eventDate.setDate(eventDate.getDate() + 1);
+
+        if (eventDate <= today) {
+          event.style.display = "none";
+        }
+      });
+    })();
+
+    // Initialize "Ver más" buttons
+    document.querySelectorAll('.vermas-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const targetId = btn.getAttribute('aria-controls');
+        const target = document.getElementById(targetId);
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+          // Collapse
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('.vermas-text').textContent = 'Ver más';
+          target.style.display = 'none';
+        } else {
+          // Collapse any other open cards first to emulate accordion gracefully!
+          document.querySelectorAll('.vermas-btn[aria-expanded="true"]').forEach(openBtn => {
+             openBtn.setAttribute('aria-expanded', 'false');
+             openBtn.querySelector('.vermas-text').textContent = 'Ver más';
+             const openId = openBtn.getAttribute('aria-controls');
+             const openTarget = document.getElementById(openId);
+             if(openTarget) openTarget.style.display = 'none';
+          });
+          
+          // Expand current
+          btn.setAttribute('aria-expanded', 'true');
+          btn.querySelector('.vermas-text').textContent = 'Ver menos';
+          target.style.display = 'block';
+        }
+      });
+    });
+
+    // Close extended content when clicking outside
+    document.addEventListener('click', (e) => {
+      // If we didn't click inside an expanded content or a ver-mas button
+      if (!e.target.closest('.extended-content') && !e.target.closest('.vermas-btn')) {
+        document.querySelectorAll('.vermas-btn[aria-expanded="true"]').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('.vermas-text').textContent = 'Ver más';
+          const targetId = btn.getAttribute('aria-controls');
+          const target = document.getElementById(targetId);
+          if (target) target.style.display = 'none';
+        });
+      }
+    });
+  </script>
+
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
+  <!-- </div> -->
+</article>

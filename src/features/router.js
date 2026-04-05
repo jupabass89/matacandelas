@@ -2,9 +2,9 @@
 
 const routes = {
   // Default routes
-  '': '/pages/programacion.html',
-  '/': '/pages/programacion.html',
-  'programacion': '/pages/programacion.html', // home *
+  '': '/pages/home.html',
+  '/': '/pages/home.html',
+  'home': '/pages/home.html',
 
   // Fallback
   '*': '',
@@ -16,13 +16,15 @@ const routes = {
   'ubicacion': '/pages/ubicacion.html',
   'casa': '/pages/casa.html',
   'logo': '/pages/logo.html',
-  'contacto': '/pages/contacto.html',
-
+  
   // Obras
   'obras': '/pages/obras.html',
-
+  
   // Documentos
   'documentos': '/pages/documentos.html',
+
+  // Contacto
+  'contacto': '/pages/contacto.html',
 }
 
 export async function router(path = window.location.pathname) {
@@ -36,20 +38,22 @@ export async function router(path = window.location.pathname) {
   // Extrae solo el nombre de la ruta (sin /)
   const routeName = path.split('/').filter(Boolean).pop() || ''
 
+  console.log(routeName)
   // Primero busca en routes definidas
   let file = routes[routeName]
+  let isFileExist
 
   // Si no está en routes, intenta buscar en blog/
   if (!file) {
-    const isFileExist = await fileExists(`/blog/${routeName}.html`)
+    isFileExist = await fileExists(`/blog/${routeName}.html`)
     if (isFileExist) {
       file = `/blog/${routeName}`
     } else {
       // Si no existe, usa fallback
-      file = routes['programacion']
+      file = routes['home']
     }
   }
-  console.log('Ruta:', routeName, 'Archivo:', file)
+  console.log('Ruta:', routeName, 'Archivo:', file, 'fileExists:', Boolean(isFileExist))
 
   try {
     const res = await fetch(file)
@@ -58,6 +62,15 @@ export async function router(path = window.location.pathname) {
 
     pageContent.innerHTML = html
     window.scrollTo(0, 0)
+
+    // Execute scripts manually since innerHTML doesn't
+    const scripts = pageContent.querySelectorAll('script')
+    scripts.forEach(oldScript => {
+      const newScript = document.createElement('script')
+      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.textContent = oldScript.textContent
+      oldScript.parentNode.replaceChild(newScript, oldScript)
+    })
   } catch (error) {
     console.error('Error loading page:', error)
     pageContent.innerHTML = '<p>Error al cargar la página</p>'
