@@ -3,12 +3,49 @@
 
 .main-footer {
   position: relative;
+  scroll-margin-top: 5rem;
   background: linear-gradient(180deg, #181818 0%, #0a0a0a 100%);
   color: $color-text-muted;
   padding: 5rem 1.5rem 3rem;
   border-top: 1px solid rgba($color-accent, 0.15);
   box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.4);
   font-family: $font-primary;
+
+  .back-to-top-wrapper {
+    display: flex;
+  }
+
+  .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.03);
+      color: $color-accent;
+      border-color: $color-accent;
+
+      svg {
+        transform: translateY(-3px);
+      }
+    }
+  }
 
   &::before {
     content: '';
@@ -33,9 +70,32 @@
   .footer-section {
     flex: 1;
     min-width: 320px;
+
+    h4 {
+      color: $color-accent;
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      padding-bottom: 0.75rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: $color-accent;
+        border-radius: 2px;
+      }
+    }
   }
 
   .footer-info {
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -50,6 +110,26 @@
         color: $color-accent;
         font-weight: 700;
         letter-spacing: 1px;
+      }
+
+      .contact-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.25rem;
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+          color: $color-accent;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
       }
     }
 
@@ -75,28 +155,6 @@
 
   .footer-allies {
     flex: 2.5;
-
-    h4 {
-      color: $color-accent;
-      font-size: 1rem;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      padding-bottom: 0.75rem;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: $color-accent;
-        border-radius: 2px;
-      }
-    }
 
     .allies-grid {
       display: grid;
@@ -145,6 +203,13 @@
     .footer-section {
       width: 100%;
       text-align: center;
+
+      h4 {
+        &::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
 
     .footer-info {
@@ -152,16 +217,80 @@
     }
 
     .footer-allies {
-      h4 {
-        &::after {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
 
       .allies-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 1.5rem 1rem;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .footer-legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    .footer-copyright-social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5% 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+      .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+      }
+
+      .footer-socials {
+        display: none;
+
+        a {
+          color: rgba(255, 255, 255, 0.7);
+          transition: color 0.3s ease;
+
+          svg {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+    }
+
+    @include mobile {
+      .footer-copyright-social {
+        padding: 1.5rem 1rem 0;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        text-align: center;
+
+        .footer-socials {
+          display: flex;
+          justify-content: center;
+          gap: 1.25rem;
+        }
       }
     }
   }
