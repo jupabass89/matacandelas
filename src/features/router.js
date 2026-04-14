@@ -1,31 +1,10 @@
 // router.js
 
-const routes = {
-  // Default routes
-  '': '/pages/home.html',
-  '/': '/pages/home.html',
-  'home': '/pages/home.html',
+// routes
+import mainRoutes from './routes/main-routes.json'
+import blogRoutes from './routes/blog-routes.json'
 
-  // Fallback
-  '*': '',
-
-  // Nuestro Grupo
-  'suscribir': '/pages/suscribir.html',
-  'historia': '/pages/historia.html',
-  'cifras': '/pages/cifras.html',
-  'ubicacion': '/pages/ubicacion.html',
-  'casa': '/pages/casa.html',
-  'logo': '/pages/logo.html',
-  
-  // Obras
-  'obras': '/pages/obras.html',
-  
-  // Documentos
-  'documentos': '/pages/documentos.html',
-
-  // Contacto
-  'contacto': '/pages/contacto.html',
-}
+const routes = {...mainRoutes, ...blogRoutes}
 
 export async function router(path = window.location.pathname) {
   // Espera a que el elemento page-content esté disponible

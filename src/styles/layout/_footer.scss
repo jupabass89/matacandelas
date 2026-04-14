@@ -33,6 +33,28 @@
   .footer-section {
     flex: 1;
     min-width: 320px;
+
+    h4 {
+      color: $color-accent;
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      padding-bottom: 0.75rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: $color-accent;
+        border-radius: 2px;
+      }
+    }
   }
 
   .footer-info {
@@ -75,28 +97,6 @@
 
   .footer-allies {
     flex: 2.5;
-
-    h4 {
-      color: $color-accent;
-      font-size: 1rem;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      position: relative;
-      padding-bottom: 0.75rem;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: $color-accent;
-        border-radius: 2px;
-      }
-    }
 
     .allies-grid {
       display: grid;
@@ -145,6 +145,13 @@
     .footer-section {
       width: 100%;
       text-align: center;
+
+      h4 {
+        &::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
 
     .footer-info {
@@ -152,12 +159,6 @@
     }
 
     .footer-allies {
-      h4 {
-        &::after {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
 
       .allies-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

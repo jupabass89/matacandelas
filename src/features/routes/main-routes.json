@@ -1,0 +1,22 @@
+
+{
+
+  "": "/pages/home.html",
+  "/": "/pages/home.html",
+  "home": "/pages/home.html",
+  "*": "",
+
+  "suscribir": "/pages/suscribir.html",
+  "historia": "/pages/historia.html",
+  "cifras": "/pages/cifras.html",
+  "ubicacion": "/pages/ubicacion.html",
+  "casa": "/pages/casa.html",
+  "logo": "/pages/logo.html",
+  
+
+  "obras": "/pages/obras.html",  
+
+  "documentos": "/pages/documentos.html",
+
+  "contacto": "/pages/contacto.html"
+}
