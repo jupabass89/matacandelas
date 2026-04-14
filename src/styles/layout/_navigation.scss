@@ -276,7 +276,13 @@
     color: $color-accent;
 
     .mobile-social {
-      display: none !important;
+      display: flex;
+
+      @include desktop {
+        body.scrolled-past & {
+          display: none;
+        }
+      }
     }
 
     @include mobile {

@@ -5,6 +5,191 @@
    Home Page Styles — Teatro Matacandelas
    ========================================================================= */
 
+/* Hero Carousel */
+.hero-carousel {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: calc(100vh - 8.5rem);
+  min-height: 400px;
+  max-height: none;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  background-color: #000;
+  border-bottom: 2px solid rgba($color-accent, 0.4);
+
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+
+      .carousel-content {
+        transform: translateY(0);
+        opacity: 1;
+        transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s, opacity 0.8s ease 0.3s;
+      }
+
+      .carousel-bg {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 10s linear; // Ken Burns effect
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(14, 14, 14, 0.9) 0%, rgba(14, 14, 14, 0.4) 50%, rgba(14, 14, 14, 0.1) 100%);
+    }
+  }
+
+  .carousel-content {
+    position: absolute;
+    bottom: 5rem;
+    left: 5%;
+    max-width: 600px;
+    padding: 2rem;
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none; // so clicks bypass background if needed
+    
+    // reset pointer events for actual content
+    > * {
+      pointer-events: auto;
+    }
+
+    .carousel-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba($color-accent, 0.8);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .carousel-title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 1rem 0;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    }
+
+    .carousel-desc {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 2rem 0;
+      line-height: 1.5;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .compra-btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+
+    &:hover {
+      background: $color-accent;
+      border-color: $color-accent;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    &.prev { left: 2%; }
+    &.next { right: 2%; }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    
+    @include mobile {
+      display: none; // clean UI on mobile usually rely on swipes or indicators
+    }
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.active, &:hover {
+        background: $color-accent;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
 /* Poem Section */
 #poemaindex {
   width: 100%;
@@ -77,6 +262,7 @@
   // padding: 0 1.5rem;
   // background: green;
   width: 100%;
+  scroll-margin-top: 5rem;
 
   /* Month Headers */
   h2.fecha {

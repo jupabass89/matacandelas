@@ -40,7 +40,16 @@ export async function router(path = window.location.pathname) {
     const html = await res.text()
 
     pageContent.innerHTML = html
-    window.scrollTo(0, 0)
+
+    if (window.location.hash) {
+      setTimeout(() => {
+        const hashEl = document.querySelector(window.location.hash)
+        if (hashEl) hashEl.scrollIntoView({ behavior: 'smooth' })
+        else window.scrollTo(0, 0)
+      }, 100)
+    } else {
+      window.scrollTo(0, 0)
+    }
 
     // Execute scripts manually since innerHTML doesn't
     const scripts = pageContent.querySelectorAll('script')
