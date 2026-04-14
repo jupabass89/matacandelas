@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   root: 'src',
@@ -9,5 +9,24 @@ export default defineConfig({
   },
   build: {
     outDir: '../dist',
-  }
+    emptyOutDir: true,
+  },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'pages',
+          dest: ''
+        },
+        {
+          src: 'blog',
+          dest: ''
+        },
+        {
+          src: 'features/frases.js',
+          dest: 'features'
+        }
+      ]
+    })
+  ]
 })
