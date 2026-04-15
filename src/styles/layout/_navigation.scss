@@ -7,30 +7,32 @@
   z-index: 1000;
   background-color: $color-bg-dark;
   backdrop-filter: blur(10px);
-  // -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  // max-width: 1200px;
-  // margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5% 0 3%;
+  padding: 0 5% 0 0;
   height: 5rem;
-
-  @include mobile {
-    padding: 0 1.5rem;
-  }
-
-  
 
   .nav-brand img {
     height: 13rem;
     width: auto;
     transition: $transition-smooth;
-    &:hover { opacity: 0.8; }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include mobile {
+      height: 12rem;
+    }
   }
 
-  .nav-toggle { display: none; }
+  .nav-toggle {
+    display: none;
+  }
+
   .nav-toggle-label {
     display: none;
     cursor: pointer;
@@ -68,6 +70,17 @@
     padding: 0.5rem 0;
     transition: $transition-smooth;
 
+    &__tickets {
+      padding: 8%;
+      font-size: 0.9rem;
+      width: max-content;
+      background: linear-gradient(135deg, #a11c1e, #d82b2b);
+
+      @include mobile {
+        width: auto;
+      }
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -81,7 +94,10 @@
 
     &:hover {
       color: $color-accent;
-      &::after { width: 100%; }
+
+      &::after {
+        width: 100%;
+      }
     }
   }
 
@@ -102,12 +118,12 @@
     left: 0;
     background-color: $color-bg-light;
     min-width: 200px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     list-style: none;
     padding: 0.5rem 0;
     margin: 10px 0 0 0;
-    
+
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -134,7 +150,7 @@
 
       &:hover {
         color: $color-text-main;
-        background-color: rgba(255,255,255,0.05);
+        background-color: rgba(255, 255, 255, 0.05);
         padding-left: 1.8rem;
       }
     }
@@ -150,7 +166,7 @@
       flex-direction: column;
       justify-content: space-between;
       margin-left: auto; // Forces it aligned to right smoothly
-      
+
       span {
         transform-origin: center;
         background-color: #ffffff !important; // Force strict visibility
@@ -160,12 +176,20 @@
       }
     }
 
-    .nav-toggle:checked ~ .nav-toggle-label {
-      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      span:nth-child(2) { opacity: 0; }
-      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-toggle:checked~.nav-toggle-label {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
     }
-    
+
     .nav-menu {
       position: absolute;
       top: 100%;
@@ -185,7 +209,7 @@
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .nav-toggle:checked ~ .nav-menu {
+    .nav-toggle:checked~.nav-menu {
       max-height: 600px;
       opacity: 1;
       visibility: visible;
@@ -196,6 +220,10 @@
       width: 100%;
       text-align: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      // background-color: red;
+
+      // &__tickets {
+      // }
 
       &:last-child {
         border-bottom: none;
@@ -206,11 +234,12 @@
       display: block;
       padding: 1.25rem 0.5rem;
       font-size: 1.1rem;
+
     }
 
     .nav-dropdown {
       position: relative;
-      background-color: rgba(255,255,255,0.02);
+      background-color: rgba(255, 255, 255, 0.02);
       box-shadow: none;
       opacity: 1;
       visibility: visible;
@@ -224,7 +253,8 @@
         font-size: 0.95rem;
         color: rgba(255, 255, 255, 0.7);
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background-color: rgba(255, 255, 255, 0.05);
           color: #fff;
         }
@@ -233,7 +263,7 @@
 
     .has-dropdown:hover .nav-dropdown,
     .has-dropdown:focus-within .nav-dropdown {
-      display: block; 
+      display: block;
     }
   }
 }
@@ -243,22 +273,24 @@
   clear: both;
   line-height: 2.1875rem;
   width: 100%;
-  height: 1.5rem;
+  height: 1.7rem;
   line-height: 1.5rem;
   display: flex;
   justify-content: space-between;
-  color: $color-accent;
+  color: rgb(198, 199, 178);
   font-size: 0.8125rem;
-  // margin: 0 auto;
   text-align: center;
-
   font-weight: bold;
-  background: rgba(58, 56, 56, 0.95);
-  // padding: 0 8rem;
-  // border-bottom: 1px solid rgba(231, 226, 174, 0.1);
-  padding: 0 5%;
+  background: rgb(39 38 38 / 95%);
+  padding: 0 4%;
 
-  > div:first-child {
+  .frase {
+    font-size: 0.7rem;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  >div:first-child {
     @include mobile {
       display: none;
     }
@@ -296,26 +328,27 @@
         display: none;
       }
     }
-    
-    a:link, 
-    a:visited, 
-    a:hover, 
+
+    a:link,
+    a:visited,
+    a:hover,
     a:active {
       color: $color-accent;
       text-decoration: none;
     }
 
     .contact-icon {
+      transform: scale(0.85);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: $transition-smooth;
-      
+
       svg {
         width: 1rem;
         height: 1rem;
       }
-      
+
       &:hover {
         transform: scale(1.15);
       }

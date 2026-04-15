@@ -10,13 +10,18 @@
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  height: calc(100vh - 8.5rem);
+  height: calc(100vh - 7.5rem);
+  // height: 87vh;
   min-height: 400px;
   max-height: none;
   overflow: hidden;
   margin-bottom: 3rem;
   background-color: #000;
   border-bottom: 2px solid rgba($color-accent, 0.4);
+
+  @include mobile {
+      height: calc(100vh - 6rem);
+  }
 
   .carousel-inner {
     position: relative;
@@ -259,7 +264,7 @@
 #programacion {
   // max-width: 1100px;
   // margin: 2rem auto;
-  // padding: 0 1.5rem;
+  padding: 25px 0;
   // background: green;
   width: 100%;
   scroll-margin-top: 5rem;
@@ -501,6 +506,7 @@
 
       @include mobile {
         grid-row: 5;
+        justify-content: center;
         margin-top: 0.5rem;
       }
     }
@@ -642,7 +648,6 @@
   }
 
   #programacion {
-    padding: 0 1rem;
 
     h2.fecha {
       letter-spacing: 0.4rem;
