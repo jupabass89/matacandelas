@@ -1,0 +1,450 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as *;
+
+/* =========================================================================
+   Programación — Modern Event Cards
+   ========================================================================= */
+
+#programacion {
+  // max-width: 1100px;
+  // margin: 2rem auto;
+  padding: 25px 0;
+  // background: green;
+  width: 100%;
+  scroll-margin-top: 5rem;
+
+  /* Month Headers */
+  h2.fecha {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: $color-accent;
+    letter-spacing: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    // background-color: grey;
+    border: none;
+    margin: 3rem auto 2rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+    width: auto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-accent;
+      margin: 0.75rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  /* ---- Individual Event Card ---- */
+
+  .ciudad {
+    border: 1px solid rgba(231, 226, 174, 0.2);
+  }
+
+  .sexta {
+    border: 1px solid rgba(231, 226, 174, 0.2);
+    background-color: rgba(198, 40, 40, 0.05);
+  }
+}
+
+.funcion-card {
+  cursor: pointer;
+  display: flex;
+
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  &:has(.vermas-btn[aria-expanded="true"]) {
+    z-index: 50;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba($color-accent, 0.2);
+
+    .date {
+      @include desktop {
+        background: linear-gradient(180deg, rgba($color-accent, 0.15) 0%, rgba($color-accent, 0.02) 100%);
+        border-right-color: rgba($color-accent, 0.25);
+      }
+    }
+
+    .content .imagen-evento {
+      transform: scale(1.03) rotate(2deg);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(180deg, rgba($color-accent, 0.06) 0%, rgba($color-accent, 0.01) 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px 0 0 12px;
+    min-width: 120px;
+    text-align: center;
+    transition: all 0.4s ease;
+
+    @include mobile {
+      flex-direction: row;
+      gap: 1rem;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px 12px 0 0;
+      padding: 1rem;
+      background: linear-gradient(90deg, rgba($color-accent, 0.08) 0%, rgba($color-accent, 0.02) 100%);
+    }
+
+    h5 {
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.5);
+
+      @include mobile {
+        font-size: 0.85rem;
+      }
+    }
+
+    h3 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      color: $color-accent;
+      line-height: 1;
+      margin: 0.5rem 0;
+      text-shadow: 0 2px 10px rgba($color-accent, 0.2);
+
+      @include mobile {
+        font-size: 2.25rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr auto;
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding: 1.25rem;
+      gap: 1rem;
+    }
+
+    .presenter {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+
+      &__strong {
+        font-weight: 700;
+        color: rgba($color-accent, 0.9);
+        display: inline;
+      }
+    }
+
+    .title {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.25;
+      text-align: left;
+
+      @include mobile {
+        grid-row: 3;
+        font-size: 1.4rem;
+      }
+    }
+
+    .description {
+      grid-column: 1;
+      grid-row: 3;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.6;
+
+      @include mobile {
+        grid-row: 4;
+      }
+
+      strong {
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .valor-etapa {
+        display: inline-block;
+        margin-bottom: 0.15rem;
+      }
+
+      .nota-edad {
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+        opacity: 0.8;
+        font-style: italic;
+        color: $color-accent; // Gives it a nice touch
+      }
+    }
+
+    .imagen-evento {
+      grid-column: 2;
+      grid-row: 2 / span 3;
+      width: 12.5rem;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      align-self: center;
+
+
+      @include mobile {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .actions-row {
+      grid-column: 1;
+      grid-row: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @include mobile {
+        grid-row: 5;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .vermas-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      font-family: inherit;
+      font-size: 0.75rem;
+      color: $color-accent;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba($color-accent, 0.3);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .vermas-icon {
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &[aria-expanded="true"] .vermas-icon {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #a11c1e, #d82b2b);
+      color: #fff !important;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(216, 43, 43, 0.25);
+      // margin-top: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(135deg, #d82b2b, #f63c3c);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(216, 43, 43, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .extended-content {
+      position: absolute;
+      top: calc(100% - 10px);
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #121212;
+      border: 1px solid rgba(255, 255, 255, 0.08); /* Matches card borders */
+      border-top: 1px dashed rgba($color-accent, 0.3);
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba($color-accent, 0.1);
+      padding: 2rem;
+      margin-top: 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+
+      @include mobile {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      p {
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.2px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          font-weight: 700;
+          color: rgba($color-accent, 0.95);
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  #programacion {
+
+    h2.fecha {
+      letter-spacing: 0.4rem;
+      margin: 2rem auto 1.5rem;
+    }
+
+    .noticiasfuncion {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      .dia {
+        flex-direction: row;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        min-width: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+        h3 {
+          font-size: 2rem;
+          margin: 0;
+        }
+
+        h5 {
+          font-size: 0.7rem;
+        }
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin: 1rem 1rem 0.5rem;
+        float: none;
+        display: inline-block;
+      }
+
+      h1 {
+        font-size: 1.15rem;
+        text-align: center;
+        margin: 0.75rem 1rem 0.25rem;
+      }
+
+      p {
+        text-align: center;
+        margin: 0.25rem 1rem 0.5rem;
+        font-size: 0.85rem;
+      }
+
+      a.vermas {
+        text-align: center;
+        margin: 0 1rem 0.75rem;
+      }
+
+      .btn {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+@include desktop {
+
+  #programacion {
+    .noticiasfuncion {
+      grid-template-columns: 120px 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      .dia {
+        padding: 1.75rem 1rem;
+        min-width: 120px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

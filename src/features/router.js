@@ -28,8 +28,8 @@ export async function router(path = window.location.pathname) {
     if (isFileExist) {
       file = `/blog/${routeName}`
     } else {
-      // Si no existe, usa fallback
-      file = routes['home']
+      // Si no existe, usa fallback 404
+      file = '/pages/404.html'
     }
   }
   console.log('Ruta:', routeName, 'Archivo:', file, 'fileExists:', Boolean(isFileExist))
