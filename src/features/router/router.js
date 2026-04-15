@@ -1,10 +1,5 @@
 // router.js
-
-// routes
-import mainRoutes from './routes/main-routes.json'
-import blogRoutes from './routes/blog-routes.json'
-
-const routes = {...mainRoutes, ...blogRoutes}
+import routes from './routes.json'
 
 export async function router(path = window.location.pathname) {
   // Espera a que el elemento page-content esté disponible
@@ -14,25 +9,25 @@ export async function router(path = window.location.pathname) {
     return
   }
 
-  // Extrae solo el nombre de la ruta (sin /)
-  const routeName = path.split('/').filter(Boolean).pop() || ''
+  // Normaliza el path: quita el primer / y el último si existe
+  let routeName = path.startsWith('/') ? path.slice(1) : path
+  if (routeName.endsWith('/')) routeName = routeName.slice(0, -1)
 
-  console.log(routeName)
-  // Primero busca en routes definidas
+  console.log('Buscando ruta:', routeName || '(home)')
+  
+  // Busca en las rutas definidas
   let file = routes[routeName]
-  let isFileExist
 
-  // Si no está en routes, intenta buscar en blog/
+  // Si no se encuentra exactamente, manejar casos especiales o fallback
   if (!file) {
-    isFileExist = await fileExists(`/blog/${routeName}.html`)
-    if (isFileExist) {
-      file = `/blog/${routeName}`
+    if (routeName === '') {
+      file = routes['home'] || routes['/'] || routes['']
     } else {
-      // Si no existe, usa fallback 404
-      file = '/pages/404.html'
+      file = routes['404']
     }
   }
-  console.log('Ruta:', routeName, 'Archivo:', file, 'fileExists:', Boolean(isFileExist))
+
+  console.log('Archivo seleccionado:', file)
 
   try {
     const res = await fetch(file)
@@ -62,18 +57,6 @@ export async function router(path = window.location.pathname) {
   } catch (error) {
     console.error('Error loading page:', error)
     pageContent.innerHTML = '<p>Error al cargar la página</p>'
-  }
-}
-
-async function fileExists(path) {
-  try {
-    const res = await fetch(path, {
-      method: 'GET',
-      headers: { 'Range': 'bytes=0-0' } // Only fetch first byte
-    })
-    return res.status === 200
-  } catch {
-    return false
   }
 }
 

@@ -1,21 +1,18 @@
-
 {
   "": "/pages/home.html",
   "/": "/pages/home.html",
   "home": "/pages/home.html",
-  "*": "",
-
   "suscribir": "/pages/suscribir.html",
   "historia": "/pages/historia.html",
   "cifras": "/pages/cifras.html",
   "ubicacion": "/pages/ubicacion.html",
   "casa": "/pages/casa.html",
   "logo": "/pages/logo.html",
-  
-
-  "obras": "/pages/obras.html",  
-
+  "obras": "/pages/obras.html",
   "documentos": "/pages/documentos.html",
-
-  "contacto": "/pages/contacto.html"
+  "contacto": "/pages/contacto.html",
+  "404": "/pages/404.html",
+  "test": "/pages/test.html",
+  "22Bobos": "/pages/22Bobos.html",
+  "fiesta": "/pages/fiesta.html"
 }

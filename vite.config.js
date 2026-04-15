@@ -17,10 +17,6 @@ export default defineConfig({
         {
           src: 'pages',
           dest: ''
-        },
-        {
-          src: 'features/frases.js',
-          dest: 'features'
         }
       ]
     })

@@ -1,8 +1,9 @@
 // main.js
 import './styles/main.scss'
-import { router } from './features/router.js'
+import { router } from './features/router/router.js'
 import './features/carousel/carousel.js'
 import './features/programacion/programacion.js'
+import './features/frases/frases.js'
 
 class MainContainer extends HTMLElement {
   connectedCallback() {
