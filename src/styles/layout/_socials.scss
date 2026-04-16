@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts' as *;
+@use '../mixins' as *;
 
 .floating-socials {
   position: fixed;

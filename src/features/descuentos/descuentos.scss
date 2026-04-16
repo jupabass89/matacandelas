@@ -1,0 +1,105 @@
+@use '../../styles/abstracts' as *;
+@use '../../styles/mixins' as *;
+
+matacandelas-descuentos {
+  display: block;
+}
+
+.descuentos-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.descuentos-label {
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $color-accent;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: $color-accent;
+    border-radius: 2px;
+  }
+}
+
+.descuentos-list {
+  width: 100%;
+}
+
+/* Individual discount row */
+.descu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem 0;
+  transition: $transition-smooth;
+
+  &:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &:hover {
+    transform: translateX(4px);
+
+    .descu-icon {
+      color: #fff;
+      transform: scale(1.1);
+    }
+  }
+
+  .descu-icon {
+    width: 24px;
+    height: 24px;
+    color: $color-accent;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  p {
+    color: $color-text-muted;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: $font-primary;
+
+    a {
+      color: $color-accent;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: #f0ebca;
+      }
+    }
+  }
+}
+
+/* Footer note */
+.descuentos-nota {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-family: $font-primary;
+  text-align: right;
+  width: 100%;
+  margin: 0.5rem 0 0;
+}

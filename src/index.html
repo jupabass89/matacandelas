@@ -56,10 +56,9 @@
   <meta property="og:title" content="Teatro Matacandelas" />
   <meta property="og:description" content="Teatro, títeres y música" />
   <meta property="og:image" content="https://www.matacandelas.com/src/assets/img/Casa-Matacandelas-2023.jpg" />
-  <!-- <script type="text/javascript" src="./components/main-container/main-container.js"></script>
 
-  <script type="text/javascript" src="./main.js"></script> -->
-
+  <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
+  <script type="module" src="/main.js"></script>
 </head>
 
 <body>
@@ -114,13 +113,10 @@
           </svg>
         </a>
       </li>
-
-
     </ul>
-
   </nav>
 
-  <div id="barraazul">
+  <div id="sub-navbar">
     <div class="frase">
       <matacandelas-frase></matacandelas-frase>
     </div>
@@ -181,401 +177,220 @@
     </div>
   </div>
 
+  <!-- Main content -->
+  <main-container></main-container>
 
+  <!-- Sub Footer -->
+  <div id="sub-footer">
+    <div id="descuentos">
+      <matacandelas-descuentos></matacandelas-descuentos>
+    </div>
 
-  <!-- InstanceBeginEditable name="contenidos" -->
-  <div class="barrateatronoticias2"></div>
-  <script type="module" src="/main.js"></script>
+    <div id="poema-columna">
+      <matacandelas-poema></matacandelas-poema>
+    </div>
 
-  <div>
-    <main-container></main-container>
-    <div>
-
-      <div class="both"></div>
-      <div id="docsydescus">
-        <div id="descuentos">
-          <h2>Descuentos</h2>
-          <div class="descu">
-            <svg class="descu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    <div id="nuevosdocs">
+      <matacandelas-articulos></matacandelas-articulos>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="main-footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-section footer-info">
+        <h4>Contacto</h4>
+        <p class="footer-address">
+          <br>
+          <a href="tel:+573502151100" class="contact-item">
+            <svg viewBox="0 0 512 512" fill="currentColor">
+              <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
             </svg>
-            <p>50% para estudiantes, tercera edad y discapacitados.</p>
-          </div>
-          <div class="descu">
-            <svg class="descu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="5.5" cy="17.5" r="3.5"></circle>
-              <circle cx="18.5" cy="17.5" r="3.5"></circle>
-              <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"></path>
+            (+57) 350 215 11 00
+          </a><br>
+          <a href="mailto:matacandelas@matacandelas.com" class="contact-item">
+            <svg viewBox="0 0 512 512" fill="currentColor">
+              <path
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
             </svg>
-            <p>Llega en bicicleta por $15.000</p>
-          </div>
-          <div class="descu">
-            <svg class="descu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-              <line x1="1" y1="10" x2="23" y2="10"></line>
+            matacandelas@matacandelas.com
+          </a>
+          <a href="ubicacion" class="contact-item">
+            <svg viewBox="0 0 384 512" fill="currentColor">
+              <path
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
             </svg>
-            <p>Asociados <a href="http://www.confiar.coop/" title="Confiar Cooperativa Financiera"
-                target="_blank">CONFIAR</a> pagan $15.000 con tarjeta.</p>
-          </div>
-          <div class="descu">
-            <svg class="descu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-              <line x1="7" y1="7" x2="7.01" y2="7"></line>
-            </svg>
-            <p>Guarda tu boleta para un descuento en Medellín en Escena</p>
-          </div>
-          <p class="nota">*Válido para funciones en nuestra sede</p>
-        </div>
-
-        <div id="poema-columna">
-          <h2>Poema del mes</h2>
-          <div id="poemaindex">
-            <h2 class="tseccion">Distinto</h2>
-            <p class="author">de Juan Ramón Jiménez</p>
-            <p>Lo querían matar<br>
-              los iguales<br>
-              porque era distinto. </p>
-            <p>Si veis un pájaro distinto,<br>
-              tiradlo;<br>
-              si veis un monte distinto,<br>
-              caedlo;<br>
-              si veis un camino distinto,<br>
-              cortadlo;<br>
-              si veis una rosa distinta,<br>
-              deshojadla;<br>
-              si veis un río distinto,<br>
-              cegadlo...<br>
-              si veis un hombre distinto,<br>
-              matadlo.</p>
-            <p>Y el sol y la luna dando en lo distinto. </p>
-          </div>
-        </div>
-
-        <div id="nuevosdocs">
-          <h2>Nuevos artículos</h2>
-          <ul>
-            <li><a href="Promesa-y-belleza-Diana-Ofelia"
-                title="Hay palabras que parecen demasiado frágiles para contener lo que intentan nombrar. Honor es una de ellas">Promesa
-                y belleza</a> Por Diana Acosta Rippe</li>
-            <li><a href="Libro-Matacandelas.pdf" title="Colectivo Teatral Matacandelas / 36 años">Libro Colectivo
-                Teatral
-                Matacandelas / 36 años | Colección Grandes Creadores del Teatro Colombiano</a></li>
-            <li><a href="Doscientos-anos-de-teatro-en-Medellin-Por-Cristobal-Pelaez-Gonzalez"
-                title="En nuestra corta historia teatral aparece una arquitectura heredada de los italianos, con recitados prestados de los españoles y, una vez proclamada la independencia">Italianos,
-                españoles, franceses y marxistas deambulando por los escenarios de La Villa</a> - Por: Cristóbal Peláez
-              González</li>
-            <li><a href="Primer-amor-de-Matacandelas-Lucido-y-transgresor"
-                title="La construcción tan teatral y a la vez tan orgánica de este personaje tan extraño y tan de este mundo a la vez...">El
-                Primer amor de Matacandelas: lúcido y transgresor</a> - Por Claudio Rivera</li>
-            <li><a href="Incertidumbre-y-muerte-por-Analucia-Isaza"
-                title="Luces y sombras. Personajes que aparecen y desaparecen. Expresan sus textos como ejercicio de actuación. Están y luego no.">Incertidumbre
-                y muerte</a> Por Analucía Isaza Molina</li>
-            <li><a href="Entrevista-Eduardo-Cardenas"
-                title="La historia del teatro en Medellín no está escrita, se zarandea en la cabeza de Eduardo Cárdenas">Entrevista
-                a Eduardo Cárdenas</a> Por Cristóbal Peláez González</li>
-            <li><a href="Dos-siglos-de-teatro-en-Medellin-Por-Cristobal-Pelaez" title="Cuaderno de apuntes sobre">Dos
-                siglos de teatro en Medellín</a> Por Cristóbal Peláez González</li>
-            <li><a href="Teatralidad-y-heteronimia-en-Fernando-Pessoa-y-Alberto-Caeiro"
-                title="trabajo de investigación literaria y teatral centrado en el análisis de la heteronimia de Fernando Pessoa manifiesta en el heterónimo y maestro Alberto Caeiro da Silva">Teatralidad
-                y heteronimia en Fernando Pessoa y Alberto Caeiro</a> - Diana Acosta Rippe</li>
-            <li><a href="El-Ceremonial-de-la-Quietud-David-Barbosa-Carvajal"
-                title="Un estudio del Teatro Estático y La Acción Vocal en O Marinheiro del Teatro Matacandelas">El
-                Ceremonial de la Quietud</a> - David Barbosa Carvajal</li>
-            <li><a href="Conversando-con-Juan-Alvaro-Romero-Por-Cristobal-Pelaez-Gonzalez"
-                title="Criado en Manrique pero nacido en Santa Bárbara, Antioquia, tierra de mangos y de dramaturgos, coterráneo de José Manuel Freidel">Conversando
-                con Juan Álvaro Romero</a> - Por Cristóbal Peláez González</li>
-            <li><a href="Antinoo-o-la-sugestion-poetica-Andres-Alvarez-Arboleda"
-                title="En efecto, la obra comienza con un cuadro escénico en el que un personaje contextualiza lo que podríamos denominar la trama presente en el poema dramático de Pessoa: el mancebo Antínoo se ha ahogado en las aguas del Nilo...">Antínoo
-                o la sugestión poética</a> - Por Andrés Álvarez Arboleda</li>
-            <li><a href="La-entrevista-perdida-de-Cristobal-Pelaez-Por-Canek-Denis"
-                title="Aprovechamos este momento para hacer público este material a propósito de la celebración de los 40 años de fundación del Teatro Matacandelas, agrupación teatral de Medellín, Colombia. Así mismo compartimos desde aquí el júbilo de haber conocido esta emblemática tropa ">La
-                entrevista perdida de Cristóbal Peláez</a> - Por Canek Denis</li>
-            <li><a href="Diego-Sanchez-Un-luto-al-ritmo-de-una-caida-Por-Manuela-Saldarriaga"
-                title="Para decirlo a la manera del poeta Huidobro: Diego Sánchez, intérprete y director de artes escénicas, agotó su vida en la vida">Diego
-                Sánchez: Un luto al ritmo de una caída</a> - Por Manuela Saldarriaga</li>
-            <li><a href="Este-pais-esta-todavia-en-obra-negra-Santiago-Orozco"
-                title="En plan pesimista, sí. En plan optimista, ojalá no fuera eso. Nosotros sabemos que estos gobiernos de derecha y de extrema derecha son muy fuertes en el mundo y están más vigorosos hoy que nunca">Este
-                país está todavía en obra negra</a> - Por Santiago Orozco U</li>
-            <li><a href="La-capital-es-Medellin-Maria-Mercedes-Carranza"
-                title="La intensa actividad cultural que se desarrolla en Medellín, se ha visto enriquecida con la inauguración de la sala de teatro del grupo matacandelas.">La
-                capital es Medellín</a> - Por Maria Mercedes Carranza</li>
-            <li><a href="El-parque-lleras-y-Sylvia-Plath"
-                title="Sylvia Plath bien vale, no una misa, sino una religión entera.">El parque Lleras y Sylvia
-                Plath</a>
-              - Por Sandro Romero Rey</li>
-            <li><a href="Miguel-Angel-Rojas-Por-Cristobal-Pelaez"
-                title="LE CUENTO A usted que la mía fue una infancia feliz como la de muchos otros niños">Indígenas,
-                cineastas y guerreros en la obra Bio de Miguel Ángel Rojas</a> - Por Cristóbal Peláez Gonzalez</li>
-            <li><a href="Nadie-deliberadamente-monta-mal-teatro-Cristobal-Pelaez-Gonzalez%20"
-                title="se ruega no disparar sobre el pianista, él lo hace lo mejor que puede">Nadie deliberadamente
-                monta
-                mal teatro</a> - Por Cristóbal Peláez González</li>
-            <li><a href="El-arte-no-es-una-suma-de-adiciones-sino-por-el-contrario-de-destrucciones"
-                title="Entonces vi, digo, aquel hombre del cual nunca me podría imaginar que iba a tener sobre mi vida teatral una importancia tan decisiva. ">El
-                arte no es una suma de adiciones, sino, por el contrario, de destrucciones</a> - Por Cristóbal Peláez
-              González</li>
-            <li><a href="Matacandelas-Pandilla-alegre-de-creadores-Por-Marina-Lamus-Obregon"
-                title="Matacandelas nació a finales de los años setenta del siglo pasado, cuando tres amigos que departían en un café, cerca de la Plazita de las Flores">Matacandelas:
-                pandilla alegre de creadores</a> - Por: Marina Lamus Obregón</li>
-            <li><a href="La-casa-en-el-aire"
-                title="A pocos kilómetros de Abejorral, Antioquia, emerge la roca del Cerro San Vicente.">La casa en el
-                aire y Matacandelas</a> - Por Cristóbal Peláez González</li>
-            <li><a href="El-legado-de-Andres-Caicedo-Por-Lina-Castano"
-                title="Hace 45 años, el 4 de marzo de 1977, aparecía publicada por primera vez, a través del Instituto Colombiano de Cultura (Colcultura), la novela ¡Que viva la música! ">El
-                legado de Andrés Caicedo. La contracultura de una generación que ha hecho eco</a> Por: Lina Isabel
-              Castaño
-            </li>
-            <li><a href="Primer-amor-este-finde-en-Casa-de-Teatro"
-                title="Esta obra te deja con un sabor a humanidad">Primer amor este finde en Casa de Teatro</a> - Por
-              Freddy Ginebra</li>
-            <li><a href="Un-manifiesto-por-Cristobal-Pelaez-Gonzalez"
-                title="Y después de cazar al jabalí y devorarlo hizo con sus colmillos un collar">Domingo 27 de marzo de
-                2022, Día Internacional del Teatro - Un manifiesto</a> - Por Cristóbal Peláez González</li>
-            <li><a href="Esteban-Gira-El-interprete-invisible-Por-Maria-Camila-Lopez"
-                title="Cuando las campanas de la Catedral Metropolitana anuncian el comienzo de la celebración eucarística, una melodía se desplaza solemne y dramática por las paredes de ladrillo">Esteban
-                Gira - El intérprete invisible</a></li>
-            <li><a href="Aproximaciones-a-lo-sonoro-y-a-lo-musical-en-el-Teatro-Matacandelas-Por-Cristobal-Pelaez"
-                title="Y por una música que ya no se escucha en ninguna parte, me refiero a esa música llamada silencio ">Aproximaciones
-                a lo sonoro y a lo musical en el Teatro Matacandelas</a> - Por: Cristóbal Peláez González</li>
-            <li><a href="Jorge-Ali-Triana-Por-Cristobal-Pelaez-Gonzalez"
-                title="Corran, muchachos, que el TPB está presentando Toma tu lanza Sintana en la escuelita Modelo">Jorge
-                Alí Triana - La dramaturgia siempre llega de última a las culturas porque es muy compleja</a> - Por:
-              Cristóbal Peláez González</li>
-            <li><a href="Una-casa-en-silencio-por-Adriana-Garcia-Arriola"
-                title="Hay una casa vieja, casi vacía, en silencio: sus paredes, recovecos y techos guardan el alma del Teatro Matacandelas ">Una
-                casa en silencio</a> - por Adriana García Arriola</li>
-            <li><a href="Juegos-Nocturnos-2-Sobre-la-utilidad-de-la-Patafisica-por-Adriana-Garcia-Arriola"
-                title="Aquí sólo montamos teatro de manguardia. Somos un teatro pobresional">Juegos Nocturnos 2: Sobre
-                la
-                ¿utilidad? de la ´Patafísica</a> por Adriana García Arriola</li>
-            <li><a href="Oscar-Campo-Yo-soy-un-collage-andante-Por-Cristobal-Pelaez-Gonzalez"
-                title="Mi estética es la de ser un collage. Hago collages todo el tiempo. Mis películas son robos. ¿Cuándo me siento feliz? Cuando encuentro alguien a quien robarle">Óscar
-                Campo: "Yo soy un collage andante"</a> Por Cristóbal Peláez González</li>
-            <li><a href="Entrevistando-a-Javier-Gomez-Henao-Por-Cristobal-Pelaez"
-                title="Yo he visto el rostro del fracaso, lo he saboreado y me he divertido con él">Entrevistando a
-                Javier
-                Gómez Henao</a> - Cristóbal Peláez González</li>
-          </ul>
-          <p style="text-align:right; font-size:12px; font-family:Verdana, Geneva, sans-serif; color:#069;"><a
-              title="Nuevos Artículos" href="documentos.htm">Ver más...</a><span class="flecha"></span></p>
+            Calle 47 No. 43 - 47 | Medellín - Colombia
+          </a>
+        </p>
+        <div class="footer-blockchain">
+          <a href="http://www.confiar.coop/" target="_blank">
+            <img src="/assets/img/LogoConfiar2023.png" alt="Confiar Cooperativa Financiera" />
+          </a>
         </div>
       </div>
-      <div class="both"></div>
 
-      <script type="text/javascript"
-        src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
-
-      <!-- </div> -->
-
-      <!-- Footer -->
-      <footer class="main-footer" id="contacto">
-        <div class="footer-container">
-          <div class="footer-section footer-info">
-            <h4>Contacto</h4>
-            <p class="footer-address">
-              <br>
-              <a href="tel:+573502151100" class="contact-item">
-                <svg viewBox="0 0 512 512" fill="currentColor">
-                  <path
-                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                </svg>
-                (+57) 350 215 11 00
-              </a><br>
-              <a href="mailto:matacandelas@matacandelas.com" class="contact-item">
-                <svg viewBox="0 0 512 512" fill="currentColor">
-                  <path
-                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                </svg>
-                matacandelas@matacandelas.com
-              </a>
-              <a href="ubicacion" class="contact-item">
-                <svg viewBox="0 0 384 512" fill="currentColor">
-                  <path
-                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                </svg>
-                Calle 47 No. 43 - 47 | Medellín - Colombia
-              </a>
-            </p>
-            <div class="footer-blockchain">
-              <a href="http://www.confiar.coop/" target="_blank">
-                <img src="/assets/img/LogoConfiar2023.png" alt="Confiar Cooperativa Financiera" />
-              </a>
-            </div>
-          </div>
-
-          <div class="footer-section footer-allies">
-            <h4>Aliados Estratégicos</h4>
-            <div class="allies-grid">
-              <a href="https://www.alklima.com.co/" target="_blank"><img src="/assets/img/LogoAlklima.png" alt="" /></a>
-              <a href="https://www.facebook.com/AeroHostal" target="_blank"><img
-                  src="/assets/img/Logo-La-casa-en-el-aire.png" alt="" /></a>
-              <a href="http://www.medellinenescena.com.co" target="_blank"><img src="/assets/img/MedellinEnEscena1.jpg"
-                  alt="" /></a>
-              <a href="http://www.otraparte.org/" target="_blank"><img src="/assets/img/OtraparteLogoGrande.jpg"
-                  alt="" /></a>
-              <a href="https://distritosanignacio.com/inicio/" target="_blank"><img src="/assets/img/LogoComfama.png"
-                  alt="" /></a>
-              <a href="https://www.eticketablanca.com/" target="_blank"><img
-                  src="/assets/img/Logo-Bitcoin-Eticketa-Blanca.png" alt="Bitcoin - Eticketa Blanca" /></a>
-              <a href="http://www.teatropablotobon.com/" target="_blank"><img src="/assets/img/LogoTeatroPabloTobon.png"
-                  alt="" /></a>
-              <a href="https://www.gatolokofilms.com/" target="_blank"><img src="/assets/img/LogoGatoLokoFilms.png"
-                  alt="" /></a>
-              <a href="https://latinastereo.com/" target="_blank"><img src="/assets/img/Logo-Latina.png"
-                  alt="Latina" /></a>
-              <a href="https://www.roccograficas.com" target="_blank"><img
-                  src="/assets/img/Logo-Litografia-Roccograficas2021.jpg" alt="Rocco Gráficas" /></a>
-              <a href="https://www.comunycorriente.org/" target="_blank"><img src="/assets/img/Logo-Pascasia.png"
-                  alt="La Pascasia" /></a>
-              <a href="https://compasurbano.com" target="_blank"><img src="/assets/img/Logo-Compas-Urbano.png"
-                  alt="Compás Urbano" /></a>
-              <a href="http://www.casateatroelpoblado.com/" target="_blank"><img
-                  src="/assets/img/Logo-CasaTeatro-El-Poblado-N.png" alt="Casa Teatro" /></a>
-              <a href="https://www.facebook.com/huggerisland/" target="_blank"><img
-                  src="/assets/img/LogoHuggerIsland.png" alt="Hugger Island" /></a>
-              <a href="https://dispronat.com.co/" target="_blank"><img src="/assets/img/logo-dispronat.png"
-                  alt="Dispronat" /></a>
-              <a href="https://morada.co/" target="_blank"><img src="/assets/img/Logo-Casa-Morada.png"
-                  alt="Casa Morada" /></a>
-              <a href="https://www.tragaluzeditores.com/" target="_blank"><img src="/assets/img/Logo-Tragaluz.png"
-                  alt="Tragaluz" /></a>
-              <a href="https://somospornaturaleza.org/" target="_blank"><img
-                  src="/assets/img/Logo-Somos-por-naturaleza.png" alt="Somos por naturaleza" /></a>
-              <a href="https://www.redcepela.org/quienes_somos/" target="_blank"><img
-                  src="/assets/img/Logo-red-cepela.png" alt="Red cepela" /></a>
-              <a href="https://puertodelaimaginacion.org/" target="_blank"><img
-                  src="/assets/img/LogoPuerto-de-la-imaginacion.png" alt="" /></a>
-              <a href="https://fundacionalmargen.com/" target="_blank"><img src="/assets/img/Logo-almargen.png"
-                  alt="" /></a>
-            </div>
-          </div>
+      <div class="footer-section footer-allies">
+        <h4>Aliados Estratégicos</h4>
+        <div class="allies-grid">
+          <a href="https://www.alklima.com.co/" target="_blank"><img src="/assets/img/LogoAlklima.png" alt="" /></a>
+          <a href="https://www.facebook.com/AeroHostal" target="_blank"><img
+              src="/assets/img/Logo-La-casa-en-el-aire.png" alt="" /></a>
+          <a href="http://www.medellinenescena.com.co" target="_blank"><img src="/assets/img/MedellinEnEscena1.jpg"
+              alt="" /></a>
+          <a href="http://www.otraparte.org/" target="_blank"><img src="/assets/img/OtraparteLogoGrande.jpg"
+              alt="" /></a>
+          <a href="https://distritosanignacio.com/inicio/" target="_blank"><img src="/assets/img/LogoComfama.png"
+              alt="" /></a>
+          <a href="https://www.eticketablanca.com/" target="_blank"><img
+              src="/assets/img/Logo-Bitcoin-Eticketa-Blanca.png" alt="Bitcoin - Eticketa Blanca" /></a>
+          <a href="http://www.teatropablotobon.com/" target="_blank"><img src="/assets/img/LogoTeatroPabloTobon.png"
+              alt="" /></a>
+          <a href="https://www.gatolokofilms.com/" target="_blank"><img src="/assets/img/LogoGatoLokoFilms.png"
+              alt="" /></a>
+          <a href="https://latinastereo.com/" target="_blank"><img src="/assets/img/Logo-Latina.png" alt="Latina" /></a>
+          <a href="https://www.roccograficas.com" target="_blank"><img
+              src="/assets/img/Logo-Litografia-Roccograficas2021.jpg" alt="Rocco Gráficas" /></a>
+          <a href="https://www.comunycorriente.org/" target="_blank"><img src="/assets/img/Logo-Pascasia.png"
+              alt="La Pascasia" /></a>
+          <a href="https://compasurbano.com" target="_blank"><img src="/assets/img/Logo-Compas-Urbano.png"
+              alt="Compás Urbano" /></a>
+          <a href="http://www.casateatroelpoblado.com/" target="_blank"><img
+              src="/assets/img/Logo-CasaTeatro-El-Poblado-N.png" alt="Casa Teatro" /></a>
+          <a href="https://www.facebook.com/huggerisland/" target="_blank"><img src="/assets/img/LogoHuggerIsland.png"
+              alt="Hugger Island" /></a>
+          <a href="https://dispronat.com.co/" target="_blank"><img src="/assets/img/logo-dispronat.png"
+              alt="Dispronat" /></a>
+          <a href="https://morada.co/" target="_blank"><img src="/assets/img/Logo-Casa-Morada.png"
+              alt="Casa Morada" /></a>
+          <a href="https://www.tragaluzeditores.com/" target="_blank"><img src="/assets/img/Logo-Tragaluz.png"
+              alt="Tragaluz" /></a>
+          <a href="https://somospornaturaleza.org/" target="_blank"><img src="/assets/img/Logo-Somos-por-naturaleza.png"
+              alt="Somos por naturaleza" /></a>
+          <a href="https://www.redcepela.org/quienes_somos/" target="_blank"><img src="/assets/img/Logo-red-cepela.png"
+              alt="Red cepela" /></a>
+          <a href="https://puertodelaimaginacion.org/" target="_blank"><img
+              src="/assets/img/LogoPuerto-de-la-imaginacion.png" alt="" /></a>
+          <a href="https://fundacionalmargen.com/" target="_blank"><img src="/assets/img/Logo-almargen.png"
+              alt="" /></a>
         </div>
-        <div class="footer-bottom">
-          <!-- <div class="footer-legal-links">
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <!-- <div class="footer-legal-links">
             <a href="#">Política de Privacidad</a>
             <a href="#">Términos y Condiciones</a>
             <a href="#">Políticas de Compra</a>
             <a href="#">Preferencias de Cookies</a>
           </div> -->
-          <div class="footer-copyright-social">
-            <div class="copyright">
-              © 2026 Asociación Colectivo Teatral Matacandelas
-            </div>
-            <div class="back-to-top-wrapper">
-              <a href="#" class="back-to-top" title="Volver al tope" onclick="window.scrollTo({top: 0}); return false;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-                Volver arriba
-              </a>
-            </div>
-            <div class="footer-socials">
-              <a href="http://www.facebook.com/matacandelas" target="_blank" title="Facebook">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/teatromatacandelas/" target="_blank" title="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </a>
-              <a href="http://www.youtube.com/teatromatacandelas" target="_blank" title="YouTube">
-                <svg viewBox="0 0 576 512" fill="currentColor">
-                  <path
-                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z">
-                  </path>
-                </svg>
-              </a>
-              <a href="https://www.tiktok.com/@matacandelas" target="_blank" title="TikTok">
-                <svg viewBox="0 0 448 512" fill="currentColor">
-                  <path
-                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z">
-                  </path>
-                </svg>
-              </a>
-              <a href="https://www.flickr.com/photos/matacandelas/albums" target="_blank" title="Flickr">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <circle cx="7" cy="12" r="5" fill="currentColor" stroke="none"></circle>
-                  <circle cx="17" cy="12" r="5" fill="currentColor" stroke="none"></circle>
-                </svg>
-              </a>
-            </div>
-          </div>
+      <div class="footer-copyright-social">
+        <div class="copyright">
+          © 2026 Asociación Colectivo Teatral Matacandelas
         </div>
-      </footer>
-
-      <!-- Menu fijo abajo -->
-      <!-- <div id="menu"><a href="home">Inicio</a> - <a href="Servicios-de-Teatro-Titeres-y-Musica">Servicios</a> -
-        <a href="historia">Historia</a> - <a href="ubicacion">Ubicación</a> - <a href="cifras">Cifras</a> - <a
-          href="obras">Obras</a> - <a href="documentos">Documentos</a>
-      </div> -->
-
-      <div class="floating-socials">
-        <a href="https://wa.me/573502151100" target="_blank" class="social-btn whatsapp" title="WhatsApp">
-          <svg viewBox="0 0 448 512" fill="currentColor" style="width: 20px; height: 20px;">
-            <path
-              d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
-            </path>
-          </svg>
-          <span class="social-text">WhatsApp</span>
-        </a>
-        <a href="https://www.instagram.com/teatromatacandelas/" target="_blank" class="social-btn instagram"
-          title="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-          <span class="social-text">Instagram</span>
-        </a>
-        <a href="http://www.facebook.com/matacandelas" target="_blank" class="social-btn facebook" title="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-          <span class="social-text">Facebook</span>
-        </a>
-        <a href="https://www.tiktok.com/@matacandelas" target="_blank" class="social-btn tiktok" title="TikTok">
-          <svg viewBox="0 0 448 512" fill="currentColor">
-            <path
-              d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z">
-            </path>
-          </svg>
-          <span class="social-text">TikTok</span>
-        </a>
-        <a href="http://www.youtube.com/teatromatacandelas" target="_blank" class="social-btn youtube" title="YouTube">
-          <svg viewBox="0 0 576 512" fill="currentColor">
-            <path
-              d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z">
-            </path>
-          </svg>
-          <span class="social-text">YouTube</span>
-        </a>
-        <a href="https://www.flickr.com/photos/matacandelas/albums" target="_blank" class="social-btn flickr"
-          title="Flickr">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="7" cy="12" r="5" fill="currentColor" stroke="none"></circle>
-            <circle cx="17" cy="12" r="5" fill="currentColor" stroke="none"></circle>
-          </svg>
-          <span class="social-text">Flickr</span>
-        </a>
+        <div class="back-to-top-wrapper">
+          <a href="#" class="back-to-top" title="Volver al tope" onclick="window.scrollTo({top: 0}); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            Volver arriba
+          </a>
+        </div>
+        <div class="footer-socials">
+          <a href="http://www.facebook.com/matacandelas" target="_blank" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/teatromatacandelas/" target="_blank" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="http://www.youtube.com/teatromatacandelas" target="_blank" title="YouTube">
+            <svg viewBox="0 0 576 512" fill="currentColor">
+              <path
+                d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@matacandelas" target="_blank" title="TikTok">
+            <svg viewBox="0 0 448 512" fill="currentColor">
+              <path
+                d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.flickr.com/photos/matacandelas/albums" target="_blank" title="Flickr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="7" cy="12" r="5" fill="currentColor" stroke="none"></circle>
+              <circle cx="17" cy="12" r="5" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
+    </div>
+  </footer>
+
+  <!-- Socials -->
+  <div class="floating-socials">
+    <a href="https://wa.me/573502151100" target="_blank" class="social-btn whatsapp" title="WhatsApp">
+      <svg viewBox="0 0 448 512" fill="currentColor" style="width: 20px; height: 20px;">
+        <path
+          d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+        </path>
+      </svg>
+      <span class="social-text">WhatsApp</span>
+    </a>
+    <a href="https://www.instagram.com/teatromatacandelas/" target="_blank" class="social-btn instagram"
+      title="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+      <span class="social-text">Instagram</span>
+    </a>
+    <a href="http://www.facebook.com/matacandelas" target="_blank" class="social-btn facebook" title="Facebook">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+      </svg>
+      <span class="social-text">Facebook</span>
+    </a>
+    <a href="https://www.tiktok.com/@matacandelas" target="_blank" class="social-btn tiktok" title="TikTok">
+      <svg viewBox="0 0 448 512" fill="currentColor">
+        <path
+          d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z">
+        </path>
+      </svg>
+      <span class="social-text">TikTok</span>
+    </a>
+    <a href="http://www.youtube.com/teatromatacandelas" target="_blank" class="social-btn youtube" title="YouTube">
+      <svg viewBox="0 0 576 512" fill="currentColor">
+        <path
+          d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z">
+        </path>
+      </svg>
+      <span class="social-text">YouTube</span>
+    </a>
+    <a href="https://www.flickr.com/photos/matacandelas/albums" target="_blank" class="social-btn flickr"
+      title="Flickr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="7" cy="12" r="5" fill="currentColor" stroke="none"></circle>
+        <circle cx="17" cy="12" r="5" fill="currentColor" stroke="none"></circle>
+      </svg>
+      <span class="social-text">Flickr</span>
+    </a>
+  </div>
+
 </body>
 
 </html>

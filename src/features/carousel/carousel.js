@@ -16,13 +16,15 @@ class MatacandelasCarousel extends HTMLElement {
 
     // Inyectar datos en los contenedores nativos
     innerContainer.innerHTML = data.map((item, index) => `
-      <div class="carousel-slide ${index === 0 ? 'active' : ''}">
+      <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-event-id="${item.eventId || ''}" style="cursor: pointer;">
         <div class="carousel-bg" style="background-image: url('${item.image}');"></div>
         <div class="carousel-content">
           <span class="carousel-badge">${item.badge}</span>
           <h2 class="carousel-title">${item.title}</h2>
           <p class="carousel-desc">${item.description}</p>
-          <a href="${item.buttonHref}" class="btn btn-danger btn-lg compra-btn">${item.buttonText}</a>
+          <button class="btn btn-danger btn-lg compra-btn carousel-action-btn" data-event-id="${item.eventId || ''}" data-ticket-url="${item.ticketUrl || ''}">
+            ${item.buttonText}
+          </button>
         </div>
       </div>
     `).join('');
@@ -32,6 +34,64 @@ class MatacandelasCarousel extends HTMLElement {
     `).join('');
 
     this.initCarousel();
+    this.initSlideInteractions();
+  }
+
+  /**
+   * Hace scroll suave hasta la card del evento correspondiente en la sección de programación.
+   * @param {string} eventId - El ID del evento (mismo que en programacion.json)
+   */
+  scrollToEventCard(eventId) {
+    if (!eventId) return;
+
+    // Intentamos encontrar la card directamente
+    const card = document.getElementById(`event-${eventId}`);
+
+    if (card) {
+      const offset = 80; // Compensar el navbar fijo
+      const top = card.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+
+      // Efecto visual de highlight en la card
+      card.classList.add('carousel-highlight');
+      setTimeout(() => card.classList.remove('carousel-highlight'), 2000);
+    } else {
+      // Si la sección de programación aún no está visible, hacer scroll a #programacion
+      const section = document.getElementById('programacion');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  initSlideInteractions() {
+    // Click en el slide completo → scroll a la card del evento
+    this.querySelectorAll('.carousel-slide').forEach(slide => {
+      slide.addEventListener('click', (e) => {
+        // Si el click fue sobre el botón, no hacer nada aquí (el botón tiene su propio listener)
+        if (e.target.closest('.carousel-action-btn')) return;
+
+        const eventId = slide.dataset.eventId;
+        this.scrollToEventCard(eventId);
+      });
+    });
+
+    // Click en el botón de acción
+    this.querySelectorAll('.carousel-action-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evitar que se propague al slide
+        const ticketUrl = btn.dataset.ticketUrl;
+        const eventId = btn.dataset.eventId;
+
+        if (ticketUrl && ticketUrl !== 'null' && ticketUrl !== '') {
+          // Si hay URL de tickets, navegar ahí (mismo comportamiento que el botón de la card)
+          window.open(ticketUrl, '_blank', 'noopener,noreferrer');
+        } else {
+          // Sin URL de tickets, hacer scroll a la card
+          this.scrollToEventCard(eventId);
+        }
+      });
+    });
   }
 
   initCarousel() {

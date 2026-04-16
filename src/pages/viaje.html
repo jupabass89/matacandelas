@@ -1,208 +1,342 @@
 <!DOCTYPE html>
 <html lang="es-co"><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
+
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Teatro Matacandelas - Viaje compartido</title>
-<!-- InstanceEndEditable -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width">
-<link href="css/Menu.css" rel="stylesheet" type="text/css"/>
-<link href="css/Menu-celular.css" rel="stylesheet" type="text/css" media="only screen and (max-width: 900px)"/>
-<link href="css/Menu-pantalla.css" rel="stylesheet" type="text/css"  media="screen and (min-width: 900px)"/>
-<link rel="stylesheet" type="text/css" href="css/body.css" />
-<link rel="stylesheet" type="text/css" href="css/body-celular.css" media="only screen and (max-width: 900px)"/>
-<link rel="stylesheet" type="text/css" href="css/body-pantalla.css" media="screen and (min-width: 900px)"/>
-<link href="css/Piedepagina.css" rel="stylesheet" type="text/css"/>
-<link rel="shortcut icon" href="img/IconoMatacandelas.ico"/>
-<link href="https://fonts.googleapis.com/css?family=Orbitron:500" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="frases.js"></script>
-<!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceBeginEditable name="doctitle" -->
+  <title>Teatro Matacandelas - Viaje compartido</title>
+  <!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <link href="css/Menu.css" rel="stylesheet" type="text/css" />
+  <link href="css/Menu-celular.css" rel="stylesheet" type="text/css" media="only screen and (max-width: 900px)" />
+  <link href="css/Menu-pantalla.css" rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" />
+  <link rel="stylesheet" type="text/css" href="css/body.css" />
+  <link rel="stylesheet" type="text/css" href="css/body-celular.css" media="only screen and (max-width: 900px)" />
+  <link rel="stylesheet" type="text/css" href="css/body-pantalla.css" media="screen and (min-width: 900px)" />
+  <link href="css/Piedepagina.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/IconoMatacandelas.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:500" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="frases.js"></script>
+  <!-- InstanceBeginEditable name="head" -->
 
-<meta name="keywords"    content="Andrés Caicedo, Marco Tulio Aguilera Garramuño, Teatro Matacandelas, Teatro Colombia, Teatro, Medellín"/>
-<meta name="description" content="Viaje compartido (1988): creación colectiva del Teatro Matacandelas. Con textos de Andrés Caicedo y Marco Tulio Aguilera Garramuño."/>
-<meta name="Author"      content="Teatro Matacandelas"/>
-<!-- InstanceEndEditable -->
-<!--Analytics-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <meta name="keywords"
+    content="Andrés Caicedo, Marco Tulio Aguilera Garramuño, Teatro Matacandelas, Teatro Colombia, Teatro, Medellín" />
+  <meta name="description"
+    content="Viaje compartido (1988): creación colectiva del Teatro Matacandelas. Con textos de Andrés Caicedo y Marco Tulio Aguilera Garramuño." />
+  <meta name="Author" content="Teatro Matacandelas" />
+  <!-- InstanceEndEditable -->
+  <!--Analytics-->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-5238098-1', 'matacandelas.com');
-  ga('require', 'displayfeatures');
-  ga('send', 'pageview');
+    ga('create', 'UA-5238098-1', 'matacandelas.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
 
-</script>
-	<!--para cuando comparten enlaces de facebook en chats-->
-	
-    <meta property="og:title" content="Teatro Matacandelas" />
-    <meta property="og:description" content="Teatro, títeres y música" />
-    <meta property="og:image" content="https://www.matacandelas.com/img/Casa-Matacandelas-2023.jpg" />
+  </script>
+  <!--para cuando comparten enlaces de facebook en chats-->
+
+  <meta property="og:title" content="Teatro Matacandelas" />
+  <meta property="og:description" content="Teatro, títeres y música" />
+  <meta property="og:image" content="https://www.matacandelas.com/img/Casa-Matacandelas-2023.jpg" />
 
 </head>
+
 <body>
-<!-- Menu -->
-<nav>
-  <label for="drop">Menu</label>
-  <input type="checkbox" id="drop" />
-  <ul>
-    <li class="fuego"><a class="index" href="index"><span class="notext">Página principal</span><img src="css/img/Matacandelas.png" width="321" height="43" alt="Matacandelas"/></a></li>
-    <li class="top inicio"><a class="nuestrogrupo" href="index.html" onclick="funcion;return false;">Inicio</a>
-    <li class="top"><a class="nuestrogrupo" href="viaje" onclick="funcion;return false;">Nuestro grupo</a>
-      <ul class="sub">
-        <li><a href="suscribir">Boletín</a></li>
-        <li><a href="historia.htm">Historia</a></li>
-        <li><a href="cifras.htm">Cifras</a></li>
-        <li><a href="Ubicacion">Ubicación</a></li>
-        <li><a href="Casa-matacandelas">La casa</a></li>
-        <li><a href="Logo-Matacandelas">Logo</a></li>
-        <!--<li><a href="../infoesal">Inf. legal</a></li>-->
-        <li><a href="contacto">Contacto</a></li>
-      </ul>
-    </li>
-    <li class="top"><a class="obras" href="obras.htm">Obras</a></li>
-    <li class="top"><a class="siguenos" href="viaje" onclick="funcion;return false;">Síguenos en:</a>
-      <ul class="sub">
-        <li><a target="_blank" href="https://www.instagram.com/teatromatacandelas/">Instagram</a></li>
-		<li><a target="_blank" href="http://www.facebook.com/matacandelas">Facebook</a></li>
-        <li><a target="_blank" href="https://www.tiktok.com/@matacandelas">Tiktok</a></li>
-        <li><a target="_blank" href="http://www.youtube.com/teatromatacandelas">Youtube</a></li>
-        <li><a target="_blank" href="https://www.flickr.com/photos/matacandelas/albums">Flickr</a></li>
-      </ul>
-    </li>
-    <li class="top"><a class="entorno" href="viaje" onclick="funcion;return false;">Entorno</a>
-      <ul class="sub">
-        <li><a href="documentos.htm">Documentos</a></li>
-      </ul>
-    </li>
-    </li>
-  </ul>
-</nav>
+  <!-- Menu -->
+  <nav>
+    <label for="drop">Menu</label>
+    <input type="checkbox" id="drop" />
+    <ul>
+      <li class="fuego"><a class="index" href="index"><span class="notext">Página principal</span><img
+            src="css/img/Matacandelas.png" width="321" height="43" alt="Matacandelas" /></a></li>
+      <li class="top inicio"><a class="nuestrogrupo" href="index.html" onclick="funcion;return false;">Inicio</a>
+      <li class="top"><a class="nuestrogrupo" href="viaje" onclick="funcion;return false;">Nuestro grupo</a>
+        <ul class="sub">
+          <li><a href="suscribir">Boletín</a></li>
+          <li><a href="historia.htm">Historia</a></li>
+          <li><a href="cifras.htm">Cifras</a></li>
+          <li><a href="Ubicacion">Ubicación</a></li>
+          <li><a href="Casa-matacandelas">La casa</a></li>
+          <li><a href="Logo-Matacandelas">Logo</a></li>
+          <!--<li><a href="../infoesal">Inf. legal</a></li>-->
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </li>
+      <li class="top"><a class="obras" href="obras.htm">Obras</a></li>
+      <li class="top"><a class="siguenos" href="viaje" onclick="funcion;return false;">Síguenos en:</a>
+        <ul class="sub">
+          <li><a target="_blank" href="https://www.instagram.com/teatromatacandelas/">Instagram</a></li>
+          <li><a target="_blank" href="http://www.facebook.com/matacandelas">Facebook</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@matacandelas">Tiktok</a></li>
+          <li><a target="_blank" href="http://www.youtube.com/teatromatacandelas">Youtube</a></li>
+          <li><a target="_blank" href="https://www.flickr.com/photos/matacandelas/albums">Flickr</a></li>
+        </ul>
+      </li>
+      <li class="top"><a class="entorno" href="viaje" onclick="funcion;return false;">Entorno</a>
+        <ul class="sub">
+          <li><a href="documentos.htm">Documentos</a></li>
+        </ul>
+      </li>
+      </li>
+    </ul>
+  </nav>
 
-<span id="barraazul"><script type="text/javascript">document.write(frase);</script></span> 
+  <span id="sub-navbar">
+    <script type="text/javascript">document.write(frase);</script>
+  </span>
 
-	
-<div id="contents"> 
-<p class="teledir">Información: (+57) <a href="tel:3502151100">350 215 11 00</a> (WhatsApp)</p>
-	
-<!-- InstanceBeginEditable name="contenidos" -->
-<div id="contenedorcolumnaobra" class="crojaviajecompartido">
-    <div class="columna"> <img class="imgcentrada" src="img/Viaje1p.JPG" width="113" height="85" alt="Viaje compartido de Marco Tulio Aguilera y Andres Caicedo" /></div>
 
-<div class="bloqueobra">
-    <h1>VIAJE COMPARTIDO</h1>
-    <h2>de Marco Tulio Aguilera Garramuño y<br />
-      <a href="Andres.htm" title="Nació en Cali, en 1951. Alguna vez dijo que vivir más allá de los 25 años era una vergüenza. Y lo cumplió, se murió a los 25 años de edad.">Andrés Caicedo</a></h2>
-    <table>
-      <tr>
-        <td><img src="img/Viaje2p.JPG" width="113" height="79" alt="Viaje compartido de Marco Tulio Aguilera y Andres Caicedo" /></td>
-        <td><ul class="listasinestilo">
-            <li>Estreno: <strong>Abril 20 año 1988</strong></li>
-            <li>Actores: <strong>María Isabel García - Ángela María Muñoz - Diego Sánchez - Cristóbal Peláez - José Fernando Álvarez - Mónica Marín - Gustavo Montoya</strong></li>
-            <li>Dirección Escénica: <strong>Cristóbal Peláez</strong></li>
-          </ul></td>
-      </tr>
-    </table>
-    <h3>ESTE VIAJE</h3>
-    <p>Saltando por encima de las interpretaciones, esos territorios privados del  espectador, <strong>Viaje compartido</strong>, es un espacio común donde se alternan dos  jóvenes talentosos escritores colombianos, Marco Tulio Aguilera Garramuño y el  desaparecido Andrés Caicedo. Tres de sus relatos vienen de la mano de cuatro  personajes, o mejor, de cuatro amarguras zambullidas en la soledad antropófaga  de una ciudad triste y espectral, que para el caso puede ambientarse en los  conglomerados de Medellín, México, Bucaramanga, o en la misma capital del  Valle, a donde remiten los aromas literarios.</p>
-    <p>La ficción tiene carne real; estos personajes existen, vulgarmente existen.  El controvertido <em>Besacalles</em>, de Caicedo, fue cierto por las calles de  Cali, con su trágica muerte, sin que alcanzara a llegar a Medellín, o a Bogotá,  o a &quot;Pereira&quot;, como lo insinúa en pocas palabras cuando ya vislumbra  su sino marginal en la ciudad que se le volvía imposible.</p>
-    <p>Y si en la cronología es improbable verificar la existencia física de la  pareja sustancial de <strong>Viaje compartido</strong> -narración que le entrega el  título al espectáculo-, estará de acuerdo con nosotros el espectador en que  esta situación es un lugar frecuente para una sociedad que maneja con despilfarro  morales antagónicas. Está puesto el milagro, señálese con una equis el santo.</p>
-    <p>Lin May, Norma Lee, Betsabé Rodriguez (O Domínguez o Jiménez), el Teatro  Blanquita, el gordísimo Fufurufo, seres y enseres del sórdido nocturno son  referencias constantes en el adorno de la trama y, hasta donde no lo permite el  pasatiempo detectivesco, registros próximos. La primera, Lin May, es la  protuberante y descomunal hembra que le ofrece ambiente carnal a un puñado de  películas aberrantes de mexicana calidad. Repertorio tan frecuente en algunas  salas de nuestro país.</p>
-    <p>El Teatro Blanquita, de México, ha sido protagonista de varios sucesos como  el narrado en la aventura de <strong>Viaje compartido</strong>. Basta con decir que hace  cosa de un año fue semidestruido por una horda enardecida de fanáticos  rumberos.</p>
-    <p>La tarea de zurcir en una sola componenda tres historias nos ha obligado por  hecho dramático a extenderle carta de invitación a otros cuatro personajes,  igualmente válidos en el plan de la escena. Son ellos, por su naturaleza gregaria  -dos confidentes, un camarero, y una mujer del ensueño- quienes tienen la  misión de aportarle mayor coherencia al asunto teatral.</p>
-    <p>Cristobal Peláez Gonzalez</p>
-    <h3><a name="aguilera">Aguilera Garramuño</a>: Escritor nuestro y lejano</h3>
-    <p>Esta entrevista fue publicada por <em>El Colombiano</em>, el 19 de noviembre  de 1989.</p>
-    <p>Estados Unidos, Costa Rica y México, han sido sus países de peregrinación.  Nació en Bogotá en 1949 y transcurrió su adolescencia en Cali. Hasta los 25  años había escrito una enorme cantidad de cuentos que obtuvieron diversas menciones  y premios en concursos locales e internacionales, pero sería con su novela <em>Breve  historia de todas las cosas</em> que marcaría el ascenso al territorio de la  escritura para ingresar a la historia de las letras latinoamericanas.</p>
-    <p>Cumplía doce años por fuera de casa y veinte de por medio para llegar por  segunda vez a la capital de Antioquia. Aquí estuvo en una visita fugaz de 24  horas para participar en el taller de escritores de la Biblioteca Pública  Piloto, presentando su último libro <em>Los placeres perdidos</em>, primer premio  en la Bienal Nacional de Novela José Eustasio Rivera.</p>
-    <p>En el corto trayecto hacia el restaurante o en el paseo en el taxi no hizo  ningún comentario sobre Medellín. Parecía desinteresado por los espacios  geográficos y de repente tan alegre y locuaz, se queda silencioso, como  molesto, como ido hacia regiones oscuras de sí mismo.</p>
-    <p>Aparte de los dos ya mencionados, ha publicado los siguientes libros: <em>Alquimia  popular</em> (1979), <em>Historias para después de hacer el amor</em> (1983), <em>Paraísos  hostiles</em> (1985), <em>Mujeres amadas</em> (1988) y <em>El juego de las  seducciones</em> (1989). Prontos a publicarse están <em>Diario de un frenético</em> (novela) y <em>Cuentos ligeramente perversos</em>.</p>
-    <p><em><strong>En estos años difíciles y estando lejos, ¿qué sensación se tiene por  el país?</strong></em></p>
-    <p>Colombia es un país maldito en el extranjero, en México es una imagen  horrorosa. Uno desde afuera tiene una información muy vaga, sólo alcanza a  percibir una cantidad de fuerzas contradictorias pero creo que hay una  corriente muy importante y es la artística, que corre a contrapelo de todo el  caos.</p>
-    <p><em><strong>En su literatura más reciente se perciben unas formas y unos acentos  muy distintos a los nuestros. El tiempo ha ido borrando el color local. </strong></em></p>
-    <p>Sí, pero eso es circunstancial. Aparece el paisaje mexicano, pero la  identidad no es colombiana ni mexicana, diría que es una identidad básicamente  humana. Yo no escribo deliberadamente. Los tonos de mis cuentos y novelas salen  de espontáneo, no planeo jamás. Me siento a la máquina y escribo  torrencialmente, claro que hay una parte de estudio, en lo otro hay una  imaginación desbocada, inconsciente, sin censura.</p>
-    <p>Estoy seguro de que si hubiera seguido viviendo en Colombia escribiría lo  mismo o cosas semejantes. Mi creatividad parte de una voluntad, de una fuerza  interior y no de motivaciones exteriores. A mí me interesan las personas, no me  ocupo de los aspectos sociales. Si me ponen a escoger entre comprender la  realidad social de una sola persona, escojo esa persona, porque sé que puedo  entender mejor, que es más afín a mí. Me interesa más la sicología que la  sociología, siempre.</p>
-    <p><em><strong>Hablemos de su vuelta al país: ¿Qué ha encontrado respecto a su vida  pública como escritor? ¿Aún existe para el lector?</strong></em></p>
-    <p>Estoy sorprendido. Me sorprende que a donde quiera que he ido me encuentro  con gente que recuerda mis cuentos, que trata de convencerme a mí mismo que  algunas obras son buenas, gente obsesionada hasta lo enfermizo, como un  muchacho escritor de Neiva que me siguió durante varios días hablándome de una  sola de mis novelas, me la explicó, me la desmenuzó por completo. Por todos  lados gente que me recuerda cuentos que ya ni existen, publicaciones de hace 20  años en <em>El Espectador</em>. Me hacen pensar que aquello que escribí en la  adolescencia tal vez no fuera tan malo y que quizá deba hacer una labor de  hemeroteca en Cali porque de pronto hay cosas rescatables.</p>
-    <p><em><strong>¿En aquella época escribía bastante?</strong></em></p>
-    <p>Entre los 20 y los 25 escribía hasta tres y cuatro cuentos diarios, aquello  era un torrencial. Gran parte de eso se perdió.</p>
-    <p><em><strong>Y aún así quedaba tiempo para el atletismo y el violín.</strong></em></p>
-    <p>Y para las mujeres.</p>
-    <p><em><strong>¿Entre ese mar de cuentos hay alguno que considere excelente?</strong></em></p>
-    <p><em>Juan Flemas despierto otra vez</em>. <em>Sammy Maccoy</em> es también muy  bueno. Puede que <em>Viaje compartido</em>.</p>
-    <p><em><strong>¿Antes de sentarse a escribir piensa en el tipo de lector? su  literatura no es del todo fácil.</strong></em></p>
-    <p>No, nunca pienso en el tipo de lector.</p>
-    <p><em><strong>¿En la actualidad dónde es más leído?¿México o Colombia?</strong></em></p>
-    <p>En México. Allí disfruto de una gran acogida. Ahora hasta me incluyen en los  diccionarios. En el diccionario de la Unam me dedican cuatro páginas. Parece  que me adoptaron.</p>
-    <p><em><strong>¿Y en Argentina?</strong></em></p>
-    <p>Un poco por <em>Breve historia</em>... Mis lectores están en Colombia, Costa  Rica y México.</p>
-    <p><em><strong>¿Puede vivir ya de la literatura?</strong></em></p>
-    <p>No, aún no. Incluso me muevo en un mundo muy ajeno a la literatura. Soy  editor de publicaciones científicas. En Jalapa, la población mexicana donde  estoy radicado, dirijo la revista <em>La ciencia y el hombre</em>, para la  Universidad veracruzana. Leo libros sobre física, química, energía nuclear,  tecnología de alimentos. Estoy en un mundo muy distinto y no me queda mucho  tiempo para leer y escribir.</p>
-    <h3>Personas con mentes  aladas</h3>
-    <p><em><strong>Los placeres perdidos, aparece  en la Bienal de novela con el título </strong></em><em><strong>Venturas y desventuras de un frenáptero. El jurado y el editor  presionaron el cambio de nombre. ¿Cuál de los dos títulos está más cerca del  espíritu de la novela?</strong></em><strong> </strong></p>
-    <p>El actual está más cercano a su esencia. El otro es más coloquial, muy  picaresco, y ésta sí es una novela picaresca pero tiene implicaciones más  profundas.</p>
-    <p><em><strong>¿Qué quiere decir frenáptero?</strong></em></p>
-    <p>Frenáptero es una persona de mente alada, en oposición a frenolito, que es  una persona de mente petrificada. Clasificaciones que yo me inventé para  designar a la gente. Frenáptero por ejemplo, es ese tipo de persona que uno  conoce e inmediatamente queda enamorado, por su capacidad imaginativa, por la  belleza de su forma. Es un creador total que no tiene tiempo para hacer obras  de arte porque su vida misma es una obra de arte.</p>
-    <p><em><strong>¿Usted se considera un frenáptero?</strong></em></p>
-    <p>No, yo no soy un frenáptero porque utilizo la literatura para mis fines. El  frenáptero es un artista de la vida, alguien que no tiene tiempo para sentarse  a registrar su creatividad.</p>
-    <p><em><strong>El frenáptero de los &quot;placeres perdidos&quot; -Adolfo  Montañovivas- ya estaba de rato entreverado en sus historias.</strong></em></p>
-    <p>Sí, en <em>Alquimia popular</em> aparece la <em>Biografía parcial de un  frenáptero</em>. En ese entonces Adolfo Montañovivas tenía 20 años, ahora tiene  30. Lo conocí hace muchos años en Cali, en el Teatro municipal. Me salió al  encuentro y empezó a abrazarme y a decirme que yo era su héroe y no sé cuántas  cosas más; me dijo que ya había leído mis cuentos y que todo eso ya lo había  pensado él, que yo estaba en su mente y escribía por él. Hicimos amistad y  desde entonces he ido tomando notas sobre su vida, sobre lo que iba imaginando  y haciendo. De ahí ha resultado esta novela.</p>
-    <p><em><strong>¿Y sí es realmente un ser alado?</strong></em></p>
-    <p>Sí, como digo, su vida es una obra de arte, ante él queda uno completamente  subyugado, tiene atractivo para todo. Debajo de la idea de él está San  Francisco de Asís, que conversaba con los pájaros. Hay una santidad, pero no es  una santidad perversa como la de los santos que es castrada, esta es una  santidad mucho más plena porque incluye la sexualidad.</p>
-    <p><em><strong>Pero Adolfo Montañovivas es incapaz de algo concreto.</strong></em></p>
-    <p>En el campo de la música sí es capaz.</p>
-    <p>Acaba de inventar un método para enseñar música a base de dibujos,  bellísimo. Si lo maneja bien va a revolucionar la pedagogía musical. Acabo de  ver un grupo de 15 niños con un mes de enseñanza y ya crean unas armonías  tremendas.</p>
-    <h3>Historias para después de hacer el amor</h3>
-    <p><em><strong>Miremos alguno de sus cuentos. </strong></em><em><strong>Contra natura es una gran fábula de amor entre  máquinas y bestias, pero menos llamativo y portentoso hay un pequeño relato que  abre el libro para hablarnos de una mujer que no conoce ni los bosques ni las  selvas ni las orquídeas y le pide a su pretendiente extranjero que la lleve a  conocer el mar. Hay allí una grácil simulación sobre el arte, sobre el amor y  sobre la industria de saber contar cuentos.</strong></em><strong> </strong></p>
-    <p>Sí, pero esa historia no la inventé yo, la oí en alguna parte.</p>
-    <p><em><strong>Pero usted la cuenta bien.</strong></em></p>
-    <p>Creo que sí. Esas cosas suelen pasar. Algunas personas tienen la capacidad  de inventar historias muy hermosas pero no pueden escribirlas, entonces uno se  ve forzado a plagiarlos, para que se salve eso. Se necesita un cronista, un  testigo que de fe de esa creatividad.</p>
-    <p><strong><em>En </em>Fruta verde<em>, donde una infante de 10 años se enamora de  un hombre mayor y lo induce al amor hay algo de sublime perversidad. ¿El  regocijo de la fruta prohibida?</em></strong></p>
-    <p>Es un cuento muy sencillo, atrevido sí, pero nada novedoso. Forma parte de  toda una tradición literaria que evoca el encuentro entre hombres mayores con  niñas. </p>
-    <p>Se dice que los hombres mayores corrompen a las niñas, pero a veces hay  menores que pueden ser acusadas de pervertir a los mayores, niñas que poseen  una madurez especial.</p>
-    <p>En <em>Los placeres perdidos</em> hay una niña de 7 años -Lorena- que es una  amante perfecta, ama cualquier cosa, puede enamorarse de una canasta, de un  árbol; se enamora de su tío de 20 años -Adolfo Montañovivas-, y dice que quiere  hacer el amor con él. Su madre le advierte que esa perversión ocasiona el que  los niños nazcan con dos cabezas, la niña le replica que no le importa, pues si  el niño nace con dos cabezas ella le comprará muñecas con dos cabezas.</p>
-    <p>En otro momento los dos -Adolfo y Lorena- caminan despreocupadamente, él por  la acera y ella en una barda. Al llegar a un obstáculo la niña, toda una  actriz, eleva los ojos al cielo en un gran suspiro para caer desmadejada en los  brazos del tío. Él comprende que su deber es darle un beso apasionado; ella  abre los ojos de pequeña villana y le exclama: &quot;¡Te lo dije: ya soy  mujer!&quot;</p>
-    <p><em><strong>Historias para después de hacer el  amor es un libro de gran dramatismo, tal vez como ningún otro libro de  cuentos conocidos.</strong></em></p>
-    <p>Hay una dramatización bastante fuerte. A mí me sucede que a veces  escribiendo debo afrontar una escena erótica y no la puedo solucionar. La única  forma que encuentro es dejar la máquina e ir a buscar la escena, copiar la  realidad, hacerlo de forma experimental estudiando el momento de estar haciendo  el amor; precisar las sensaciones, las palabras, los gestos, mirar el amor,  mirarme a mí mismo haciendo el amor. Porque yo soy un voyerista y puedo  objetivarme, convertirme en otra persona.</p>
-    <p><em><strong>Lo cual quiere decir que no es difícil que usted sea el personaje de </strong></em><em><strong>Historia de un orificio</strong></em></p>
-    <p>Puede ser.</p>
-    <h3>Humor, eros e ironía</h3>
-    <p><em><strong>Sus personajes, entre pintorescos y mundanos, siempre bailan,  estrafalarios, en la cuerda de los casos límite.</strong></em></p>
-    <p>Eso es bien importante. Mis personajes son siempre seres extremos, caricaturas,  seres humanos en una situación intolerable. No hay relato de una cotidianidad  que se agota en ella misma. Formando parte de una tradición literaria tengo  rasgos que me marginan de ella. Aquí no es común el uso del humor, de la  ironía, no hay mucha libertad en el manejo del erotismo, y esas son  características fundamentales de lo que escribo.</p>
-    <p><em><strong>Habla de no planificar. ¿Puede en un momento dado escribir a partir  de una frase?</strong></em></p>
-    <p>No, yo escribo de forma totalmente irresponsable, de una sentada, sin estructurar.  Razono después y corrijo mucho.</p>
-    <p><em><strong>¿Y esa persistente obsesión por el tema amoroso?</strong></em></p>
-    <p>Tal vez porque he sido muy mujeriego.</p>
-    <p>Cada mujer me representa un enigma, como esos niños que agarran un juguete y  tienen que destrozarlo para ver qué tiene adentro.</p>
-    <p>Veo una mujer que me atrae y tengo que acercármele de alguna manera,  comenzar a desmontar la maquinaria; a veces no tiene nada y, como el niño, me  voy.</p>
-    <p><em><strong>Una curiosidad final, muy personal, ¿bajo qué circunstancias escribe  el cuento </strong></em><em><strong>Viaje compartido?</strong></em></p>
-    <p>Sólo recuerdo que tenía unas ganas inmensas de ir al baño y no sé por qué no  podía, entonces, aguantando, me senté y escribí de un tirón la cómica historia  de esa pareja.</p>
-    <p>Años después cuando García Márquez escribió su famoso monólogo teatral  presentándolo como una novedad, me dije:</p>
-    <p>¡Caramba, esta vez me adelanté, eso ya lo escribí yo!</p>
-	
-	<div class="flickypdfs">
-		<a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/matacandelas/albums/72157618118173613" title="VIAJE COMPARTIDO de Marco Tulio Aguilera y Andrés Caicedo"><img src="https://farm4.staticflickr.com/3608/3533818997_781ec1849e_b.jpg" width="1024" height="819" alt="VIAJE COMPARTIDO de Marco Tulio Aguilera y Andrés Caicedo"></a><script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-		</div>
-	
+  <div id="contents">
+    <p class="teledir">Información: (+57) <a href="tel:3502151100">350 215 11 00</a> (WhatsApp)</p>
+
+    <!-- InstanceBeginEditable name="contenidos" -->
+    <div id="contenedorcolumnaobra" class="crojaviajecompartido">
+      <div class="columna"> <img class="imgcentrada" src="img/Viaje1p.JPG" width="113" height="85"
+          alt="Viaje compartido de Marco Tulio Aguilera y Andres Caicedo" /></div>
+
+      <div class="bloqueobra">
+        <h1>VIAJE COMPARTIDO</h1>
+        <h2>de Marco Tulio Aguilera Garramuño y<br />
+          <a href="Andres.htm"
+            title="Nació en Cali, en 1951. Alguna vez dijo que vivir más allá de los 25 años era una vergüenza. Y lo cumplió, se murió a los 25 años de edad.">Andrés
+            Caicedo</a>
+        </h2>
+        <table>
+          <tr>
+            <td><img src="img/Viaje2p.JPG" width="113" height="79"
+                alt="Viaje compartido de Marco Tulio Aguilera y Andres Caicedo" /></td>
+            <td>
+              <ul class="listasinestilo">
+                <li>Estreno: <strong>Abril 20 año 1988</strong></li>
+                <li>Actores: <strong>María Isabel García - Ángela María Muñoz - Diego Sánchez - Cristóbal Peláez - José
+                    Fernando Álvarez - Mónica Marín - Gustavo Montoya</strong></li>
+                <li>Dirección Escénica: <strong>Cristóbal Peláez</strong></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <h3>ESTE VIAJE</h3>
+        <p>Saltando por encima de las interpretaciones, esos territorios privados del espectador, <strong>Viaje
+            compartido</strong>, es un espacio común donde se alternan dos jóvenes talentosos escritores colombianos,
+          Marco Tulio Aguilera Garramuño y el desaparecido Andrés Caicedo. Tres de sus relatos vienen de la mano de
+          cuatro personajes, o mejor, de cuatro amarguras zambullidas en la soledad antropófaga de una ciudad triste y
+          espectral, que para el caso puede ambientarse en los conglomerados de Medellín, México, Bucaramanga, o en la
+          misma capital del Valle, a donde remiten los aromas literarios.</p>
+        <p>La ficción tiene carne real; estos personajes existen, vulgarmente existen. El controvertido
+          <em>Besacalles</em>, de Caicedo, fue cierto por las calles de Cali, con su trágica muerte, sin que alcanzara a
+          llegar a Medellín, o a Bogotá, o a &quot;Pereira&quot;, como lo insinúa en pocas palabras cuando ya vislumbra
+          su sino marginal en la ciudad que se le volvía imposible.</p>
+        <p>Y si en la cronología es improbable verificar la existencia física de la pareja sustancial de <strong>Viaje
+            compartido</strong> -narración que le entrega el título al espectáculo-, estará de acuerdo con nosotros el
+          espectador en que esta situación es un lugar frecuente para una sociedad que maneja con despilfarro morales
+          antagónicas. Está puesto el milagro, señálese con una equis el santo.</p>
+        <p>Lin May, Norma Lee, Betsabé Rodriguez (O Domínguez o Jiménez), el Teatro Blanquita, el gordísimo Fufurufo,
+          seres y enseres del sórdido nocturno son referencias constantes en el adorno de la trama y, hasta donde no lo
+          permite el pasatiempo detectivesco, registros próximos. La primera, Lin May, es la protuberante y descomunal
+          hembra que le ofrece ambiente carnal a un puñado de películas aberrantes de mexicana calidad. Repertorio tan
+          frecuente en algunas salas de nuestro país.</p>
+        <p>El Teatro Blanquita, de México, ha sido protagonista de varios sucesos como el narrado en la aventura de
+          <strong>Viaje compartido</strong>. Basta con decir que hace cosa de un año fue semidestruido por una horda
+          enardecida de fanáticos rumberos.</p>
+        <p>La tarea de zurcir en una sola componenda tres historias nos ha obligado por hecho dramático a extenderle
+          carta de invitación a otros cuatro personajes, igualmente válidos en el plan de la escena. Son ellos, por su
+          naturaleza gregaria -dos confidentes, un camarero, y una mujer del ensueño- quienes tienen la misión de
+          aportarle mayor coherencia al asunto teatral.</p>
+        <p>Cristobal Peláez Gonzalez</p>
+        <h3><a name="aguilera">Aguilera Garramuño</a>: Escritor nuestro y lejano</h3>
+        <p>Esta entrevista fue publicada por <em>El Colombiano</em>, el 19 de noviembre de 1989.</p>
+        <p>Estados Unidos, Costa Rica y México, han sido sus países de peregrinación. Nació en Bogotá en 1949 y
+          transcurrió su adolescencia en Cali. Hasta los 25 años había escrito una enorme cantidad de cuentos que
+          obtuvieron diversas menciones y premios en concursos locales e internacionales, pero sería con su novela
+          <em>Breve historia de todas las cosas</em> que marcaría el ascenso al territorio de la escritura para ingresar
+          a la historia de las letras latinoamericanas.</p>
+        <p>Cumplía doce años por fuera de casa y veinte de por medio para llegar por segunda vez a la capital de
+          Antioquia. Aquí estuvo en una visita fugaz de 24 horas para participar en el taller de escritores de la
+          Biblioteca Pública Piloto, presentando su último libro <em>Los placeres perdidos</em>, primer premio en la
+          Bienal Nacional de Novela José Eustasio Rivera.</p>
+        <p>En el corto trayecto hacia el restaurante o en el paseo en el taxi no hizo ningún comentario sobre Medellín.
+          Parecía desinteresado por los espacios geográficos y de repente tan alegre y locuaz, se queda silencioso, como
+          molesto, como ido hacia regiones oscuras de sí mismo.</p>
+        <p>Aparte de los dos ya mencionados, ha publicado los siguientes libros: <em>Alquimia popular</em> (1979),
+          <em>Historias para después de hacer el amor</em> (1983), <em>Paraísos hostiles</em> (1985), <em>Mujeres
+            amadas</em> (1988) y <em>El juego de las seducciones</em> (1989). Prontos a publicarse están <em>Diario de
+            un frenético</em> (novela) y <em>Cuentos ligeramente perversos</em>.</p>
+        <p><em><strong>En estos años difíciles y estando lejos, ¿qué sensación se tiene por el país?</strong></em></p>
+        <p>Colombia es un país maldito en el extranjero, en México es una imagen horrorosa. Uno desde afuera tiene una
+          información muy vaga, sólo alcanza a percibir una cantidad de fuerzas contradictorias pero creo que hay una
+          corriente muy importante y es la artística, que corre a contrapelo de todo el caos.</p>
+        <p><em><strong>En su literatura más reciente se perciben unas formas y unos acentos muy distintos a los
+              nuestros. El tiempo ha ido borrando el color local. </strong></em></p>
+        <p>Sí, pero eso es circunstancial. Aparece el paisaje mexicano, pero la identidad no es colombiana ni mexicana,
+          diría que es una identidad básicamente humana. Yo no escribo deliberadamente. Los tonos de mis cuentos y
+          novelas salen de espontáneo, no planeo jamás. Me siento a la máquina y escribo torrencialmente, claro que hay
+          una parte de estudio, en lo otro hay una imaginación desbocada, inconsciente, sin censura.</p>
+        <p>Estoy seguro de que si hubiera seguido viviendo en Colombia escribiría lo mismo o cosas semejantes. Mi
+          creatividad parte de una voluntad, de una fuerza interior y no de motivaciones exteriores. A mí me interesan
+          las personas, no me ocupo de los aspectos sociales. Si me ponen a escoger entre comprender la realidad social
+          de una sola persona, escojo esa persona, porque sé que puedo entender mejor, que es más afín a mí. Me interesa
+          más la sicología que la sociología, siempre.</p>
+        <p><em><strong>Hablemos de su vuelta al país: ¿Qué ha encontrado respecto a su vida pública como escritor? ¿Aún
+              existe para el lector?</strong></em></p>
+        <p>Estoy sorprendido. Me sorprende que a donde quiera que he ido me encuentro con gente que recuerda mis
+          cuentos, que trata de convencerme a mí mismo que algunas obras son buenas, gente obsesionada hasta lo
+          enfermizo, como un muchacho escritor de Neiva que me siguió durante varios días hablándome de una sola de mis
+          novelas, me la explicó, me la desmenuzó por completo. Por todos lados gente que me recuerda cuentos que ya ni
+          existen, publicaciones de hace 20 años en <em>El Espectador</em>. Me hacen pensar que aquello que escribí en
+          la adolescencia tal vez no fuera tan malo y que quizá deba hacer una labor de hemeroteca en Cali porque de
+          pronto hay cosas rescatables.</p>
+        <p><em><strong>¿En aquella época escribía bastante?</strong></em></p>
+        <p>Entre los 20 y los 25 escribía hasta tres y cuatro cuentos diarios, aquello era un torrencial. Gran parte de
+          eso se perdió.</p>
+        <p><em><strong>Y aún así quedaba tiempo para el atletismo y el violín.</strong></em></p>
+        <p>Y para las mujeres.</p>
+        <p><em><strong>¿Entre ese mar de cuentos hay alguno que considere excelente?</strong></em></p>
+        <p><em>Juan Flemas despierto otra vez</em>. <em>Sammy Maccoy</em> es también muy bueno. Puede que <em>Viaje
+            compartido</em>.</p>
+        <p><em><strong>¿Antes de sentarse a escribir piensa en el tipo de lector? su literatura no es del todo
+              fácil.</strong></em></p>
+        <p>No, nunca pienso en el tipo de lector.</p>
+        <p><em><strong>¿En la actualidad dónde es más leído?¿México o Colombia?</strong></em></p>
+        <p>En México. Allí disfruto de una gran acogida. Ahora hasta me incluyen en los diccionarios. En el diccionario
+          de la Unam me dedican cuatro páginas. Parece que me adoptaron.</p>
+        <p><em><strong>¿Y en Argentina?</strong></em></p>
+        <p>Un poco por <em>Breve historia</em>... Mis lectores están en Colombia, Costa Rica y México.</p>
+        <p><em><strong>¿Puede vivir ya de la literatura?</strong></em></p>
+        <p>No, aún no. Incluso me muevo en un mundo muy ajeno a la literatura. Soy editor de publicaciones científicas.
+          En Jalapa, la población mexicana donde estoy radicado, dirijo la revista <em>La ciencia y el hombre</em>, para
+          la Universidad veracruzana. Leo libros sobre física, química, energía nuclear, tecnología de alimentos. Estoy
+          en un mundo muy distinto y no me queda mucho tiempo para leer y escribir.</p>
+        <h3>Personas con mentes aladas</h3>
+        <p><em><strong>Los placeres perdidos, aparece en la Bienal de novela con el título
+            </strong></em><em><strong>Venturas y desventuras de un frenáptero. El jurado y el editor presionaron el
+              cambio de nombre. ¿Cuál de los dos títulos está más cerca del espíritu de la novela?</strong></em><strong>
+          </strong></p>
+        <p>El actual está más cercano a su esencia. El otro es más coloquial, muy picaresco, y ésta sí es una novela
+          picaresca pero tiene implicaciones más profundas.</p>
+        <p><em><strong>¿Qué quiere decir frenáptero?</strong></em></p>
+        <p>Frenáptero es una persona de mente alada, en oposición a frenolito, que es una persona de mente petrificada.
+          Clasificaciones que yo me inventé para designar a la gente. Frenáptero por ejemplo, es ese tipo de persona que
+          uno conoce e inmediatamente queda enamorado, por su capacidad imaginativa, por la belleza de su forma. Es un
+          creador total que no tiene tiempo para hacer obras de arte porque su vida misma es una obra de arte.</p>
+        <p><em><strong>¿Usted se considera un frenáptero?</strong></em></p>
+        <p>No, yo no soy un frenáptero porque utilizo la literatura para mis fines. El frenáptero es un artista de la
+          vida, alguien que no tiene tiempo para sentarse a registrar su creatividad.</p>
+        <p><em><strong>El frenáptero de los &quot;placeres perdidos&quot; -Adolfo Montañovivas- ya estaba de rato
+              entreverado en sus historias.</strong></em></p>
+        <p>Sí, en <em>Alquimia popular</em> aparece la <em>Biografía parcial de un frenáptero</em>. En ese entonces
+          Adolfo Montañovivas tenía 20 años, ahora tiene 30. Lo conocí hace muchos años en Cali, en el Teatro municipal.
+          Me salió al encuentro y empezó a abrazarme y a decirme que yo era su héroe y no sé cuántas cosas más; me dijo
+          que ya había leído mis cuentos y que todo eso ya lo había pensado él, que yo estaba en su mente y escribía por
+          él. Hicimos amistad y desde entonces he ido tomando notas sobre su vida, sobre lo que iba imaginando y
+          haciendo. De ahí ha resultado esta novela.</p>
+        <p><em><strong>¿Y sí es realmente un ser alado?</strong></em></p>
+        <p>Sí, como digo, su vida es una obra de arte, ante él queda uno completamente subyugado, tiene atractivo para
+          todo. Debajo de la idea de él está San Francisco de Asís, que conversaba con los pájaros. Hay una santidad,
+          pero no es una santidad perversa como la de los santos que es castrada, esta es una santidad mucho más plena
+          porque incluye la sexualidad.</p>
+        <p><em><strong>Pero Adolfo Montañovivas es incapaz de algo concreto.</strong></em></p>
+        <p>En el campo de la música sí es capaz.</p>
+        <p>Acaba de inventar un método para enseñar música a base de dibujos, bellísimo. Si lo maneja bien va a
+          revolucionar la pedagogía musical. Acabo de ver un grupo de 15 niños con un mes de enseñanza y ya crean unas
+          armonías tremendas.</p>
+        <h3>Historias para después de hacer el amor</h3>
+        <p><em><strong>Miremos alguno de sus cuentos. </strong></em><em><strong>Contra natura es una gran fábula de amor
+              entre máquinas y bestias, pero menos llamativo y portentoso hay un pequeño relato que abre el libro para
+              hablarnos de una mujer que no conoce ni los bosques ni las selvas ni las orquídeas y le pide a su
+              pretendiente extranjero que la lleve a conocer el mar. Hay allí una grácil simulación sobre el arte, sobre
+              el amor y sobre la industria de saber contar cuentos.</strong></em><strong> </strong></p>
+        <p>Sí, pero esa historia no la inventé yo, la oí en alguna parte.</p>
+        <p><em><strong>Pero usted la cuenta bien.</strong></em></p>
+        <p>Creo que sí. Esas cosas suelen pasar. Algunas personas tienen la capacidad de inventar historias muy hermosas
+          pero no pueden escribirlas, entonces uno se ve forzado a plagiarlos, para que se salve eso. Se necesita un
+          cronista, un testigo que de fe de esa creatividad.</p>
+        <p><strong><em>En </em>Fruta verde<em>, donde una infante de 10 años se enamora de un hombre mayor y lo induce
+              al amor hay algo de sublime perversidad. ¿El regocijo de la fruta prohibida?</em></strong></p>
+        <p>Es un cuento muy sencillo, atrevido sí, pero nada novedoso. Forma parte de toda una tradición literaria que
+          evoca el encuentro entre hombres mayores con niñas. </p>
+        <p>Se dice que los hombres mayores corrompen a las niñas, pero a veces hay menores que pueden ser acusadas de
+          pervertir a los mayores, niñas que poseen una madurez especial.</p>
+        <p>En <em>Los placeres perdidos</em> hay una niña de 7 años -Lorena- que es una amante perfecta, ama cualquier
+          cosa, puede enamorarse de una canasta, de un árbol; se enamora de su tío de 20 años -Adolfo Montañovivas-, y
+          dice que quiere hacer el amor con él. Su madre le advierte que esa perversión ocasiona el que los niños nazcan
+          con dos cabezas, la niña le replica que no le importa, pues si el niño nace con dos cabezas ella le comprará
+          muñecas con dos cabezas.</p>
+        <p>En otro momento los dos -Adolfo y Lorena- caminan despreocupadamente, él por la acera y ella en una barda. Al
+          llegar a un obstáculo la niña, toda una actriz, eleva los ojos al cielo en un gran suspiro para caer
+          desmadejada en los brazos del tío. Él comprende que su deber es darle un beso apasionado; ella abre los ojos
+          de pequeña villana y le exclama: &quot;¡Te lo dije: ya soy mujer!&quot;</p>
+        <p><em><strong>Historias para después de hacer el amor es un libro de gran dramatismo, tal vez como ningún otro
+              libro de cuentos conocidos.</strong></em></p>
+        <p>Hay una dramatización bastante fuerte. A mí me sucede que a veces escribiendo debo afrontar una escena
+          erótica y no la puedo solucionar. La única forma que encuentro es dejar la máquina e ir a buscar la escena,
+          copiar la realidad, hacerlo de forma experimental estudiando el momento de estar haciendo el amor; precisar
+          las sensaciones, las palabras, los gestos, mirar el amor, mirarme a mí mismo haciendo el amor. Porque yo soy
+          un voyerista y puedo objetivarme, convertirme en otra persona.</p>
+        <p><em><strong>Lo cual quiere decir que no es difícil que usted sea el personaje de
+            </strong></em><em><strong>Historia de un orificio</strong></em></p>
+        <p>Puede ser.</p>
+        <h3>Humor, eros e ironía</h3>
+        <p><em><strong>Sus personajes, entre pintorescos y mundanos, siempre bailan, estrafalarios, en la cuerda de los
+              casos límite.</strong></em></p>
+        <p>Eso es bien importante. Mis personajes son siempre seres extremos, caricaturas, seres humanos en una
+          situación intolerable. No hay relato de una cotidianidad que se agota en ella misma. Formando parte de una
+          tradición literaria tengo rasgos que me marginan de ella. Aquí no es común el uso del humor, de la ironía, no
+          hay mucha libertad en el manejo del erotismo, y esas son características fundamentales de lo que escribo.</p>
+        <p><em><strong>Habla de no planificar. ¿Puede en un momento dado escribir a partir de una frase?</strong></em>
+        </p>
+        <p>No, yo escribo de forma totalmente irresponsable, de una sentada, sin estructurar. Razono después y corrijo
+          mucho.</p>
+        <p><em><strong>¿Y esa persistente obsesión por el tema amoroso?</strong></em></p>
+        <p>Tal vez porque he sido muy mujeriego.</p>
+        <p>Cada mujer me representa un enigma, como esos niños que agarran un juguete y tienen que destrozarlo para ver
+          qué tiene adentro.</p>
+        <p>Veo una mujer que me atrae y tengo que acercármele de alguna manera, comenzar a desmontar la maquinaria; a
+          veces no tiene nada y, como el niño, me voy.</p>
+        <p><em><strong>Una curiosidad final, muy personal, ¿bajo qué circunstancias escribe el cuento
+            </strong></em><em><strong>Viaje compartido?</strong></em></p>
+        <p>Sólo recuerdo que tenía unas ganas inmensas de ir al baño y no sé por qué no podía, entonces, aguantando, me
+          senté y escribí de un tirón la cómica historia de esa pareja.</p>
+        <p>Años después cuando García Márquez escribió su famoso monólogo teatral presentándolo como una novedad, me
+          dije:</p>
+        <p>¡Caramba, esta vez me adelanté, eso ya lo escribí yo!</p>
+
+        <div class="flickypdfs">
+          <a data-flickr-embed="true" data-header="true"
+            href="https://www.flickr.com/photos/matacandelas/albums/72157618118173613"
+            title="VIAJE COMPARTIDO de Marco Tulio Aguilera y Andrés Caicedo"><img
+              src="https://farm4.staticflickr.com/3608/3533818997_781ec1849e_b.jpg" width="1024" height="819"
+              alt="VIAJE COMPARTIDO de Marco Tulio Aguilera y Andrés Caicedo"></a>
+          <script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+        </div>
+
+      </div>
+    </div>
+    <!-- InstanceEndEditable -->
+
+    <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
+
   </div>
-  </div>
-<!-- InstanceEndEditable -->
 
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
-
-</div>
-
-<!-- Footer -->
+  <!-- Footer -->
 
 
 
-<!-- Menu fijo abajo -->
+  <!-- Menu fijo abajo -->
 
-<div id="menu"><a href="index">Inicio</a> - <a href="Servicios-de-Teatro-Titeres-y-Musica">Servicios</a> - <a href="historia.htm">Historia</a> - <a href="Ubicacion">Ubicación</a> - <a href="cifras.htm">Cifras</a> - <a href="obras.htm">Obras</a> - <a href="documentos.htm">Documentos</a></div>
+  <div id="menu"><a href="index">Inicio</a> - <a href="Servicios-de-Teatro-Titeres-y-Musica">Servicios</a> - <a
+      href="historia.htm">Historia</a> - <a href="Ubicacion">Ubicación</a> - <a href="cifras.htm">Cifras</a> - <a
+      href="obras.htm">Obras</a> - <a href="documentos.htm">Documentos</a></div>
 
 
 
 
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

@@ -18,7 +18,7 @@ class MatacandelasProgramacion extends HTMLElement {
       
       month.events.forEach((item, index) => {
         html += `
-          <article class="funcion-card" data-date="${item.date}">
+          <article class="funcion-card" id="event-${item.id}" data-event-id="${item.id}" data-date="${item.date}">
             <section class="date">
               <h5>${item.dayName}</h5>
               <h3>${item.dayNumber}</h3>

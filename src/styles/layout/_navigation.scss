@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use '../abstracts' as *;
+@use '../mixins' as *;
 
 .main-nav {
   position: sticky;
@@ -298,7 +298,7 @@
 }
 
 /* Barra azul, va abajo del menu, y ahi van las frases  */
-#barraazul {
+#sub-navbar {
   clear: both;
   line-height: 2.1875rem;
   width: 100%;

@@ -1,5 +1,5 @@
-@use '../../styles/abstracts/variables' as *;
-@use '../../styles/abstracts/mixins' as *;
+@use '../../styles/abstracts' as *;
+@use '../../styles/mixins' as *;
 
 /* Hero Carousel */
 .hero-carousel {
@@ -34,6 +34,22 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 1s;
+    cursor: pointer; // Indica que el slide completo es clickeable
+
+    // Ripple overlay subtle al hacer hover (indica que es interactivo)
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0);
+      transition: background 0.3s ease;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    &:hover::before {
+      background: rgba(255, 255, 255, 0.04);
+    }
 
     &.active {
       opacity: 1;

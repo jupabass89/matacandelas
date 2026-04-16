@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "people",
+    "text": "50% para estudiantes, tercera edad y discapacitados.",
+    "link": null
+  },
+  {
+    "icon": "bike",
+    "text": "Llega en bicicleta por $15.000",
+    "link": null
+  },
+  {
+    "icon": "card",
+    "text": "Asociados {CONFIAR} pagan $15.000 con tarjeta.",
+    "link": { "label": "CONFIAR", "href": "http://www.confiar.coop/", "title": "Confiar Cooperativa Financiera" }
+  },
+  {
+    "icon": "ticket",
+    "text": "Guarda tu boleta para un descuento en Medellín en Escena",
+    "link": null
+  }
+]

@@ -4,6 +4,9 @@ import { router } from './features/router/router.js'
 import './features/carousel/carousel.js'
 import './features/programacion/programacion.js'
 import './features/frases/frases.js'
+import './features/poema/poema.js'
+import './features/articulos/articulos.js'
+import './features/descuentos/descuentos.js'
 
 class MainContainer extends HTMLElement {
   connectedCallback() {

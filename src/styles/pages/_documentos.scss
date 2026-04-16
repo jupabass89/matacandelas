@@ -1,0 +1,217 @@
+@use '../abstracts' as *;
+@use '../mixins' as *;
+
+.documentos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  color: $color-text-main;
+
+  .documentos-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    
+    h1 {
+      font-family: $font-headings;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: $color-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // Sticky Category Nav
+  .docs-nav-wrapper {
+    position: sticky;
+    top: 6rem;
+    z-index: 100;
+    margin-bottom: 4rem;
+    
+    @include mobile {
+        top: 4.5rem;
+    }
+  }
+
+  .docs-nav {
+    background: rgba($color-bg-light, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 40px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    a {
+      color: $color-text-muted;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      transition: $transition-smooth;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  // Latest Articles
+  .latest-docs {
+    margin-bottom: 6rem;
+
+    .latest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .latest-card {
+      background: linear-gradient(135deg, rgba($color-accent, 0.1) 0%, transparent 100%), $color-bg-light;
+      border: 1px solid rgba($color-accent, 0.2);
+      padding: 1.75rem;
+      border-radius: 16px;
+      transition: $transition-smooth;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        border-color: $color-accent;
+      }
+
+      .card-tag {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: $color-accent;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      h4 {
+        margin: 0 0 0.75rem 0;
+        font-family: $font-headings;
+        font-size: 1.15rem;
+        line-height: 1.4;
+      }
+
+      .card-author {
+        font-size: 0.9rem;
+        color: $color-text-muted;
+        font-style: italic;
+      }
+    }
+  }
+
+  // Category Sections
+  .doc-category {
+    margin-bottom: 6rem;
+    scroll-margin-top: 10rem;
+
+    .cat-title {
+      font-family: $font-headings;
+      font-size: 1.75rem;
+      color: $color-accent;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(255,255,255,0.1);
+      }
+    }
+
+    .doc-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+
+      @include desktop {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      li {
+        a {
+          display: flex;
+          flex-direction: column;
+          padding: 1.25rem 1.5rem;
+          background: rgba($color-bg-light, 0.4);
+          border: 1px solid rgba(255,255,255,0.03);
+          border-radius: 12px;
+          text-decoration: none;
+          color: $color-text-main;
+          transition: $transition-smooth;
+
+          &:hover {
+            background: $color-bg-light;
+            border-color: rgba($color-accent, 0.3);
+            transform: translateX(10px);
+            
+            .doc-title { color: $color-accent; }
+          }
+        }
+
+        .doc-title {
+          font-weight: 700;
+          font-size: 1.05rem;
+          margin-bottom: 0.25rem;
+          transition: color 0.3s ease;
+        }
+
+        .doc-meta {
+          font-size: 0.85rem;
+          color: $color-text-muted;
+          font-style: italic;
+        }
+      }
+    }
+
+    // Special styling for "Nuestras Obras" inner categories
+    &.obra-specific {
+      margin-top: 3rem;
+      padding-left: 2rem;
+      border-left: 2px solid rgba($color-accent, 0.2);
+
+      .cat-title {
+        font-size: 1.25rem;
+        color: rgba($color-text-main, 0.9);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .documentos-page {
+    padding: 2rem 1rem;
+    
+    .docs-nav {
+      font-size: 0.75rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .doc-category {
+      .doc-list li a:hover {
+        transform: none;
+      }
+      
+      &.obra-specific {
+        padding-left: 1rem;
+      }
+    }
+  }
+}

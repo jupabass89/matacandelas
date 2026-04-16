@@ -1,0 +1,290 @@
+@use 'sass:color';
+@use '../abstracts' as *;
+@use '../mixins' as *;
+
+.historia-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 5rem;
+  color: $color-text-main;
+  font-family: $font-primary;
+
+  // Hero Section
+  .historia-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/src/assets/img/40cumplidos-fachada-matacandelas-con-amigos.jpg') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 4rem;
+    border-bottom: 4px solid $color-accent;
+
+    .hero-content {
+      z-index: 2;
+      padding: 0 1.5rem;
+    }
+
+    .historia-title {
+      font-family: $font-headings;
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 800;
+      color: $color-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      margin: 0;
+      text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .historia-subtitle {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      color: $color-text-main;
+      margin-top: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .historia-content {
+    padding: 0 2rem;
+  }
+
+  section {
+    margin-bottom: 5rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba($color-text-main, 0.9);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+
+    strong {
+      color: $color-accent;
+      font-weight: 600;
+    }
+  }
+
+  .section-title {
+    font-family: $font-headings;
+    font-size: 2rem;
+    color: $color-accent;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: $color-accent;
+    }
+  }
+
+  // repertorio list
+  .repertorio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: contents;
+    }
+
+    li {
+      background: rgba($color-bg-light, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: $transition-smooth;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background: transparent;
+        transition: $transition-smooth;
+      }
+
+      &:hover {
+        background: rgba($color-bg-light, 0.8);
+        border-color: rgba($color-accent, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+        &::before {
+          background: $color-accent;
+        }
+      }
+
+      a {
+        display: block;
+        color: $color-text-main;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+        font-family: $font-headings;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      .tdleft {
+        display: block;
+        font-size: 0.85rem;
+        color: $color-text-muted;
+        font-style: normal;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .repertorio-note {
+    font-size: 0.95rem;
+    color: $color-text-muted;
+    font-style: italic;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  // Image section
+  .historia-image-container {
+    margin: 3rem 0;
+    text-align: center;
+
+    .historia-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .img-caption {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: $color-text-muted;
+      text-align: center;
+    }
+  }
+
+  // Filosofía section
+  .filosofia-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: $bp-desktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .filosofia-card {
+    background: rgba($color-bg-light, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid $color-accent;
+
+    p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+    }
+  }
+
+  // Invitation
+  .historia-invitacion {
+    background: linear-gradient(135deg, $color-bg-light 0%, color.adjust($color-bg-light, $lightness: -5%) 100%);
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba($color-accent, 0.1);
+
+    p {
+      text-align: center;
+    }
+
+    .invitacion-final {
+      font-family: $font-headings;
+      font-size: 1.5rem;
+      color: $color-accent;
+      margin-top: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  // Contact info
+  .historia-contact-info {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+    margin-top: 4rem;
+
+    h3 {
+      font-family: $font-headings;
+      color: $color-accent;
+      letter-spacing: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: $color-text-muted;
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Mobile overrides
+@include mobile {
+  .historia-page {
+    .historia-hero {
+      height: 40vh;
+    }
+
+    .historia-content {
+      padding: 0 1.25rem;
+    }
+
+    .repertorio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .historia-invitacion {
+      padding: 2rem 1.5rem;
+    }
+  }
+}
