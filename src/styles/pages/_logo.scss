@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use '../abstracts' as *;
+@use '../mixins' as *;
+
+.logo-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: $color-text-main;
+
+  .logo-header {
+    margin-bottom: 4rem;
+    
+    h1 {
+      font-family: $font-headings;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: $color-accent;
+      color: $color-bg-dark;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: $transition-smooth;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      box-shadow: 0 10px 20px rgba(231, 226, 174, 0.2);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(231, 226, 174, 0.3);
+        background: color.adjust($color-accent, $lightness: 5%);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .logo-preview {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 5rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 30px rgba(0,0,0,0.5));
+    }
+  }
+
+  .asset-info {
+    margin-top: 3rem;
+    color: $color-text-muted;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+}
+
+@include mobile {
+  .logo-page {
+    padding: 4rem 1rem;
+    
+    .logo-preview {
+      padding: 2.5rem 1rem;
+    }
+  }
+}

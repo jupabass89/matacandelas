@@ -1,5 +1,5 @@
-@use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
+@use 'abstracts' as *;
+@use 'mixins' as *;
 
 #page-content {
   background-color: $color-bg-light;
@@ -10,12 +10,17 @@
 
 // --- body.css ---
 html {
-  font-size: 112.5%;
+  font-size: 100%;
   /* Changes base from 16px to 18px */
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-headings;
 }
 

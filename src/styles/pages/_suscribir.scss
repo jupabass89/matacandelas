@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+@use '../mixins' as *;
+
+.newsletter-page {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: #121212;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba($color-accent, 0.1);
+
+  @include mobile {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 92%;
+  }
+
+  .newsletter-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    .newsletter-title {
+      color: $color-accent;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: $color-accent;
+        margin: 0.75rem auto 0;
+        border-radius: 2px;
+      }
+    }
+
+    .newsletter-desc {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+
+  .newsletter-iframe-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    padding: 1rem; // Un pequeño padding interior para que el contenido del iframe no quede pegado al borde si es blanco
+    
+    .ipz-iframe {
+      width: 100%;
+      height: 650px;
+      display: block;
+      border-radius: 4px;
+    }
+  }
+}

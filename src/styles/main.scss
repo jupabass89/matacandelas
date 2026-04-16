@@ -1,9 +1,16 @@
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
-@use 'base/global';
+@use 'abstracts';
+@use 'mixins';
+@use 'global';
 @use 'layout/navigation';
 @use 'layout/footer';
-@use 'components/socials';
+@use 'layout/socials';
 @use 'pages/home';
 @use 'pages/obras';
-
+@use 'pages/suscribir';
+@use 'pages/historia';
+@use 'pages/cifras';
+@use 'pages/ubicacion';
+@use 'pages/casa';
+@use 'pages/logo';
+@use 'pages/documentos';
+@use 'pages/404' as notfound;

@@ -1,0 +1,128 @@
+@use '../../styles/abstracts' as *;
+@use '../../styles/mixins' as *;
+
+matacandelas-articulos {
+  display: block;
+}
+
+.articulos-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.articulos-label {
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $color-accent;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: $color-accent;
+    border-radius: 2px;
+  }
+}
+
+/* Scrollable list — same max-height as sibling columns */
+.articulos-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 450px;
+  overflow-y: scroll;
+  // Hide scrollbar — all browsers
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.articulo-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: $transition-smooth;
+
+  &:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &:hover {
+    background: rgba($color-accent, 0.05);
+    transform: translateX(4px);
+    border-bottom-color: rgba($color-accent, 0.15);
+  }
+}
+
+.articulo-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 0.85rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.articulo-title {
+  font-family: $font-primary;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: $color-text-main;
+  line-height: 1.35;
+  transition: color 0.25s ease;
+
+  .articulo-link:hover & {
+    color: $color-accent;
+  }
+}
+
+.articulo-author {
+  font-family: $font-primary;
+  font-size: 0.75rem;
+  color: $color-text-muted;
+  font-style: italic;
+}
+
+/* "Ver todos" link at the bottom */
+.articulos-ver-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-family: $font-primary;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba($color-accent, 0.7);
+  text-decoration: none;
+  transition: color 0.25s ease, gap 0.25s ease;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    color: $color-accent;
+    gap: 0.55rem;
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+}

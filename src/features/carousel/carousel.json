@@ -1,0 +1,29 @@
+[
+  {
+    "image": "/assets/img/200-de-teatro-01.jpg",
+    "badge": "En temporada",
+    "title": "El Cabaret El Cantadero",
+    "description": "Una experiencia inmersiva para los amantes de las tablas y nuestro gran legado teatral antioqueño.",
+    "buttonText": "Ver Programación",
+    "eventId": "fabio-lione-1",
+    "ticketUrl": null
+  },
+  {
+    "image": "/assets/img/La-casa-grande-06.jpg",
+    "badge": "Clásico Imperdible",
+    "title": "La Casa Grande",
+    "description": "Revive la historia con esta asombrosa adaptación. No te quedes por fuera.",
+    "buttonText": "Comprar Tickets",
+    "eventId": "fabio-lione-2",
+    "ticketUrl": "https://www.domebi.com/events/fabio-lione-rhapsody-times-dawn-of-the-enchanted-tales-en-medelln"
+  },
+  {
+    "image": "/assets/img/MatacandelasBellaDurmiente2017.jpg",
+    "badge": "Música y Teatro",
+    "title": "La Bella Durmiente",
+    "description": "Una mágica obra musical y de títeres para disfrutar en familia con la calidad Matacandelas.",
+    "buttonText": "Ver Información",
+    "eventId": "fabio-lione-3",
+    "ticketUrl": null
+  }
+]
