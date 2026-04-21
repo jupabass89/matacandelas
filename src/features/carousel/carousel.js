@@ -17,7 +17,9 @@ class MatacandelasCarousel extends HTMLElement {
     // Inyectar datos en los contenedores nativos
     innerContainer.innerHTML = data.map((item, index) => `
       <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-event-id="${item.eventId || ''}" style="cursor: pointer;">
-        <div class="carousel-bg" style="background-image: url('${item.image}');"></div>
+        <div class="carousel-bg">
+          <img src="${item.image}" alt="${item.title}" fetchpriority="${index === 0 ? 'high' : 'auto'}" loading="${index === 0 ? 'eager' : 'lazy'}" />
+        </div>
         <div class="carousel-content">
           <span class="carousel-badge">${item.badge}</span>
           <h2 class="carousel-title">${item.title}</h2>

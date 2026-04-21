@@ -16,14 +16,24 @@ export async function router(path = window.location.pathname) {
   console.log('Buscando ruta:', routeName || '(home)')
   
   // Busca en las rutas definidas
-  let file = routes[routeName]
+  let routeData = routes[routeName]
 
   // Si no se encuentra exactamente, manejar casos especiales o fallback
-  if (!file) {
+  if (!routeData) {
     if (routeName === '') {
-      file = routes['home'] || routes['/'] || routes['']
+      routeData = routes['home'] || routes['/'] || routes['']
     } else {
-      file = routes['404']
+      routeData = routes['404']
+    }
+  }
+
+  const file = routeData?.path;
+
+  if (routeData) {
+    if (routeData.title) document.title = routeData.title;
+    if (routeData.description) {
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', routeData.description);
     }
   }
 

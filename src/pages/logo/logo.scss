@@ -1,6 +1,6 @@
 @use 'sass:color';
-@use '../abstracts' as *;
-@use '../mixins' as *;
+@use '../../styles/abstracts' as *;
+@use '../../styles/mixins' as *;
 
 .logo-page {
   max-width: 900px;
