@@ -1,18 +1,82 @@
 {
-  "": "/pages/home.html",
-  "/": "/pages/home.html",
-  "home": "/pages/home.html",
-  "suscribir": "/pages/suscribir.html",
-  "historia": "/pages/historia.html",
-  "cifras": "/pages/cifras.html",
-  "ubicacion": "/pages/ubicacion.html",
-  "casa": "/pages/casa.html",
-  "logo": "/pages/logo.html",
-  "obras": "/pages/obras.html",
-  "documentos": "/pages/documentos.html",
-  "contacto": "/pages/contacto.html",
-  "404": "/pages/404.html",
-  "test": "/pages/test.html",
-  "22Bobos": "/pages/22Bobos.html",
-  "fiesta": "/pages/fiesta.html"
+  "": {
+    "path": "/pages/home/home.html",
+    "title": "Teatro Matacandelas - Inicio",
+    "description": "Página oficial del Teatro Matacandelas de Medellín - Colombia, agrupación dedicada a la experimentación con el teatro, la música y los títeres."
+  },
+  "/": {
+    "path": "/pages/home/home.html",
+    "title": "Teatro Matacandelas - Inicio",
+    "description": "Página oficial del Teatro Matacandelas de Medellín - Colombia, agrupación dedicada a la experimentación con el teatro, la música y los títeres."
+  },
+  "home": {
+    "path": "/pages/home/home.html",
+    "title": "Teatro Matacandelas - Inicio",
+    "description": "Página oficial del Teatro Matacandelas de Medellín - Colombia, agrupación dedicada a la experimentación con el teatro, la música y los títeres."
+  },
+  "suscribir": {
+    "path": "/pages/suscribir/suscribir.html",
+    "title": "Suscríbete al Boletín - Teatro Matacandelas",
+    "description": "Únete al boletín del Teatro Matacandelas para recibir noticias, programación y promociones exclusivas de nuestros espectáculos."
+  },
+  "historia": {
+    "path": "/pages/historia/historia.html",
+    "title": "Nuestra Historia - Teatro Matacandelas",
+    "description": "Conoce más de 40 años de trayectoria ininterrumpida del Teatro Matacandelas creando arte escénico, obras de teatro y música en la ciudad."
+  },
+  "cifras": {
+    "path": "/pages/cifras/cifras.html",
+    "title": "Cifras y Logros - Teatro Matacandelas",
+    "description": "Descubre nuestros logros, cantidad de presentaciones, número de obras realizadas y el impacto cultural en Colombia."
+  },
+  "ubicacion": {
+    "path": "/pages/ubicacion/ubicacion.html",
+    "title": "Ubicación y Sede - Teatro Matacandelas",
+    "description": "Visita nuestra sede ubicada en Calle 47 No. 43 - 47, Medellín. Reserva tus boletas y disfruta de nuestro café bar cultural."
+  },
+  "casa": {
+    "path": "/pages/casa/casa.html",
+    "title": "La Casa Matacandelas - Teatro Matacandelas",
+    "description": "Un recorrido histórico y fotográfico por la sede de nuestra corporación artística, espacio patrimonial de la ciudad."
+  },
+  "logo": {
+    "path": "/pages/logo/logo.html",
+    "title": "El Significado de Nuestro Logo - Matacandelas",
+    "description": "Conoce la historia detrás del nombre Matacandelas y nuestro diseño de marca a través de la evolución gráfica."
+  },
+  "obras": {
+    "path": "/pages/obras/obras.html",
+    "title": "Obras de Repertorio - Teatro Matacandelas",
+    "description": "Explora nuestro catálogo de obras teatrales en repertorio. Obras para jóvenes, adultos, musicales, títeres y producciones especiales."
+  },
+  "documentos": {
+    "path": "/pages/documentos/documentos.html",
+    "title": "Documentos y Textos - Teatro Matacandelas",
+    "description": "Artículos, textos críticos y publicaciones literarias y escénicas del Teatro Matacandelas y sus directores."
+  },
+  "contacto": {
+    "path": "/pages/contacto/contacto.html",
+    "title": "Contáctanos - Teatro Matacandelas",
+    "description": "Ponte en contacto con nuestro equipo para contrataciones, funciones, talleres, o más información sobre corporación Matacandelas."
+  },
+  "404": {
+    "path": "/pages/404/404.html",
+    "title": "Página No Encontrada - Teatro Matacandelas",
+    "description": "Lo sentimos, la página que buscas no está disponible en nuestro repertorio. Vuelve al inicio."
+  },
+  "test": {
+    "path": "/pages/test/test.html",
+    "title": "Prueba Experimental - Teatro Matacandelas",
+    "description": "Área de pruebas reservada para componentes de la interfaz."
+  },
+  "22Bobos": {
+    "path": "/pages/22Bobos/22Bobos.html",
+    "title": "Los 22 Bobos - Teatro Matacandelas",
+    "description": "Presentación y reseña crítica de esta aclamada obra y manifestación humorística."
+  },
+  "fiesta": {
+    "path": "/pages/fiesta/fiesta.html",
+    "title": "Fiestas y Celebraciones - Teatro Matacandelas",
+    "description": "Revive la historia viva y los encuentros anuales de conmemoración de la corporación Matacandelas."
+  }
 }

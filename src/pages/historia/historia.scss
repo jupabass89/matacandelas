@@ -1,6 +1,6 @@
 @use 'sass:color';
-@use '../abstracts' as *;
-@use '../mixins' as *;
+@use '../../styles/abstracts' as *;
+@use '../../styles/mixins' as *;
 
 .historia-page {
   max-width: 1100px;
