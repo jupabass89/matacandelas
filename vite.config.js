@@ -18,6 +18,10 @@ export default defineConfig({
         {
           src: 'pages',
           dest: ''
+        },
+        {
+          src: 'assets/img',
+          dest: ''
         }
       ]
     })

@@ -92,4 +92,27 @@ function waitForElement(selector, timeout = 5000) {
   })
 }
 
-window.addEventListener('popstate', router)
+window.addEventListener('popstate', () => router());
+
+// Interceptar clicks en enlaces para hacer la navegación tipo SPA
+document.addEventListener('click', e => {
+  const link = e.target.closest('a');
+  
+  if (link && link.origin === window.location.origin && link.target !== '_blank') {
+    // Si la ruta es la misma (ej. anclas en la misma página #), dejamos que el navegador lo maneje
+    if (link.pathname === window.location.pathname) {
+      return;
+    }
+
+    // Normalizar la ruta para buscar en routes.json
+    let routeName = link.pathname.startsWith('/') ? link.pathname.slice(1) : link.pathname;
+    if (routeName.endsWith('/')) routeName = routeName.slice(0, -1);
+
+    // Solo interceptar si es una ruta conocida en la SPA
+    if (routes[routeName] || routeName === '') {
+      e.preventDefault();
+      window.history.pushState({}, '', link.href);
+      router();
+    }
+  }
+});
