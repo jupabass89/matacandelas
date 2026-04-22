@@ -34,3 +34,19 @@ window.addEventListener('scroll', () => {
     document.body.classList.remove('scrolled-past');
   }
 });
+
+// Close mobile menu when a link is clicked
+document.addEventListener('click', (e) => {
+  const navToggle = document.getElementById('nav-toggle');
+  if (!navToggle || !navToggle.checked) return;
+
+  // Check if the click was on a link inside the navigation
+  const link = e.target.closest('.main-nav a');
+  if (link) {
+    // Don't close if it's just a dropdown toggle (link with href="#")
+    if (link.getAttribute('href') === '#') return;
+
+    navToggle.checked = false;
+  }
+});
+
