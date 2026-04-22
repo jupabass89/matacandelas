@@ -327,6 +327,9 @@
 
   @include mobile {
     justify-content: center;
+    position: relative;
+    z-index: 1001;
+    pointer-events: none;
   }
 
   .teledir {
@@ -372,6 +375,7 @@
       align-items: center;
       justify-content: center;
       transition: $transition-smooth;
+      pointer-events: auto;
 
       svg {
         width: 1rem;
